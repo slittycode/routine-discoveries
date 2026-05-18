@@ -51,3 +51,14 @@ flarkflarkflark/STEMwerk-reaper
 crlandsc/torch-l1-snr
 sildater/parangonar
 JulienVincenot/MOZLib
+wavey-ai/mel-spec
+undef13/splifft
+Boof2015/astra
+markwilkins/midi-chord-reader
+Natooz/MidiTok
+dreamrec/LivePilot
+bschoepke/ableton-live-mcp
+phones24/ep133-export-to-daw
+gluon/Void-LinkAudio
+Conceptual-Machines/magda-core
+andremichelle/openDAW
