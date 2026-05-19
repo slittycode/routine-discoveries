@@ -37,3 +37,17 @@ asteroid-team/asteroid
 WeebLabs/DSPi
 complexlogic/rsgain
 gluon/ofxAbletonLinkAudio
+openclaw/songsee
+DarienBrito/EssentiaTD
+jhartquist/resonators
+Angel2mp3/AudioAuditor
+WB2024/Essentia-to-Metadata
+craiglush/navidrome-mood-plugin
+NeptuneHub/AudioMuse-AI-NV-plugin
+JuzzyDee/audio-analyzer-rs
+marcus/good-composer
+Ryan5453/demucs-next
+flarkflarkflark/STEMwerk-reaper
+crlandsc/torch-l1-snr
+sildater/parangonar
+JulienVincenot/MOZLib
