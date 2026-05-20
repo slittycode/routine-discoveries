@@ -62,3 +62,11 @@ phones24/ep133-export-to-daw
 gluon/Void-LinkAudio
 Conceptual-Machines/magda-core
 andremichelle/openDAW
+casantosmu/audiodeck
+mhartzel/freelcs
+dogayuksel/webKeyFinder
+brightlikethelight/music21-mcp-server
+uisato/ableton-mcp-extended
+ifeelvoid/keyfinder
+zsteinkamp/m4l-Knobbler4
+paladini/voice-separator-demucs
