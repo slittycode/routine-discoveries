@@ -70,3 +70,17 @@ uisato/ableton-mcp-extended
 ifeelvoid/keyfinder
 zsteinkamp/m4l-Knobbler4
 paladini/voice-separator-demucs
+CPJKU/beat_this
+Polochon-street/bliss-rs
+MTG/gaia
+pianosnake/ireal-reader
+CPJKU/partitura
+a1ex90/MusicalKeyCNN
+Sonata165/PhraseLDM_code
+lunashia/o-m_beatmap_trainer
+astradzhao/music-rfm
+christopherwxyz/remix-mcp
+urinieto/msaf
+MTG/essentia
+Rezonality/zing
+snejus/beetcamp
