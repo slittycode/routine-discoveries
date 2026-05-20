@@ -84,3 +84,14 @@ urinieto/msaf
 MTG/essentia
 Rezonality/zing
 snejus/beetcamp
+libAudioFlux/audioFlux
+hugohow/mcp-music-analysis
+NeptuneHub/AudioMuse-AI
+tyiannak/pyAudioAnalysis
+audeering/opensmile
+facebookresearch/demucs
+maxrmorrison/torchcrepe
+BillyDM/awesome-audio-dsp
+EmulationAI/awesome-large-audio-models
+Yuan-ManX/audio-development-tools
+pettarin/awesome-python-audio-research
