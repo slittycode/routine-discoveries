@@ -1,18 +1,26 @@
 # routine-discoveries
 
-Recurring discovery scans for audio/MIR/music tooling, scored against two
-projects: **ASA** (Essentia.js DSP pipeline) and **Harmonia** (Tonal.js
-chord-progression / reharmonization).
+A hub for recurring GitHub discovery sweeps. Each **stream** routinely surfaces and vets repos for
+a different purpose; results land on `main` as the single source of truth.
+
+## Streams
+
+- **audio-mir** — audio / MIR / music-theory tooling for the **ASA** and **Harmonia** projects.
+  - sweeps: `discoveries/audio-mir-<date>.md` · dedupe: `discoveries/_seen.txt` · shortlist:
+    `RECOMMENDATIONS.md` · routine: `routines/audio-mir.md`
+- **legaltech-nz** — personal tools a NZ property lawyer (who "vibe-codes") could **fork and build
+  from**: document comparison / legal-impact, document understanding, personal productivity, and
+  build-your-own-tool foundations. Local-first preferred; licence ignored.
+  - sweeps: `discoveries/legaltech-nz-<date>.md` · dedupe: `discoveries/_seen-legaltech-nz.txt` ·
+    routine: `routines/legaltech-nz.md`
 
 ## Layout
 
-- **[`RECOMMENDATIONS.md`](RECOMMENDATIONS.md)** — the consolidated,
-  deduped shortlist across every sweep. Start here.
-- **`discoveries/`** — the raw per-sweep vetting record: one dated file
-  per scan with full write-ups, 1–5 scores, and why candidates were
-  dropped. `_seen.txt` is the master de-dup list of everything evaluated.
-- **`incorporations/`** — plans for actually lifting selected discoveries
-  into the downstream projects.
+- **`routines/`** — the routine prompt for each stream (the registry of what runs).
+- **`discoveries/`** — raw per-sweep vetting records: one dated file per scan with scores and why
+  candidates were dropped. Each stream keeps its own `_seen` dedupe list.
+- **`RECOMMENDATIONS.md`** — consolidated shortlist for the audio-mir stream (a legaltech-nz one
+  will follow once several sweeps accrue).
+- **`incorporations/`** — plans for lifting selected discoveries into downstream projects.
 
-`main` is the single source of truth: discoveries, the vetting balance
-behind each, and the recommendation list all live here.
+`main` is the single source of truth.
