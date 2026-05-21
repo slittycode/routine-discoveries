@@ -10,11 +10,13 @@ listed here — when sweeps disagreed, the entry shows the most favourable
 verdict and the divergence is logged at the bottom (we keep things in
 rather than drop them).
 
-**Legend** — score is 1–5 relevance to **ASA** (Essentia.js DSP:
-mel-spectrograms, tonal balance, dynamics, loudness) and/or **Harmonia**
-(Tonal.js chord-progression / reharmonization). `★` = has an
+**Legend** — score is 1–5 relevance to **ASA** (server-side Python app;
+NATIVE Essentia + librosa/torchcrepe/Demucs DSP and a Gemini/LLM layer;
+emits spectral/key/chords/genre/EBU-R128/structure/stems JSON) and/or
+**Harmonia** (Tonal.js chord-progression / reharmonization). `★` = has an
 incorporation plan in `incorporations/`. The date marks the sweep that
-surfaced it.
+surfaced it. (Earlier sweeps mislabelled ASA as "Essentia.js / in-browser"
+— that framing was wrong; native libraries are first-class.)
 
 ## Top picks (5/5)
 
@@ -22,10 +24,12 @@ surfaced it.
 - **5** · [DarienBrito/EssentiaTD](https://github.com/DarienBrito/EssentiaTD) — Essentia CHOPs for TouchDesigner; cleanest map of ASA-relevant algorithms. _(05-14)_
 - **5** · [ptnghia-j/ChordMiniApp](https://github.com/ptnghia-j/ChordMiniApp) — chord recognition + beat tracking + lyrics + sheet render; closest neighbour to Harmonia. _(05-13)_
 - **5** · [JuzzyDee/audio-analyzer-rs](https://github.com/JuzzyDee/audio-analyzer-rs) — pure-Rust MCP with the whole MIR stack incl. K-S key, pitch-class, tonnetz. _(05-14 · both)_
+- **5** · [OpenMOSS/MOSS-Music](https://github.com/OpenMOSS/MOSS-Music) — open 8B audio-LLM: structure + chord/key/tempo + captioning + Q&A; reference for ASA's Gemini layer. _(05-21)_
 
 ## ASA — DSP, loudness, MIR features
 
 - **5** · [creightonlinza/forever-jukebox](https://github.com/creightonlinza/forever-jukebox) — local Infinite-Jukebox; analysis → JSON contract. _(05-13 · ★ ASA plan Track 3)_
+- **5** · [OpenMOSS/MOSS-Music](https://github.com/OpenMOSS/MOSS-Music) — open 8B music-understanding LMM (audio→text); self-hostable analogue of the Essentia+Gemini layer. _(05-21)_
 - **5** · [DarienBrito/EssentiaTD](https://github.com/DarienBrito/EssentiaTD) — Essentia CHOPs (spectrum/mel/MFCC/key/onset/R128). _(05-14)_
 - **4** · [httpsworldview/openmeters](https://github.com/httpsworldview/openmeters) — Rust BS.1770-5 LUFS/true-peak + spectral-reassignment spectrogram. _(05-13 · ★ ASA plan Track 1)_
 - **4** · [Ircam-Partiels/Partiels](https://github.com/Ircam-Partiels/Partiels) — IRCAM Vamp host; CSV/SDIF/JSON export schemas. _(05-13 · ★ ASA plan Track 2)_
@@ -50,6 +54,7 @@ surfaced it.
 - **3** · [mhartzel/freelcs](https://github.com/mhartzel/freelcs) — EBU R128 hotfolder loudness-correction server. _(05-18)_
 - **3** · [Polochon-street/bliss-rs](https://github.com/Polochon-street/bliss-rs) — chroma/tempo/timbre similarity feature vectors. _(05-19)_
 - **3** · [MTG/gaia](https://github.com/MTG/gaia) — Essentia's similarity/classifier companion (high-level models). _(05-19)_
+- **3** · [geshang777/GaMMA](https://github.com/geshang777/GaMMA) — global-temporal music-understanding LMM (research); second data point for ASA's LLM layer. _(05-21)_
 
 ## Harmonia — chords, key, theory
 
@@ -65,6 +70,9 @@ surfaced it.
 - **3** · [Natooz/MidiTok](https://github.com/Natooz/MidiTok) — canonical MIDI/abc tokenizer library. _(05-17)_
 - **3** · [brightlikethelight/music21-mcp-server](https://github.com/brightlikethelight/music21-mcp-server) — music21 theory tools (Roman numerals, cadences, voice-leading) over MCP. _(05-18)_
 - **3** · [CPJKU/partitura](https://github.com/CPJKU/partitura) — symbolic score model (MusicXML/MIDI/kern/MEI). _(05-19)_
+- **3** · [sivabenepoivediamo/musicplusplus](https://github.com/sivabenepoivediamo/musicplusplus) — header-only C++ theory lib (voice leading, reharm via modal interchange); TS SDK planned. _(05-21)_
+- **3** · [fpachet/continuator](https://github.com/fpachet/continuator) — Pachet's constrainable Markov continuator; constraint-guaranteed chord/melody continuation. _(05-21)_
+- **3** · [comorebi-notes/rechord](https://github.com/comorebi-notes/rechord) — React + Tone.js chord-progression entry/playback reference (no reharm logic). _(05-21)_
 
 ## Relevant to both
 
@@ -72,6 +80,7 @@ surfaced it.
 - **4** · [rzru/nightingale](https://github.com/rzru/nightingale) — Tauri karaoke: separation + transcription + pitch scoring + key/tempo shift. _(05-13 · ★ ASA plan: filed for later)_
 - **4** · [dreamrec/LivePilot](https://github.com/dreamrec/LivePilot) — large Ableton-MCP with spectral + Krumhansl-Schmuckler key bridge. _(05-17)_
 - **4** · [a1ex90/MusicalKeyCNN](https://github.com/a1ex90/MusicalKeyCNN) — CQT-CNN key estimation with Camelot-wheel output. _(05-19)_
+- **4** · [andreamust/consonance-ACE](https://github.com/andreamust/consonance-ACE) — Conformer audio chord estimation (decomposed root/bass/pitch heads); pretrained, 170-class .lab output. _(05-21)_
 - **3** · [uisato/ableton-mcp-extended](https://github.com/uisato/ableton-mcp-extended) — TCP+UDP Ableton MCP with ElevenLabs TTS. _(05-18)_
 - **3** · [ifeelvoid/keyfinder](https://github.com/ifeelvoid/keyfinder) — from-scratch Krumhansl-Schmuckler key/BPM detector (Swift app + VST). _(05-19)_
 
