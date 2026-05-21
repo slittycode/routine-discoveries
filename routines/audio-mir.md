@@ -6,19 +6,27 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
 
 > NOTE: this supersedes an earlier framing that described ASA as "an in-browser Essentia.js
 > library." That was wrong and biased scoring toward browser/WASM tools. ASA is a SERVER-SIDE
-> Python app. Two placeholders below — **[Gemini role]** and **[verify Harmonia]** — still need
-> confirming against the projects' own `CLAUDE.md` before this routine is fully trustworthy. When
-> in doubt, read those repos and treat them as authoritative over this summary.
+> Python app. The **[Gemini role]** slot below is now filled from ASA's own `CLAUDE.md`;
+> **Harmonia** is described from ASA's own incorporations doc and is still NOT verified against
+> Harmonia's own `CLAUDE.md`. When in doubt, read those repos and treat them as authoritative
+> over this summary.
 
 ## Projects (verify against each repo's CLAUDE.md; this is a convenience copy)
 - **ASA** — a SERVER-SIDE Python (FastAPI) backend + React frontend application. Audio analysis
   runs server-side via native libraries (Essentia primary, plus librosa, torchcrepe, Demucs) and
-  Gemini (LLM) for **[Gemini role — fill from ASA's CLAUDE.md]**. It already emits a large analysis
+  Gemini (LLM) for **Phase 2 interpretation (Layer 3)** — turning the deterministic Phase 1 DSP
+  measurements into specific, measurement-cited Ableton Live 12 device/parameter/value
+  recommendations, never overriding the measured values (Phase 1 is ground truth; every
+  recommendation cites the measurement(s) that justify it). Phase 2 is optional and flag-gated
+  (`VITE_ENABLE_PHASE2_GEMINI`); a run completes without it. It already emits a large analysis
   JSON (spectral features, chroma/HPCP, key, chords, genre, EBU R128 loudness/true-peak/LRA,
   BPM/beats/rhythm, structure, stems, melody). It is an APP, not a library: NO Essentia.js, NO
   client-side/in-browser DSP, NO WASM. PyTorch is already in the stack.
-- **Harmonia** — a React chord-progression / reharmonization tool on Tonal.js. **[verify against
-  Harmonia's CLAUDE.md.]**
+- **Harmonia** — a React chord-progression / reharmonization tool on Tonal.js. Symbolic-first (not
+  audio-first); license assumed MIT but unconfirmed. *(Per ASA's own
+  `incorporations/forking-plans-2026-05-14.md`, which flags Harmonia's license as "Assumed MIT
+  (confirm — out of repo)" — NOT verified against Harmonia's own CLAUDE.md, which is out of scope
+  from this ASA-scoped session.)*
 
 ## Workflow
 
