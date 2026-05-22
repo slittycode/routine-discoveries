@@ -6,8 +6,8 @@ per-sweep record. **Re-scored 2026-05-20** under corrected ground truth — see
 `discoveries/reanalysis-2026-05-20.md` for old→new deltas and rationale.
 
 > **Comprehensive catalog:** this file is the *shortlist* (≥ 3). For **every** repo ever
-> surfaced — including barely-mentioned and dropped-for-redundancy ones, plus the 2026-05-21
-> sweep's additions — with idea-mining ("what to fork/build") commentary, see **`baseline/`**
+> surfaced — including barely-mentioned and dropped-for-redundancy ones — with idea-mining
+> ("what to fork/build") commentary, see **`baseline/`**
 > (`baseline/music-asa/` and `baseline/legal-tech/`). **Harmonia is a phantom** (no such
 > project; `github.com/slittycode/harmonia` → 404; ASA PR #98 / `f8d7add`); `(H)` scores below
 > are retained as historical relevance to a general chord/theory consumer.
@@ -32,6 +32,7 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **5** · [MTG/essentia](https://github.com/MTG/essentia) — **ASA's own core native dependency**; algorithm + model-zoo + upgrade reference. _(was wrongly dropped)_
 - **5** · [dreamrec/LivePilot](https://github.com/dreamrec/LivePilot) — Ableton MCP **+** spectral/K-S-key/mel-chroma analysis bridge **+** measure→act→measure loop; closest analog to ASA end-to-end. _(both)_
 - **5** · [JuzzyDee/audio-analyzer-rs](https://github.com/JuzzyDee/audio-analyzer-rs) — pure-Rust MCP with ASA's whole L1 MIR stack (K-S key, pitch-class, tonnetz, R128). _(both)_
+- **5** · [OpenMOSS/MOSS-Music](https://github.com/OpenMOSS/MOSS-Music) — open 8B audio-LLM (lyrics ASR, structure, chord/key/tempo, captioning, Q&A); closest open self-hostable analogue of ASA's Essentia+Gemini layer. _(05-21)_
 - **5** · [ptnghia-j/ChordMiniApp](https://github.com/ptnghia-j/ChordMiniApp) — chord recognition + beat + lyrics + sheet render; closest neighbour to Harmonia. _(H)_
 
 ## ASA — Phase 1: native DSP, loudness, MIR features
@@ -75,6 +76,7 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 ## ASA — LLM / MCP / Ableton (Phase 2–3)
 
 - **5** · [dreamrec/LivePilot](https://github.com/dreamrec/LivePilot) — Ableton MCP + analysis bridge + before/after measurement; the end-to-end analog. _(both · ↑)_
+- **5** · [OpenMOSS/MOSS-Music](https://github.com/OpenMOSS/MOSS-Music) — open 8B audio-LLM emitting ASA-shaped analysis (structure/chord/key/tempo/Q&A); reference or partial replacement for the Gemini layer. _(05-21)_
 - **4** · [adamjmurray/producer-pal](https://github.com/adamjmurray/producer-pal) — M4L + MCP + **Gemini** Ableton control; "apply the recommendation in Live" companion. _(↑)_
 - **4** · [hugohow/mcp-music-analysis](https://github.com/hugohow/mcp-music-analysis) — Python MCP wrapping librosa for LLMs; the analysis-as-MCP-tools template. _(new)_
 - **4** · [brightlikethelight/music21-mcp-server](https://github.com/brightlikethelight/music21-mcp-server) — FastMCP exposing theory/analysis tools to an LLM (also `(H)`). _(↑)_
@@ -84,6 +86,7 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **3** · [christopherwxyz/remix-mcp](https://github.com/christopherwxyz/remix-mcp) — Rust Ableton-control MCP (OSC, 266 tools). _(was wrongly dropped)_
 - **3** · [williamzujkowski/live-coding-music-mcp](https://github.com/williamzujkowski/live-coding-music-mcp) — Strudel.cc over MCP (+ analysis + optional Gemini).
 - **3** · [Conceptual-Machines/magda-core](https://github.com/Conceptual-Machines/magda-core) — AI-first JUCE DAW; NL→DSL session edits (agentic-surface reference).
+- **3** · [geshang777/GaMMA](https://github.com/geshang777/GaMMA) — research audio-LLM for joint global/temporal music understanding; second data point for the LLM layer (paper repo, not packaged). _(05-21)_
 - **3** · [innermost47/ai-dj](https://github.com/innermost47/ai-dj) — server-side Stable Audio Open loop generator; Phase-3 audition-sample reference. _(was wrongly dropped)_
 - **3** · [prabal-rje/latentscore](https://github.com/prabal-rje/latentscore) — retrieval-based ambient generation (Phase-3 retrieval-gen angle).
 
@@ -106,6 +109,9 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **3** · [markwilkins/midi-chord-reader](https://github.com/markwilkins/midi-chord-reader) — JUCE plugin: name chords from MIDI.
 - **3** · [Natooz/MidiTok](https://github.com/Natooz/MidiTok) — canonical MIDI/abc tokenizer.
 - **3** · [CPJKU/partitura](https://github.com/CPJKU/partitura) — symbolic score model (MusicXML/MIDI/kern/MEI).
+- **3** · [sivabenepoivediamo/musicplusplus](https://github.com/sivabenepoivediamo/musicplusplus) — header-only C++ theory lib (voice leading, reharm via modal interchange); TS/Python SDKs planned — algorithm reference, not a Tonal.js drop-in yet. _(05-21)_
+- **3** · [fpachet/continuator](https://github.com/fpachet/continuator) — Pachet's constrainable variable-order Markov continuator; chord/melody completion under hard anchor constraints (technique to borrow). _(05-21)_
+- **3** · [comorebi-notes/rechord](https://github.com/comorebi-notes/rechord) — React + Tone.js chord-progression entry/playback app; Harmonia's exact stack (UI/playback reference; no reharm logic). _(05-21)_
 
 ## Relevant to both
 
@@ -113,6 +119,7 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **5** · [dreamrec/LivePilot](https://github.com/dreamrec/LivePilot) — Ableton + analysis + agentic measurement loop.
 - **4** · [rzru/nightingale](https://github.com/rzru/nightingale) — Tauri: Demucs separation + transcription + pitch scoring + key/tempo shift. _(★ filed-for-later)_
 - **4** · [a1ex90/MusicalKeyCNN](https://github.com/a1ex90/MusicalKeyCNN) — CQT-CNN key estimation + Camelot output (tonal signal for both).
+- **4** · [andreamust/consonance-ACE](https://github.com/andreamust/consonance-ACE) — Conformer audio chord-estimation (root/bass/pitch heads), pretrained, WAV→170-class timestamped `.lab`; modern server-side model for ASA's chord stage + Harmonia input. _(05-21)_
 - **3** · [ifeelvoid/keyfinder](https://github.com/ifeelvoid/keyfinder) — from-scratch K-S key/BPM (Swift; worked-example reference).
 
 ## Tangential / plumbing (kept at 3)
@@ -147,3 +154,9 @@ Pre-existing divergences retained from the prior consolidation (now superseded w
 re-scored): EssentiaTD 4→5 and Essentia-to-Metadata 3→4 (already applied in 05-17);
 wavey-ai/mel-spec 4 vs 3; freelcs/uisato/ifeelvoid kept-vs-dropped across sweeps —
 all resolved to the corrected scores above.
+
+**2026-05-21 sweep folded in (2026-05-22):** the six ≥3 survivors from
+`discoveries/audio-mir-2026-05-21.md` — MOSS-Music (5), consonance-ACE (4), GaMMA (3),
+musicplusplus (3), continuator (3), rechord (3) — were previously only in `baseline/`
+and the dated sweep; now added above so the shortlist again lists every repo ≥3. They
+were already scored under the corrected server-side framing.
