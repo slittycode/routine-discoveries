@@ -22,5 +22,8 @@ a different purpose; results land on `main` as the single source of truth.
 - **`RECOMMENDATIONS.md`** — consolidated shortlist for the audio-mir stream (a legaltech-nz one
   will follow once several sweeps accrue).
 - **`incorporations/`** — plans for lifting selected discoveries into downstream projects.
+- **`baseline/`** — the comprehensive **tech baseline**: every non-trash repo ever surfaced,
+  categorized (`music-asa/`, `legal-tech/`) with idea-mining ("what to fork/build") commentary —
+  scan it when starting a new project. Broader than `RECOMMENDATIONS.md` (the ≥3 shortlist).
 
 `main` is the single source of truth.
