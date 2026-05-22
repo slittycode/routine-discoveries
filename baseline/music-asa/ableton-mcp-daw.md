@@ -4,8 +4,9 @@ Ableton / MCP / DAW plumbing and the agentic surface — the tools that let an L
 read or drive a DAW, plus the Link/export/session-edit plumbing around them. This is
 **on-theme for ASA**: ASA is a server-side Python/FastAPI + Gemini app whose whole
 point is measurement-cited **Ableton Live 12** advice, so an "apply the recommendation
-in Live" companion (MCP/M4L) is a natural extension. Scores are **1–5 relevance** +
-flag: `ASA` · `H` (Harmonia = **phantom**; see `../README.md`) · `Both` · `tang`.
+in Live" companion (MCP/M4L) is a natural extension. Scores are **1–5 relevance** to
+ASA + flag: `ASA` · `H` (**conceptual reference for Harmonia**, an unpublished
+single-file tool — not a scored repo; see `../README.md`) · `Both` · `tang`.
 Corrected scores follow `discoveries/reanalysis-2026-05-20.md` (native + LLM/MCP +
 Ableton tooling are first-class; browser/WASM credit removed).
 

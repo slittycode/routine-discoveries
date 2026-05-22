@@ -38,6 +38,14 @@ reharmonization on Tonal.js") as an unverified assumption and **hold** all Harmo
 `(H)` scores. The browser/native correction barely applies to Harmonia anyway (it
 genuinely *is* a React/Tonal.js browser app).
 
+> **Correction (2026-05-22):** the two claims above are now known to be wrong. Harmonia is **not**
+> "no repo / could-not-reach-ground-truth," and it is **not** "genuinely a React/Tonal.js browser
+> app." Ground truth (owner-confirmed): Harmonia is a real but **unpublished single local HTML
+> file** — a dependency-free, vanilla HTML/CSS/JS chord/reharmonization tool with **no React and no
+> Tonal.js**, simply never pushed to GitHub (`github.com/slittycode/harmonia` → 404). The held `(H)`
+> scores were therefore judged against an inaccurate target; they now mean **conceptual reference
+> only** (see `routines/audio-mir.md`, `baseline/music-asa/`). Record left intact on purpose.
+
 ## Two systematic errors (not one)
 
 1. **Browser/native bias** (the brief's premise). Native C/C++/Rust/Python tools
@@ -143,6 +151,10 @@ relevant by definition); low-signal awesome-lists `BillyDM/awesome-audio-dsp` &
 
 - **Harmonia is unverified** (no repo found; absent from ASA). Its `(H)` scores are
   held and flagged. If a Harmonia repo exists elsewhere, re-run.
+  - **Correction (2026-05-22):** resolved — Harmonia is a real but **unpublished single local HTML
+    file** (dependency-free vanilla JS; **no React/Tonal.js**), simply never published to GitHub, so
+    re-running a GitHub search will **not** find it. The `(H)` scores now mean **conceptual reference
+    only**, not relevance to a discoverable repo.
 - ASA facts are from its public `CLAUDE.md`/`README.md`, treated as authoritative
   over the brief's summary (per instructions). The `[FILL IN]` for Gemini is
   resolved above.

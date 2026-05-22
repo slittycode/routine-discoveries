@@ -27,6 +27,15 @@ At a glance:
 
 Everything inside the code block below is the prompt.
 
+> **Correction (2026-05-22):** this is a frozen historical artifact — **do not re-run the prompt
+> below as-is.** Its premises are now known to be wrong: ASA is a **server-side Python/FastAPI** app
+> (not an "Essentia.js in-browser pipeline"), and **Harmonia** is a real but **unpublished single
+> local HTML file** — a dependency-free vanilla-JS chord/reharmonization tool with **no React and no
+> Tonal.js**, never pushed to GitHub (`github.com/slittycode/harmonia` → 404). The Harmonia
+> "fork-for-reference" / dataset-incorporation steps below are therefore superseded; treat any
+> Harmonia candidate as a **conceptual reference only**. Corrected framing: `routines/audio-mir.md`,
+> `baseline/music-asa/`.
+
 ```
 You are a coding agent working in the `routine-discoveries` repository.
 Your task: turn five selected discoveries into five concrete forking /

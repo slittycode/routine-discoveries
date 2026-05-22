@@ -8,9 +8,10 @@ per-sweep record. **Re-scored 2026-05-20** under corrected ground truth — see
 > **Comprehensive catalog:** this file is the *shortlist* (≥ 3). For **every** repo ever
 > surfaced — including barely-mentioned and dropped-for-redundancy ones — with idea-mining
 > ("what to fork/build") commentary, see **`baseline/`**
-> (`baseline/music-asa/` and `baseline/legal-tech/`). **Harmonia is a phantom** (no such
-> project; `github.com/slittycode/harmonia` → 404; ASA PR #98 / `f8d7add`); `(H)` scores below
-> are retained as historical relevance to a general chord/theory consumer.
+> (`baseline/music-asa/` and `baseline/legal-tech/`). **Harmonia** is a real but **unpublished
+> single local HTML file** (dependency-free vanilla JS — **no React/Tonal.js**; not on GitHub,
+> `github.com/slittycode/harmonia` → 404); `(H)` marks a **conceptual reference** for it, not a
+> scored/incorporable repo.
 
 Every repo at relevance **≥ 3** is listed; where sweeps disagreed we keep the most
 favourable verdict (and now the corrected one). Repos that fell **below 3** in the
@@ -20,10 +21,11 @@ re-score are listed under "Downgraded out."
 3.11 + FastAPI** backend + **React 19** frontend that measures audio **server-side**
 (L1 native **Essentia 2.1b6**; L2 **torchcrepe** pitch on **Demucs** stems) then has
 **Gemini** (Phase 2) emit measurement-cited **Ableton Live 12 device/param**
-recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progression
-/ reharmonization — **unverified**: no repo found, scores held from prior sweeps).
-`★` = incorporation plan in `incorporations/`. `⚠` = caveat. `(new)` = surfaced
-2026-05-20.
+recommendations. `(H)` = **conceptual reference for Harmonia** — a real but
+**unpublished**, dependency-free single-file vanilla-JS chord/reharmonization tool with
+no repo (not React/Tonal.js; `github.com/slittycode/harmonia` → 404), so `(H)` flags
+idea-usefulness, not an incorporation/stack-fit score. `★` = incorporation plan in
+`incorporations/`. `⚠` = caveat. `(new)` = surfaced 2026-05-20.
 
 ## Top picks (5)
 
@@ -97,7 +99,7 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **4** · [marcus/good-composer](https://github.com/marcus/good-composer) — FastAPI + WebSocket streaming + React + LLM = ASA's stack pattern. _(↑)_
 - **3** · [Boof2015/astra](https://github.com/Boof2015/astra) — Electron player; decoupled analysis/output paths + visualizer-rack UX.
 
-## Harmonia — chords, key, theory _(unverified — scores held)_
+## Harmonia — conceptual references (idea-only)
 
 - **5** · [ptnghia-j/ChordMiniApp](https://github.com/ptnghia-j/ChordMiniApp) — chord recognition + beat + lyrics + OpenSheetMusicDisplay.
 - **4** · [spyroskantarelis/chordonomicon](https://github.com/spyroskantarelis/chordonomicon) — 666K section-labelled chord progressions dataset.
@@ -109,9 +111,9 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **3** · [markwilkins/midi-chord-reader](https://github.com/markwilkins/midi-chord-reader) — JUCE plugin: name chords from MIDI.
 - **3** · [Natooz/MidiTok](https://github.com/Natooz/MidiTok) — canonical MIDI/abc tokenizer.
 - **3** · [CPJKU/partitura](https://github.com/CPJKU/partitura) — symbolic score model (MusicXML/MIDI/kern/MEI).
-- **3** · [sivabenepoivediamo/musicplusplus](https://github.com/sivabenepoivediamo/musicplusplus) — header-only C++ theory lib (voice leading, reharm via modal interchange); TS/Python SDKs planned — algorithm reference, not a Tonal.js drop-in yet. _(05-21)_
+- **3** · [sivabenepoivediamo/musicplusplus](https://github.com/sivabenepoivediamo/musicplusplus) — header-only C++ theory lib (voice leading, reharm via modal interchange); TS/Python SDKs planned — algorithm reference. _(05-21)_
 - **3** · [fpachet/continuator](https://github.com/fpachet/continuator) — Pachet's constrainable variable-order Markov continuator; chord/melody completion under hard anchor constraints (technique to borrow). _(05-21)_
-- **3** · [comorebi-notes/rechord](https://github.com/comorebi-notes/rechord) — React + Tone.js chord-progression entry/playback app; Harmonia's exact stack (UI/playback reference; no reharm logic). _(05-21)_
+- **3** · [comorebi-notes/rechord](https://github.com/comorebi-notes/rechord) — React + Tone.js chord-progression entry/playback app (UI/playback reference; no reharm logic). _(05-21)_
 
 ## Relevant to both
 
@@ -119,7 +121,7 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **5** · [dreamrec/LivePilot](https://github.com/dreamrec/LivePilot) — Ableton + analysis + agentic measurement loop.
 - **4** · [rzru/nightingale](https://github.com/rzru/nightingale) — Tauri: Demucs separation + transcription + pitch scoring + key/tempo shift. _(★ filed-for-later)_
 - **4** · [a1ex90/MusicalKeyCNN](https://github.com/a1ex90/MusicalKeyCNN) — CQT-CNN key estimation + Camelot output (tonal signal for both).
-- **4** · [andreamust/consonance-ACE](https://github.com/andreamust/consonance-ACE) — Conformer audio chord-estimation (root/bass/pitch heads), pretrained, WAV→170-class timestamped `.lab`; modern server-side model for ASA's chord stage + Harmonia input. _(05-21)_
+- **4** · [andreamust/consonance-ACE](https://github.com/andreamust/consonance-ACE) — Conformer audio chord-estimation (root/bass/pitch heads), pretrained, WAV→170-class timestamped `.lab`; modern server-side model for ASA's chord stage. _(05-21)_
 - **3** · [ifeelvoid/keyfinder](https://github.com/ifeelvoid/keyfinder) — from-scratch K-S key/BPM (Swift; worked-example reference).
 
 ## Tangential / plumbing (kept at 3)
