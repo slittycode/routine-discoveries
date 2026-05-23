@@ -4,7 +4,7 @@ Full **analysis apps**, media-server integrations, track-to-track similarity, an
 the job-queue / worker / deployment shapes ASA needs in hosted mode (Python 3.11 +
 FastAPI backend, React 19 frontend, measurement → pitch/note → Gemini-interpretation
 queue). ASA is an **app**, so React UIs + API/contract + queue/deployment all count.
-Scores are **1–5 relevance** + flag: `ASA` · `H` (Harmonia = **phantom**) · `Both` ·
+Scores are **1–5 relevance** + flag: `ASA` · `H` (Harmonia = conceptual ref) · `Both` ·
 `tang`. See `../README.md`; corrected scores follow
 `discoveries/reanalysis-2026-05-20.md`.
 

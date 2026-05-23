@@ -8,9 +8,11 @@ per-sweep record. **Re-scored 2026-05-20** under corrected ground truth — see
 > **Comprehensive catalog:** this file is the *shortlist* (≥ 3). For **every** repo ever
 > surfaced — including barely-mentioned and dropped-for-redundancy ones — with idea-mining
 > ("what to fork/build") commentary, see **`baseline/`**
-> (`baseline/music-asa/` and `baseline/legal-tech/`). **Harmonia is a phantom** (no such
-> project; `github.com/slittycode/harmonia` → 404; ASA PR #98 / `f8d7add`); `(H)` scores below
-> are retained as historical relevance to a general chord/theory consumer.
+> (`baseline/music-asa/` and `baseline/legal-tech/`). **Harmonia** is slittycode's
+> *unpublished, dependency-free single-file vanilla-JS* chord/reharmonization tool — **not** a
+> GitHub repo (`github.com/slittycode/harmonia` → 404) and **not** a "phantom" (it exists, just
+> unpublished; the earlier ASA-docs "phantom" wording overshot). `(H)` scores below are
+> **conceptual** relevance only (UX / algorithm / dataset) — never dependency or stack-fit.
 
 Every repo at relevance **≥ 3** is listed; where sweeps disagreed we keep the most
 favourable verdict (and now the corrected one). Repos that fell **below 3** in the
@@ -20,8 +22,9 @@ re-score are listed under "Downgraded out."
 3.11 + FastAPI** backend + **React 19** frontend that measures audio **server-side**
 (L1 native **Essentia 2.1b6**; L2 **torchcrepe** pitch on **Demucs** stems) then has
 **Gemini** (Phase 2) emit measurement-cited **Ableton Live 12 device/param**
-recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progression
-/ reharmonization — **unverified**: no repo found, scores held from prior sweeps).
+recommendations. `(H)` = **conceptual** relevance to **Harmonia** (slittycode's unpublished,
+dependency-free single-file vanilla-JS chord/reharmonization tool — no repo, nothing to
+incorporate; idea / algorithm / dataset references only, never stack-fit).
 `★` = incorporation plan in `incorporations/`. `⚠` = caveat. `(new)` = surfaced
 2026-05-20.
 
@@ -97,7 +100,7 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **4** · [marcus/good-composer](https://github.com/marcus/good-composer) — FastAPI + WebSocket streaming + React + LLM = ASA's stack pattern. _(↑)_
 - **3** · [Boof2015/astra](https://github.com/Boof2015/astra) — Electron player; decoupled analysis/output paths + visualizer-rack UX.
 
-## Harmonia — chords, key, theory _(unverified — scores held)_
+## Harmonia — chords, key, theory _(conceptual references — no repo to incorporate)_
 
 - **5** · [ptnghia-j/ChordMiniApp](https://github.com/ptnghia-j/ChordMiniApp) — chord recognition + beat + lyrics + OpenSheetMusicDisplay.
 - **4** · [spyroskantarelis/chordonomicon](https://github.com/spyroskantarelis/chordonomicon) — 666K section-labelled chord progressions dataset.
@@ -109,9 +112,9 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **3** · [markwilkins/midi-chord-reader](https://github.com/markwilkins/midi-chord-reader) — JUCE plugin: name chords from MIDI.
 - **3** · [Natooz/MidiTok](https://github.com/Natooz/MidiTok) — canonical MIDI/abc tokenizer.
 - **3** · [CPJKU/partitura](https://github.com/CPJKU/partitura) — symbolic score model (MusicXML/MIDI/kern/MEI).
-- **3** · [sivabenepoivediamo/musicplusplus](https://github.com/sivabenepoivediamo/musicplusplus) — header-only C++ theory lib (voice leading, reharm via modal interchange); TS/Python SDKs planned — algorithm reference, not a Tonal.js drop-in yet. _(05-21)_
+- **3** · [sivabenepoivediamo/musicplusplus](https://github.com/sivabenepoivediamo/musicplusplus) — header-only C++ theory lib (voice leading, reharm via modal interchange); an **algorithm reference** for Harmonia's substitutions logic (a technique to study, not a drop-in — Harmonia has no deps). _(05-21)_
 - **3** · [fpachet/continuator](https://github.com/fpachet/continuator) — Pachet's constrainable variable-order Markov continuator; chord/melody completion under hard anchor constraints (technique to borrow). _(05-21)_
-- **3** · [comorebi-notes/rechord](https://github.com/comorebi-notes/rechord) — React + Tone.js chord-progression entry/playback app; Harmonia's exact stack (UI/playback reference; no reharm logic). _(05-21)_
+- **3** · [comorebi-notes/rechord](https://github.com/comorebi-notes/rechord) — React + Tone.js chord-progression entry/playback app; a progression-entry **UI/playback idea reference** for Harmonia (no reharm logic; not a stack match — Harmonia is dep-free vanilla JS). _(05-21)_
 
 ## Relevant to both
 

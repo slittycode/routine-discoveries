@@ -5,7 +5,7 @@ read or drive a DAW, plus the Link/export/session-edit plumbing around them. Thi
 **on-theme for ASA**: ASA is a server-side Python/FastAPI + Gemini app whose whole
 point is measurement-cited **Ableton Live 12** advice, so an "apply the recommendation
 in Live" companion (MCP/M4L) is a natural extension. Scores are **1–5 relevance** +
-flag: `ASA` · `H` (Harmonia = **phantom**; see `../README.md`) · `Both` · `tang`.
+flag: `ASA` · `H` (Harmonia = conceptual ref; see `../README.md`) · `Both` · `tang`.
 Corrected scores follow `discoveries/reanalysis-2026-05-20.md` (native + LLM/MCP +
 Ableton tooling are first-class; browser/WASM credit removed).
 

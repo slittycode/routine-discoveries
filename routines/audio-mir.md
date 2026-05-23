@@ -1,16 +1,22 @@
 # Routine — audio-mir discoveries
 
 Recurring sweep that surfaces newly relevant GitHub repos in audio DSP / MIR /
-music theory / music generation / LLM-assisted music tooling for the **ASA**
-project. One of two streams in this repo (see `routines/README.md`).
+music theory / music generation / LLM-assisted music tooling for the **ASA** project,
+with **Harmonia** as a secondary **conceptual-reference-only** axis. One of two streams
+in this repo (see `routines/README.md`).
 
-> Framing history: an earlier version called ASA "an in-browser Essentia.js library"
-> and scored a second target, "Harmonia." Both were wrong. ASA is a SERVER-SIDE
-> Python app (below). **Harmonia is a phantom** — no such repo
-> (`github.com/slittycode/harmonia` → 404; confirmed ASA PR #98 / `f8d7add`) — and is
-> NOT a scoring target. Repos once scored "Harmonia-relevant" survive only if they
-> help ASA (its chord/key stage or its React UI). Historical `(H)` entries are kept in
-> `baseline/` and `RECOMMENDATIONS.md` for reference, not re-scored here.
+Evidence discipline: back claims with `file:line`, commit hash, or URL, and distinguish
+"I couldn't find it" from "it doesn't exist."
+
+> Framing history (two corrections — don't repeat either):
+> 1. An earlier version called ASA "an in-browser Essentia.js library." Wrong — ASA is a
+>    SERVER-SIDE Python app (below); native code is first-class and browser/WASM earns no
+>    credit.
+> 2. The same version mis-described **Harmonia** as "a React + Tonal.js chord-progression
+>    repo," and a later correction then *overshot* by calling it a **"phantom" that doesn't
+>    exist.** Both are wrong. Harmonia is **real but unpublished** (see its section below).
+>    Use the accurate framing: do NOT call it a phantom, and do NOT score candidates for
+>    Harmonia stack-compatibility or "incorporation."
 
 ## Project: ASA  (verify against its CLAUDE.md; this copy can drift)
 
@@ -38,6 +44,27 @@ hosted worker-queue mode) that already emits a large analysis JSON.
 read ASA's `CLAUDE.md`/`README.md` via the public web (WebFetch on
 `slittycode/ableton-sonic-analyzer`) and treat it as authoritative over this summary.
 
+## Project: Harmonia  (conceptual-reference-only — not a repo)
+
+Harmonia is slittycode's own **unpublished, single local HTML file** — a bare-bones
+"Chord Progression Studio." Verified facts:
+
+- **Vanilla HTML/CSS/JS, zero dependencies.** It hand-rolls its own music theory (note
+  tables, scale/chord-interval maps, roman numerals) and its own **byte-level MIDI
+  writer**. **No React, no Tonal.js, no imports, no build step.**
+- Features: mood/genre → diatonic progression generation, roman-numeral analysis, an SVG
+  piano, a chord **Substitutions** panel (relative minor/major, tritone sub, sus
+  voicings = reharmonization), Web Audio playback, MIDI export. Symbolic-first.
+- **Not a GitHub repo** — `github.com/slittycode/harmonia` → **404** (verify each run). It
+  is an unpublished local file, not a codebase with a backlog. It is **not** a "phantom"
+  (it exists); it's simply unpublished and was previously mis-described.
+
+Because there is no repo and no dependencies, **GitHub "incorporation" / stack-
+compatibility scoring does not apply to Harmonia.** A candidate can earn Harmonia
+relevance only as a **conceptual reference** — a UX idea, an algorithm worth studying, or
+a dataset — for a chord-progression / reharmonization tool. Never score a candidate as a
+Harmonia dependency or "matches Harmonia's stack."
+
 ## Workflow
 
 1. Read `discoveries/_seen.txt` (dedupe list, one `owner/repo` per line; absent =
@@ -49,6 +76,7 @@ read ASA's `CLAUDE.md`/`README.md` via the public web (WebFetch on
    - "essentia" OR "gaia" OR "music information retrieval" OR "essentia models" OR "music audio tagging"  # incl. Essentia ecosystem
    - "mel spectrogram" OR "audio feature extraction"
    - "chord recognition" OR "key detection" OR "audio chord estimation"  # ASA chord/key stage
+   - "chord progression" OR "reharmonization" OR "voice leading"         # Harmonia conceptual refs
    - "stem separation" OR "demucs" OR "source separation"                # ASA Layer 2
    - "pitch detection" OR "torchcrepe" OR "beat tracking" OR "tempo"     # ASA Layer 2 / rhythm
    - "loudness" OR "LUFS" OR "EBU R128"
@@ -64,18 +92,19 @@ read ASA's `CLAUDE.md`/`README.md` via the public web (WebFetch on
    don't pad to a cap), pull: description, stars, last commit date, README (~200
    words), primary language.
 
-5. Score each 1–5 on **ASA** relevance. Drop anything <3. Score against the REAL stack:
-   - Native C/C++/Rust/Python audio libraries are **first-class** (a Rust crate is a
-     PyO3 extension or sidecar; a C++ lib is a native dependency). Do NOT penalise
+5. Score each 1–5 — primarily on **ASA** relevance, secondarily on **Harmonia**
+   (conceptual only). Drop anything <3. Score against the REAL stacks:
+   - Native C/C++/Rust/Python audio libraries are **first-class** for ASA (a Rust crate
+     is a PyO3 extension or sidecar; a C++ lib is a native dependency). Do NOT penalise
      "native / not browser-friendly."
    - Native libraries that DON'T bind to a Python backend (Go, C#/.NET, Swift, …) are
      NOT penalised either — score them as algorithm/architecture **references** (cap
      ~4) on their DSP/app design, not as drop-in deps (matches the `maturity: reference`
      convention in `baseline/`).
-   - Do NOT award relevance for "in-browser", "WASM", "Essentia.js", or "client-side";
-     ignore bundle-size / cold-start. (Past framing error.)
+   - Do NOT award ASA relevance for "in-browser", "WASM", "Essentia.js", or
+     "client-side"; ignore bundle-size / cold-start. (Past framing error.)
    - The **Essentia ecosystem** (Essentia, gaia, Essentia pretrained models,
-     host/wrapper projects as references) is directly relevant.
+     host/wrapper projects as references) is directly ASA-relevant.
    - **Layer 2 is current scope:** stem separation (Demucs & forks), pitch/melody
      (torchcrepe & alternatives), and beat/tempo tooling count — not "future."
    - **Ableton is core:** ASA targets Ableton Live 12 and emits Ableton device/param
@@ -85,17 +114,20 @@ read ASA's `CLAUDE.md`/`README.md` via the public web (WebFetch on
      music interfaces, MCP servers, and prompt-to-analysis tooling are ASA-relevant.
    - **ASA is an app:** REST/API contract design, React analysis UIs, and
      job/queue/server-deployment patterns count.
-   - Chord/key repos score on ASA relevance (they feed ASA's chord/key detection
-     stage), flagged `ASA`. **Symbolic / MIDI / score-theory libraries drop regardless
-     of language** — a native C++ theory lib is NOT rescued by "native is first-class" —
-     unless they directly serve ASA's audio chord/key stage or its React UI. There is
-     no Harmonia axis any more.
+   - Chord/key **audio** repos that feed ASA's chord/key detection stage are `ASA`
+     (or `Both` if they're also a Harmonia idea reference).
+   - **Harmonia is conceptual-reference-only.** Chord-progression / reharmonization /
+     music-theory / symbolic / MIDI tools (ANY language) earn an `H` flag as a **UX,
+     algorithm, or dataset** reference for Harmonia — never as a dependency or stack
+     match (Harmonia has no repo and no deps; the old "React + Tonal.js" stack was a
+     mis-description, so do not score "stack fit"). A repo with no ASA value and no
+     Harmonia idea/UX/dataset angle is below the bar.
 
 6. Append survivors to `discoveries/audio-mir-<YYYY-MM-DD>.md`, sections:
-   **ASA-relevant** / **Tangential but interesting**, plus a **Dropped** list with
-   one-line reasons. Two-sentence pitch each, with link, score, and flag — `ASA` or
-   `tang` only (the `(H)` and `Both` flags are retired; a chord/key repo that helps ASA
-   is flagged `ASA`).
+   **ASA-relevant** / **Harmonia (conceptual reference)** / **Both** / **Tangential but
+   interesting**, plus a **Dropped** list with one-line reasons. Two-sentence pitch each,
+   with link, score, and flag (`ASA` · `H` · `Both` · `tang`). `H`/`Both` denote
+   **conceptual** Harmonia value only — never dependency or stack-fit.
 
 7. Append every surfaced `owner/repo` line (survivors AND drops) to `_seen.txt`.
 
