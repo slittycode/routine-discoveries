@@ -1,11 +1,12 @@
 # music-asa / chord-key
 
 Chord and key detection — audio→chord, audio→key, and the harmonic-core MIR that
-feeds both ASA's tonal stage and a (phantom) Harmonia consumer. Scores are **1–5
-relevance** to ASA / Harmonia plus a flag: `ASA` · `H` (Harmonia = **phantom**: no
-such project; `H` repos are kept as general chord/key references, mineable but not
-validated against any real consumer) · `Both` · `tang`. See `../README.md` for the
-spec; corrected scores follow `discoveries/reanalysis-2026-05-20.md`.
+feeds ASA's tonal stage and, conceptually, a chord tool like Harmonia. Scores are **1–5
+relevance** to ASA / Harmonia plus a flag: `ASA` · `H` (Harmonia = slittycode's
+unpublished, dependency-free single-file vanilla-JS chord/reharmonization tool — no repo;
+`H` repos are conceptual chord/key references only, never a dependency or stack match) ·
+`Both` · `tang`. See `../README.md` for the spec; corrected scores follow
+`discoveries/reanalysis-2026-05-20.md`.
 
 ## Cross-domain (full entry here — harmonic-core)
 
@@ -35,7 +36,7 @@ spec; corrected scores follow `discoveries/reanalysis-2026-05-20.md`.
 ## Marginal — kept with a note (low)
 
 - **low/H** · [lorediggia/harmony-lab](https://github.com/lorediggia/harmony-lab) · `Rust` · `maturity:app`
-  Minimal Rust scale/chord explorer. Dropped 05-21 as too small and wrong-stack for a Harmonia. **Mine:** only as a tiny reference for representing scales/chords in Rust if a native harmonic helper is wanted. _(surfaced 05-21 · tags: chord, scale, rust)_
+  Minimal Rust scale/chord explorer. Dropped 05-21 as too small. **Mine:** only a tiny conceptual reference for representing scales/chords (Rust) if a native harmonic helper is ever wanted. _(surfaced 05-21 · tags: chord, scale, rust)_
 - **low/tang** · [sepandhaghighi/capo](https://github.com/sepandhaghighi/capo) · `Python` · `maturity:lib`
   Python guitar-chord transposition. Dropped 05-21 (Tonal.js already transposes). **Mine:** capo/transpose mapping logic only, if a guitar-specific transpose ever comes up. _(surfaced 05-21 · tags: chord, guitar, transpose)_
 - **low/tang** · [timvancann/chordflow](https://github.com/timvancann/chordflow) · `Rust` · `maturity:app`

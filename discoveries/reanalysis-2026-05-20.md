@@ -1,5 +1,7 @@
 # Re-analysis — 2026-05-20
 
+> **Correction (2026-05-23): Harmonia was mis-described here.** Harmonia is **real** but is slittycode's **unpublished, single-file, dependency-free vanilla-JS** chord-progression / reharmonization tool — **not** a React+Tonal.js project, and **not** a GitHub repo (`github.com/slittycode/harmonia` → 404). It is **not** a "phantom" (it exists; the ASA-docs "phantom" wording overshot). Any `(H)` / "Harmonia-relevant" / stack-fit notes below therefore stand only as **conceptual** (UX / idea / dataset) references, never dependency or stack-compatibility judgments. History preserved, not re-scored.
+
 Every prior sweep (05-13, 05-14, 05-17, 05-18, 05-19) scored repos against a
 **wrong** description of ASA — *"Essentia.js DSP pipeline … in-browser"* — which
 biased scores toward browser/WASM/client-side tools and penalised native
