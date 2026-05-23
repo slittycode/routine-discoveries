@@ -122,7 +122,7 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **5** · [dreamrec/LivePilot](https://github.com/dreamrec/LivePilot) — Ableton + analysis + agentic measurement loop.
 - **4** · [rzru/nightingale](https://github.com/rzru/nightingale) — Tauri: Demucs separation + transcription + pitch scoring + key/tempo shift. _(★ filed-for-later)_
 - **4** · [a1ex90/MusicalKeyCNN](https://github.com/a1ex90/MusicalKeyCNN) — CQT-CNN key estimation + Camelot output (tonal signal for both).
-- **4** · [andreamust/consonance-ACE](https://github.com/andreamust/consonance-ACE) — Conformer audio chord-estimation (root/bass/pitch heads), pretrained, WAV→170-class timestamped `.lab`; modern server-side model for ASA's chord stage + Harmonia input. _(05-21)_
+- **4** · [andreamust/consonance-ACE](https://github.com/andreamust/consonance-ACE) — Conformer audio chord-estimation (root/bass/pitch heads), pretrained, WAV→170-class timestamped `.lab`; modern server-side model for ASA's chord stage. _(05-21)_
 - **3** · [ifeelvoid/keyfinder](https://github.com/ifeelvoid/keyfinder) — from-scratch K-S key/BPM (Swift; worked-example reference).
 
 ## Tangential / plumbing (kept at 3)
