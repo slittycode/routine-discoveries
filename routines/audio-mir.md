@@ -6,10 +6,14 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
 
 > NOTE: this supersedes an earlier framing that described ASA as "an in-browser Essentia.js
 > library." That was wrong and biased scoring toward browser/WASM tools. ASA is a SERVER-SIDE
-> Python app. The **[Gemini role]** slot below is now filled from ASA's own `CLAUDE.md`;
-> **Harmonia** is described from ASA's own incorporations doc and is still NOT verified against
-> Harmonia's own `CLAUDE.md`. When in doubt, read those repos and treat them as authoritative
-> over this summary.
+> Python app. The **[Gemini role]** slot below is now filled from ASA's own `CLAUDE.md`.
+>
+> CORRECTION (2026-05-24): **Harmonia** was previously mis-described here as "a React + Tonal.js
+> chord tool" and assumed to be a discoverable GitHub repo. Both were wrong (owner-verified).
+> Harmonia is a real but **unpublished, single-file, dependency-free vanilla HTML/CSS/JS** tool;
+> it is **not on GitHub** (`github.com/slittycode/harmonia` → 404). With no repo and no
+> dependencies, it is a **conceptual reference only** — never a stack-compatibility or
+> GitHub-incorporation target (see the Harmonia bullet and the scoring rubric below).
 
 ## Projects (verify against each repo's CLAUDE.md; this is a convenience copy)
 - **ASA** — a SERVER-SIDE Python (FastAPI) backend + React frontend application. Audio analysis
@@ -22,11 +26,17 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
   JSON (spectral features, chroma/HPCP, key, chords, genre, EBU R128 loudness/true-peak/LRA,
   BPM/beats/rhythm, structure, stems, melody). It is an APP, not a library: NO Essentia.js, NO
   client-side/in-browser DSP, NO WASM. PyTorch is already in the stack.
-- **Harmonia** — a React chord-progression / reharmonization tool on Tonal.js. Symbolic-first (not
-  audio-first); license assumed MIT but unconfirmed. *(Per ASA's own
-  `incorporations/forking-plans-2026-05-14.md`, which flags Harmonia's license as "Assumed MIT
-  (confirm — out of repo)" — NOT verified against Harmonia's own CLAUDE.md, which is out of scope
-  from this ASA-scoped session.)*
+- **Harmonia** — a real but **unpublished, single-file, dependency-free** vanilla HTML/CSS/JS
+  "Chord Progression Studio" (owner-confirmed 2026-05-24). It hand-rolls its own music theory
+  (note tables, scale/chord-interval maps, roman numerals) and its own byte-level MIDI writer:
+  mood/genre → diatonic progression generation, roman-numeral analysis, an SVG piano, a chord
+  **Substitutions** panel (relative minor/major, tritone sub, sus voicings = reharmonization),
+  Web Audio playback, and MIDI export. Symbolic-first. **No React, no Tonal.js, no imports, no
+  build**, and **not on GitHub** (`github.com/slittycode/harmonia` → 404 — it is a local file,
+  not a repo with a backlog). Because it has no repo and no dependencies, GitHub incorporation /
+  stack-compatibility scoring **does not apply**: candidates can only ever be *conceptual*
+  references (a UX, algorithm, or dataset idea). *(The earlier "React + Tonal.js, discoverable
+  repo" framing was wrong on both counts.)*
 
 ## Workflow
 
@@ -48,7 +58,8 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
 4. For the rest (cap at 15), pull: description, stars, last commit date, README (~200 words),
    primary language.
 
-5. Score each 1–5 on relevance to ASA or Harmonia. Drop anything <3. Score against the REAL stacks:
+5. Score each 1–5 on relevance to **ASA** — the scored GitHub-incorporation target. Drop anything
+   <3. Score against the REAL stacks:
    - ASA runs server-side on NATIVE Essentia (Python/C++). Native C/C++/Rust/Python audio
      libraries are FIRST-CLASS (a Rust crate is a PyO3 extension or sidecar; a C++ lib is a native
      dependency). Do NOT penalise "native / not browser-friendly."
@@ -60,10 +71,18 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
      servers, and prompt-to-analysis tooling are genuinely ASA-relevant — NOT merely "tangential".
    - ASA is an application: REST/API contract design, React analysis UIs, and job/queue patterns
      count.
-   - Score Harmonia against its real stack (verify via CLAUDE.md).
+   - **Harmonia is NOT scored on a stack-compatibility / incorporation axis.** It is an
+     unpublished, dependency-free single file with no repo, so "stack-compatible" and "incorporate
+     into Harmonia's codebase" are meaningless. Flag a candidate as a *Harmonia conceptual
+     reference* only when it offers a genuinely transferable **idea** — a reharmonization /
+     voice-leading algorithm, a chord-progression dataset, or a UX pattern — never because of its
+     stack. (Harmonia is symbolic-first and ingests no audio, so audio→chord/key tools are not
+     Harmonia references.)
 
 6. Append survivors to `discoveries/audio-mir-<YYYY-MM-DD>.md` with sections: ASA-relevant /
-   Harmonia-relevant / Both / Tangential but interesting. Two-sentence pitch each, link, score.
+   Harmonia (conceptual reference) / Both / Tangential but interesting. Two-sentence pitch each,
+   link, score. The score is **ASA-relevance**; a Harmonia item carries an idea note, not a
+   stack-fit score.
 
 7. Append surfaced `owner/repo` lines to `_seen.txt`.
 

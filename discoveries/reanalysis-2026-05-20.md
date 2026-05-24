@@ -1,5 +1,13 @@
 # Re-analysis — 2026-05-20
 
+> CORRECTION (2026-05-24): this historical re-analysis treats **Harmonia** as "unverified — no repo
+> found" and held its `(H)` scores. That is now resolved (owner-verified): Harmonia is a real but
+> **unpublished, single-file, dependency-free vanilla-JS** chord/reharmonization tool — **not on
+> GitHub** (`github.com/slittycode/harmonia` → 404) and **not** "React + Tonal.js." Do **not** read
+> "no repo found" as "does not exist" — it exists, as an unpublished local file. With no repo and no
+> dependencies, the held `(H)` / stack-fit scores were graded against an inaccurate target; treat
+> them as *conceptual* idea references only. Corrected description: `routines/audio-mir.md`.
+
 Every prior sweep (05-13, 05-14, 05-17, 05-18, 05-19) scored repos against a
 **wrong** description of ASA — *"Essentia.js DSP pipeline … in-browser"* — which
 biased scores toward browser/WASM/client-side tools and penalised native

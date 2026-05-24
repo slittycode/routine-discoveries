@@ -1,5 +1,15 @@
 # Forking / incorporation planning prompt — 2026-05-14
 
+> CORRECTION (2026-05-24): this historical prompt encodes a **wrong** description of Harmonia ("a
+> React chord-progression / reharmonization tool built on Tonal.js") and selects two repos (#4
+> ChordMiniApp, #5 chordonomicon) as **Harmonia incorporation targets**. Harmonia is actually a real
+> but **unpublished, single-file, dependency-free vanilla-JS** tool — **not on GitHub**
+> (`github.com/slittycode/harmonia` → 404), with no repo to incorporate into and no dependencies to
+> add. **Do not run the Harmonia portions of this prompt as written:** treat ChordMiniApp,
+> chordonomicon, and any "Harmonia-leaning" bench item as *conceptual* idea references only, not
+> incorporation / dataset-integration targets. The ASA tracks are unaffected. The prompt body below
+> is left intact as a record. Corrected description: `routines/audio-mir.md`.
+
 A ready-to-paste prompt for a coding agent. It directs the agent to turn
 five discoveries into concrete forking / incorporation plans, in the same
 shape as `incorporations/asa-2026-05-13.md`.
