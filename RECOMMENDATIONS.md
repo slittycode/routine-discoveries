@@ -8,9 +8,13 @@ per-sweep record. **Re-scored 2026-05-20** under corrected ground truth — see
 > **Comprehensive catalog:** this file is the *shortlist* (≥ 3). For **every** repo ever
 > surfaced — including barely-mentioned and dropped-for-redundancy ones, plus the 2026-05-21
 > sweep's additions — with idea-mining ("what to fork/build") commentary, see **`baseline/`**
-> (`baseline/music-asa/` and `baseline/legal-tech/`). **Harmonia is a phantom** (no such
-> project; `github.com/slittycode/harmonia` → 404; ASA PR #98 / `f8d7add`); `(H)` scores below
-> are retained as historical relevance to a general chord/theory consumer.
+> (`baseline/music-asa/` and `baseline/legal-tech/`). **Harmonia is real but unpublished**
+> (corrected 2026-05-25): a single-file, vanilla HTML/CSS/JS, **zero-dependency** chord /
+> reharmonization tool — **not on GitHub** (`github.com/slittycode/harmonia` → 404), no repo, no
+> deps. (An earlier ASA-side note over-reached by calling it a "phantom"; it is real, just
+> unpublished and previously mis-described as React/Tonal.js.) `(H)` scores below were made against
+> that mis-described target and are retained only as **conceptual relevance** — there is no codebase
+> to fork into, so they are not incorporation/stack-fit scores.
 
 Every repo at relevance **≥ 3** is listed; where sweeps disagreed we keep the most
 favourable verdict (and now the corrected one). Repos that fell **below 3** in the
@@ -20,8 +24,10 @@ re-score are listed under "Downgraded out."
 3.11 + FastAPI** backend + **React 19** frontend that measures audio **server-side**
 (L1 native **Essentia 2.1b6**; L2 **torchcrepe** pitch on **Demucs** stems) then has
 **Gemini** (Phase 2) emit measurement-cited **Ableton Live 12 device/param**
-recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progression
-/ reharmonization — **unverified**: no repo found, scores held from prior sweeps).
+recommendations. `(H)` = **conceptual relevance** to **Harmonia** (a real but unpublished
+single-file, dependency-free vanilla-JS chord-progression / reharmonization tool — no repo,
+no React/Tonal.js; `(H)` numbers are retained from prior sweeps as idea-mining relevance,
+not stack-fit scores).
 `★` = incorporation plan in `incorporations/`. `⚠` = caveat. `(new)` = surfaced
 2026-05-20.
 
@@ -94,12 +100,12 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **4** · [marcus/good-composer](https://github.com/marcus/good-composer) — FastAPI + WebSocket streaming + React + LLM = ASA's stack pattern. _(↑)_
 - **3** · [Boof2015/astra](https://github.com/Boof2015/astra) — Electron player; decoupled analysis/output paths + visualizer-rack UX.
 
-## Harmonia — chords, key, theory _(unverified — scores held)_
+## Harmonia conceptual references — chords, key, theory _(idea-mining only; not fork/dependency targets)_
 
 - **5** · [ptnghia-j/ChordMiniApp](https://github.com/ptnghia-j/ChordMiniApp) — chord recognition + beat + lyrics + OpenSheetMusicDisplay.
 - **4** · [spyroskantarelis/chordonomicon](https://github.com/spyroskantarelis/chordonomicon) — 666K section-labelled chord progressions dataset.
 - **4** · [vpavlenko/rawl](https://github.com/vpavlenko/rawl) — pitch-class-coloured MIDI/MusicXML harmony visualizer.
-- **4** · [madderscientist/noteDigger](https://github.com/madderscientist/noteDigger) — zero-deps pure-JS audio→MIDI (Harmonia-only; not ASA-relevant).
+- **4** · [madderscientist/noteDigger](https://github.com/madderscientist/noteDigger) — zero-deps pure-JS audio→MIDI (conceptual reference; not ASA-relevant — and Harmonia is symbolic, with no audio input).
 - **4** · [dogayuksel/webKeyFinder](https://github.com/dogayuksel/webKeyFinder) — libKeyFinder→WASM in AudioWorklet/workers (native libKeyFinder is the ASA nugget).
 - **4** · [pianosnake/ireal-reader](https://github.com/pianosnake/ireal-reader) — iReal Pro charts → structured chord-symbol JSON.
 - **3** · [chromatone/chromatone.center](https://github.com/chromatone/chromatone.center) — Tonal.js + abcjs chord/scale/pitch-colour PWA.

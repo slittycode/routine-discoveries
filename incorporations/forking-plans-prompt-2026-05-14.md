@@ -4,6 +4,20 @@ A ready-to-paste prompt for a coding agent. It directs the agent to turn
 five discoveries into concrete forking / incorporation plans, in the same
 shape as `incorporations/asa-2026-05-13.md`.
 
+> **Correction — 2026-05-25 (prompt left intact as the record).** This prompt describes ASA as an
+> "Essentia.js DSP pipeline … in-browser" and Harmonia as "a React chord-progression /
+> reharmonization tool built on Tonal.js," and selects two **Harmonia** incorporation plans
+> (`ChordMiniApp` #4, `chordonomicon` #5) plus a shared ASA+Harmonia core (`audio-analyzer-rs` #1) on
+> that basis. Both project descriptions are wrong. ASA is a server-side native-Essentia app (see
+> `discoveries/reanalysis-2026-05-20.md`). Harmonia is a **real but unpublished, single-file vanilla
+> HTML/CSS/JS** tool with **zero dependencies** and **no GitHub repo**
+> (`github.com/slittycode/harmonia` → 404) — so its "stack" reasoning, the "Rust/Go/C++ upstream →
+> port-the-math or compile-to-WASM for Harmonia (React + Tonal.js)" instruction, and any
+> "incorporate into Harmonia" framing do not apply: there is no codebase to fork into. The named
+> repos remain valid as **conceptual references** only. The resulting `forking-plans-2026-05-14.md`
+> was never committed, so no Harmonia plan was executed. Corrected target + rubric:
+> `routines/audio-mir.md`, `baseline/`.
+
 The five were selected from `discoveries/audio-mir-2026-05-13.md` and
 `discoveries/audio-mir-2026-05-14.md`. The existing plan
 (`asa-2026-05-13.md`) only covers three ASA tracks from the 05-13 AM pass

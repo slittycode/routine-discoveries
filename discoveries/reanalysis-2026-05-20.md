@@ -7,6 +7,15 @@ C/C++/Rust/Python. This re-scores the whole back-catalogue under corrected groun
 truth and updates `RECOMMENDATIONS.md`. **The dated sweep files are left intact as
 the record;** all corrections live here and in `RECOMMENDATIONS.md`.
 
+> **Correction — 2026-05-25 (Harmonia; this re-analysis left intact as the record).**
+> This re-analysis fixed the ASA framing but **held Harmonia** as "an unverified React/Tonal.js
+> browser app" (and at one point asserts "it genuinely *is* a React/Tonal.js browser app"). That is
+> wrong: Harmonia is a **real but unpublished, single-file vanilla HTML/CSS/JS** tool with **zero
+> dependencies** (no React, no Tonal.js, no build) and **no GitHub repo**
+> (`github.com/slittycode/harmonia` → 404) — not a "phantom", just unpublished. The held `(H)` scores
+> are therefore not stack-fit numbers; they are retained as **conceptual relevance** only. Corrected
+> target + rubric: `routines/audio-mir.md`, `baseline/`.
+
 ## Ground truth (read from the real repo, authoritative)
 
 **ASA = "Ableton Sonic Analyzer"** (`slittycode/ableton-sonic-analyzer`, public;
