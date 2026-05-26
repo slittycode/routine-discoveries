@@ -27,7 +27,8 @@ are kept, with commentary saying why they're marginal and what's still mineable.
   <what it is — 1 dense line: concrete features>. **Mine:** <what you'd fork / learn / build from it>. _(surfaced MM-DD · ★<plan-ref> · tags: a, b, c)_
 ```
 - **Score schema is per stream** (not unified): music = **1–5 relevance** to ASA/Harmonia plus a flag
-  (`ASA` / `H` / `Both` / `tang`); legal = **`fork N / spark N`** plus a `local-first:` flag.
+  (`ASA` / `H` / `Both` / `tang`). `(H)` is **conceptual relevance** only — see the Framing
+  section below. Legal = **`fork N / spark N`** plus a `local-first:` flag.
 - `maturity` answers fork-and-run vs study-only. Unknown metadata fields are omitted, never guessed.
 - Cross-domain repos get a full entry in their primary sub-domain file and a one-line stub-with-link
   in the secondary file, so they're findable from both.
@@ -38,9 +39,18 @@ are kept, with commentary saying why they're marginal and what's still mineable.
   layer that maps the deterministic analysis JSON to Ableton Live 12 device/parameter
   recommendations. It is **not** in-browser / WASM / Essentia.js — native C/C++/Rust/Python is
   first-class. (Authoritative: `routines/audio-mir.md`. The old "Essentia.js" wording elsewhere is wrong.)
-- **Harmonia** = a **phantom**: no such project exists (`github.com/slittycode/harmonia` → 404;
-  confirmed in ASA PR #98 / commit `f8d7add`). Repos formerly scored "Harmonia-relevant" are kept as
-  **general chord / theory / UI references** — mineable, but not validated against any real consumer.
+- **Harmonia** = **real but unpublished** (corrected 2026-05-26): a single local HTML file —
+  vanilla HTML/CSS/JS, **zero dependencies**, with hand-rolled music theory (note tables,
+  scale/chord interval maps, roman numerals) and a hand-rolled byte-level MIDI writer. Features:
+  mood/genre → diatonic progression generation, roman-numeral analysis, SVG piano, a
+  **Substitutions** panel (relative minor/major, tritone sub, sus voicings — i.e. reharmonization),
+  Web Audio playback, MIDI export. **Not on GitHub** (`github.com/slittycode/harmonia` → 404,
+  re-verified 2026-05-26). Two earlier framings — "React + Tonal.js GitHub repo" (wrong stack;
+  pre-2026-05-20) and "phantom / does not exist" (wrong existence; the ASA-side overshoot in
+  PR #98 / `f8d7add`) — are both superseded by this. Because Harmonia has no repo, no build, and
+  no dependencies, `(H)` repos here are kept as **conceptual references** to its idea space
+  (chord/key/theory/UI/MIDI ideas, datasets, technique notes) — **never** as stack-compatibility
+  or "incorporate into Harmonia's codebase" candidates.
 
 ## Provenance
 Per-repo write-ups originate in the dated sweeps under `discoveries/` and the consolidated

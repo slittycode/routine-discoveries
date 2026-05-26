@@ -8,9 +8,18 @@ per-sweep record. **Re-scored 2026-05-20** under corrected ground truth — see
 > **Comprehensive catalog:** this file is the *shortlist* (≥ 3). For **every** repo ever
 > surfaced — including barely-mentioned and dropped-for-redundancy ones, plus the 2026-05-21
 > sweep's additions — with idea-mining ("what to fork/build") commentary, see **`baseline/`**
-> (`baseline/music-asa/` and `baseline/legal-tech/`). **Harmonia is a phantom** (no such
-> project; `github.com/slittycode/harmonia` → 404; ASA PR #98 / `f8d7add`); `(H)` scores below
-> are retained as historical relevance to a general chord/theory consumer.
+> (`baseline/music-asa/` and `baseline/legal-tech/`).
+>
+> **Harmonia — corrected framing (2026-05-26):** Harmonia is **real but unpublished** — a
+> single local HTML file (vanilla HTML/CSS/JS, **zero dependencies**, hand-rolled music theory
+> and byte-level MIDI writer). It is **not on GitHub** (`github.com/slittycode/harmonia` → 404,
+> re-verified 2026-05-26) and **not** the "React + Tonal.js chord-progression tool" earlier
+> docs claimed. Two prior framings — "Harmonia is a React/Tonal.js GitHub repo" (incorrect
+> stack) and "Harmonia is a phantom / does not exist" (incorrect existence; an ASA-side
+> over-correction) — are both superseded by this. `(H)` scores below are retained as
+> **conceptual relevance** to Harmonia's idea space (chords, key, reharmonization, roman
+> numerals, piano UI, MIDI export). No `(H)` repo is a "stack-compatible" / "incorporate into
+> Harmonia's codebase" candidate, because Harmonia has no codebase to incorporate into.
 
 Every repo at relevance **≥ 3** is listed; where sweeps disagreed we keep the most
 favourable verdict (and now the corrected one). Repos that fell **below 3** in the
@@ -20,8 +29,9 @@ re-score are listed under "Downgraded out."
 3.11 + FastAPI** backend + **React 19** frontend that measures audio **server-side**
 (L1 native **Essentia 2.1b6**; L2 **torchcrepe** pitch on **Demucs** stems) then has
 **Gemini** (Phase 2) emit measurement-cited **Ableton Live 12 device/param**
-recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progression
-/ reharmonization — **unverified**: no repo found, scores held from prior sweeps).
+recommendations. `(H)` = **conceptual relevance** to **Harmonia** (unpublished local
+single-file vanilla-JS chord/reharmonization tool — no repo, no dependencies, no
+stack to fit; `(H)` = idea/UX/dataset reference only, never a code-lift target).
 `★` = incorporation plan in `incorporations/`. `⚠` = caveat. `(new)` = surfaced
 2026-05-20.
 
@@ -94,7 +104,7 @@ recommendations. `(H)` = relevance to **Harmonia** (React/Tonal.js chord-progres
 - **4** · [marcus/good-composer](https://github.com/marcus/good-composer) — FastAPI + WebSocket streaming + React + LLM = ASA's stack pattern. _(↑)_
 - **3** · [Boof2015/astra](https://github.com/Boof2015/astra) — Electron player; decoupled analysis/output paths + visualizer-rack UX.
 
-## Harmonia — chords, key, theory _(unverified — scores held)_
+## Harmonia — chords, key, theory _(conceptual references; Harmonia is an unpublished single-file vanilla-JS tool)_
 
 - **5** · [ptnghia-j/ChordMiniApp](https://github.com/ptnghia-j/ChordMiniApp) — chord recognition + beat + lyrics + OpenSheetMusicDisplay.
 - **4** · [spyroskantarelis/chordonomicon](https://github.com/spyroskantarelis/chordonomicon) — 666K section-labelled chord progressions dataset.

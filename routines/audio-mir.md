@@ -4,12 +4,15 @@ Recurring sweep that surfaces newly relevant GitHub repos in audio DSP / MIR / m
 music generation for the **ASA** and **Harmonia** projects. One of two streams in this repo
 (see `routines/README.md`).
 
-> NOTE: this supersedes an earlier framing that described ASA as "an in-browser Essentia.js
-> library." That was wrong and biased scoring toward browser/WASM tools. ASA is a SERVER-SIDE
-> Python app. The **[Gemini role]** slot below is now filled from ASA's own `CLAUDE.md`;
-> **Harmonia** is described from ASA's own incorporations doc and is still NOT verified against
-> Harmonia's own `CLAUDE.md`. When in doubt, read those repos and treat them as authoritative
-> over this summary.
+> NOTE: this supersedes two earlier framings. (1) ASA was described as "an in-browser
+> Essentia.js library" — that was wrong and biased scoring toward browser/WASM tools; ASA is a
+> SERVER-SIDE Python app. (2) Harmonia was described as "a React + Tonal.js chord-progression /
+> reharmonization tool" and treated as a discoverable GitHub repo — that was also wrong.
+> Harmonia is a single, unpublished local HTML file (vanilla HTML/CSS/JS, zero dependencies;
+> hand-rolled music theory + byte-level MIDI writer). There is no `slittycode/harmonia` repo
+> (404). The **[Gemini role]** slot below is filled from ASA's own `CLAUDE.md`; Harmonia is
+> now described accurately below. When in doubt, treat ASA's own repo and the actual Harmonia
+> HTML file as authoritative over this summary.
 
 ## Projects (verify against each repo's CLAUDE.md; this is a convenience copy)
 - **ASA** — a SERVER-SIDE Python (FastAPI) backend + React frontend application. Audio analysis
@@ -22,11 +25,15 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
   JSON (spectral features, chroma/HPCP, key, chords, genre, EBU R128 loudness/true-peak/LRA,
   BPM/beats/rhythm, structure, stems, melody). It is an APP, not a library: NO Essentia.js, NO
   client-side/in-browser DSP, NO WASM. PyTorch is already in the stack.
-- **Harmonia** — a React chord-progression / reharmonization tool on Tonal.js. Symbolic-first (not
-  audio-first); license assumed MIT but unconfirmed. *(Per ASA's own
-  `incorporations/forking-plans-2026-05-14.md`, which flags Harmonia's license as "Assumed MIT
-  (confirm — out of repo)" — NOT verified against Harmonia's own CLAUDE.md, which is out of scope
-  from this ASA-scoped session.)*
+- **Harmonia** — an unpublished, single-file, dependency-free **vanilla HTML/CSS/JS** "Chord
+  Progression Studio": hand-rolled music theory (note tables, scale/chord-interval maps, roman
+  numerals) and a hand-rolled byte-level MIDI writer — **no React, no Tonal.js, no build, no
+  imports**. Features: mood/genre → diatonic progression generation, roman-numeral analysis, SVG
+  piano, a **Substitutions** panel (relative minor/major, tritone sub, sus voicings — i.e.
+  reharmonization), Web Audio playback, MIDI export. Symbolic-first; one local file, not a repo
+  (`github.com/slittycode/harmonia` → 404). Because it has no codebase to "incorporate into" and
+  no dependencies to be "stack-compatible with," **discovered repos can only ever be conceptual
+  references** (UX ideas, datasets, technique notes) — never code lifts or fork targets.
 
 ## Workflow
 
@@ -48,7 +55,8 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
 4. For the rest (cap at 15), pull: description, stars, last commit date, README (~200 words),
    primary language.
 
-5. Score each 1–5 on relevance to ASA or Harmonia. Drop anything <3. Score against the REAL stacks:
+5. Score each 1–5 on relevance to ASA or Harmonia. Drop anything <3. Score against the REAL
+   shape of each project:
    - ASA runs server-side on NATIVE Essentia (Python/C++). Native C/C++/Rust/Python audio
      libraries are FIRST-CLASS (a Rust crate is a PyO3 extension or sidecar; a C++ lib is a native
      dependency). Do NOT penalise "native / not browser-friendly."
@@ -60,10 +68,17 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
      servers, and prompt-to-analysis tooling are genuinely ASA-relevant — NOT merely "tangential".
    - ASA is an application: REST/API contract design, React analysis UIs, and job/queue patterns
      count.
-   - Score Harmonia against its real stack (verify via CLAUDE.md).
+   - **Harmonia is an unpublished, dependency-free, single-file vanilla-JS toy.** It has no
+     codebase to incorporate into, no stack to be compatible with, and no consumer beyond its
+     author. Score `(H)` purely as **conceptual relevance** to Harmonia's idea space — chord
+     progressions, reharmonization, roman numerals, key/scale UI, piano UI, MIDI export, mood/
+     genre→progression — and never as stack-fit, "Tonal.js drop-in", "React/Tone.js family", or
+     "incorporate into Harmonia's codebase." Don't down-score for being native / C++ / Python /
+     Rust either — every Harmonia-relevant repo is reference-only by definition.
 
 6. Append survivors to `discoveries/audio-mir-<YYYY-MM-DD>.md` with sections: ASA-relevant /
-   Harmonia-relevant / Both / Tangential but interesting. Two-sentence pitch each, link, score.
+   Harmonia-relevant (conceptual) / Both / Tangential but interesting. Two-sentence pitch each,
+   link, score.
 
 7. Append surfaced `owner/repo` lines to `_seen.txt`.
 

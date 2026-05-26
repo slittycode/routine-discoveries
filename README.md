@@ -5,7 +5,9 @@ a different purpose; results land on `main` as the single source of truth.
 
 ## Streams
 
-- **audio-mir** — audio / MIR / music-theory tooling for the **ASA** and **Harmonia** projects.
+- **audio-mir** — audio / MIR / music-theory tooling for the **ASA** project and as a
+  conceptual-idea bench for **Harmonia** (an unpublished, single-file, dependency-free vanilla-JS
+  chord/reharmonization tool; no repo, no stack to fit, candidates are reference-only).
   - sweeps: `discoveries/audio-mir-<date>.md` · dedupe: `discoveries/_seen.txt` · shortlist:
     `RECOMMENDATIONS.md` · routine: `routines/audio-mir.md`
 - **legaltech-nz** — personal tools a NZ property lawyer (who "vibe-codes") could **fork and build

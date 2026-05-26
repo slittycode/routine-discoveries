@@ -1,5 +1,17 @@
 # Forking / incorporation planning prompt — 2026-05-14
 
+> **Correction (2026-05-26):** the prompt below describes both targets incorrectly. ASA was
+> later corrected (server-side Python/FastAPI, not Essentia.js / in-browser — see
+> `discoveries/reanalysis-2026-05-20.md`). **Harmonia** is also wrong in the prompt — it is
+> **not** "a React chord-progression / reharmonization tool built on Tonal.js." Harmonia is a
+> **single, unpublished local HTML file**: vanilla HTML/CSS/JS, **zero dependencies**, with
+> hand-rolled music theory and byte-level MIDI writer (`github.com/slittycode/harmonia` → 404).
+> The agent that ran this prompt produced `forking-plans-2026-05-14.md` (now historical) under
+> the wrong premises — its **Track 4** (ChordMiniApp) and **Track 5** (chordonomicon) plans
+> were framed as code/dataset incorporations into a stack Harmonia doesn't have. Treat any
+> output of this prompt as historical; do not re-run it without rewriting Tracks 4–5 to
+> "conceptual reference only" for Harmonia.
+
 A ready-to-paste prompt for a coding agent. It directs the agent to turn
 five discoveries into concrete forking / incorporation plans, in the same
 shape as `incorporations/asa-2026-05-13.md`.

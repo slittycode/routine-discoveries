@@ -1,5 +1,16 @@
 # Re-analysis — 2026-05-20
 
+> **Follow-up correction (2026-05-26):** this re-analysis fixed ASA's description but **held
+> Harmonia's `(H)` scores under an unverified "React + Tonal.js browser app" assumption**
+> (see *"Could not reach ground truth"* / *"genuinely is a React/Tonal.js browser app"*
+> below). That assumption is **wrong**. Harmonia is a **single, unpublished local HTML
+> file**: vanilla HTML/CSS/JS, **zero dependencies**, hand-rolled music theory + byte-level
+> MIDI writer; `github.com/slittycode/harmonia` → 404. So the browser/native correction
+> *does* apply to Harmonia after all (its "browser-ness" was just a wrong assumption);
+> Harmonia has no codebase or stack to be compatible with. `(H)` scores below should be read
+> as **conceptual** chord/theory idea references only, not stack-fit or code-lift targets.
+> This file is left intact as the audit trail.
+
 Every prior sweep (05-13, 05-14, 05-17, 05-18, 05-19) scored repos against a
 **wrong** description of ASA — *"Essentia.js DSP pipeline … in-browser"* — which
 biased scores toward browser/WASM/client-side tools and penalised native
