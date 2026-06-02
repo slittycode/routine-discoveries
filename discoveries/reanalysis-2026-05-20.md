@@ -32,11 +32,14 @@ archived Python predecessor `slittycode/sonic-analyzer`). From its
 This resolves the brief's `[FILL IN]`: **Gemini is the Phase-2 interpreter** mapping
 measurements → grounded Ableton device/param advice.
 
-**Harmonia:** no repo exists under the account and ASA never references it. **Could
-not reach ground truth** — I treat the brief's description ("React chord-progression/
-reharmonization on Tonal.js") as an unverified assumption and **hold** all Harmonia
-`(H)` scores. The browser/native correction barely applies to Harmonia anyway (it
-genuinely *is* a React/Tonal.js browser app).
+**Harmonia:** no repo exists under the account and ASA never references it. The
+description in the brief ("React chord-progression/reharmonization on Tonal.js") was
+an incorrect assumption — **Harmonia is real but was mis-described.** Ground truth
+(confirmed by the owner, 2026-06-02): Harmonia is an **unpublished, dependency-free,
+vanilla-JS single-file** chord/reharmonization tool with no GitHub repo and no npm
+ecosystem. It has no React, no Tonal.js, no external dependencies. All `(H)` scores
+are held as **conceptual references** to chord/theory work. The note "it genuinely is
+a React/Tonal.js browser app" in earlier context was also wrong and is retracted.
 
 ## Two systematic errors (not one)
 
@@ -141,8 +144,10 @@ relevant by definition); low-signal awesome-lists `BillyDM/awesome-audio-dsp` &
 
 ## Assumptions & limits
 
-- **Harmonia is unverified** (no repo found; absent from ASA). Its `(H)` scores are
-  held and flagged. If a Harmonia repo exists elsewhere, re-run.
+- **Harmonia ground truth confirmed (2026-06-02):** it is real but was mis-described as
+  "React + Tonal.js." It is a vanilla-JS single-file tool, unpublished, no GitHub repo.
+  All `(H)` scores are held as conceptual chord/theory references; do not re-run for a
+  GitHub repo (there is none to find).
 - ASA facts are from its public `CLAUDE.md`/`README.md`, treated as authoritative
   over the brief's summary (per instructions). The `[FILL IN]` for Gemini is
   resolved above.

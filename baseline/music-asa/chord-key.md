@@ -1,11 +1,12 @@
 # music-asa / chord-key
 
 Chord and key detection — audio→chord, audio→key, and the harmonic-core MIR that
-feeds both ASA's tonal stage and a (phantom) Harmonia consumer. Scores are **1–5
-relevance** to ASA / Harmonia plus a flag: `ASA` · `H` (Harmonia = **phantom**: no
-such project; `H` repos are kept as general chord/key references, mineable but not
-validated against any real consumer) · `Both` · `tang`. See `../README.md` for the
-spec; corrected scores follow `discoveries/reanalysis-2026-05-20.md`.
+feeds both ASA's tonal stage and Harmonia as a conceptual consumer. Scores are **1–5
+relevance** to ASA / Harmonia plus a flag: `ASA` · `H` (Harmonia = **conceptual
+reference**: a real but unpublished, vanilla-JS single-file chord tool — prior "React+
+Tonal.js" description was wrong; `H` repos are chord/key idea-references, not
+incorporation candidates) · `Both` · `tang`. See `../README.md` for the spec;
+corrected scores follow `discoveries/reanalysis-2026-05-20.md`.
 
 ## Cross-domain (full entry here — harmonic-core)
 

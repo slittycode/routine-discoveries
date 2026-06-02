@@ -1,5 +1,16 @@
 # Forking / incorporation planning prompt — 2026-05-14
 
+> **Correction (2026-06-02):** This prompt was written with an inaccurate description of Harmonia.
+> Harmonia is NOT "a React chord-progression / reharmonization tool built on Tonal.js." It is an
+> unpublished, dependency-free, vanilla-JS single-file chord/reharmonization tool with no GitHub
+> repo and no npm ecosystem. The "Harmonia is React + Tonal.js" and "ASA is in-browser JS / WASM"
+> descriptions embedded in the prompt text are both wrong (see `routines/audio-mir.md` for the
+> corrected framing of both). Items 4 and 5 (ChordMiniApp and chordonomicon) remain **conceptually
+> relevant** to chord-progression work — keep them as idea references — but the "incorporate into
+> Harmonia's codebase / fork for Harmonia" framing does not apply since Harmonia has no build, no
+> npm, and no place for external dependencies. Item 1 (audio-analyzer-rs) similarly used wrong
+> assumptions about Harmonia's architecture in framing the "shared core" question.
+
 A ready-to-paste prompt for a coding agent. It directs the agent to turn
 five discoveries into concrete forking / incorporation plans, in the same
 shape as `incorporations/asa-2026-05-13.md`.
