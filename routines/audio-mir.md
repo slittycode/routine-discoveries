@@ -56,8 +56,14 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
      bundle-size / cold-start — these are irrelevant to ASA and were a past framing error.
    - The Essentia ecosystem (Essentia, gaia, Essentia models, host/wrapper references) is directly
      relevant to ASA.
-   - ASA has a Gemini/LLM layer: LLM-/agent-driven analysis, natural-language music interfaces, MCP
-     servers, and prompt-to-analysis tooling are genuinely ASA-relevant — NOT merely "tangential".
+   - ASA has a Gemini/LLM layer: LLM-/agent-driven *analysis*, natural-language music interfaces,
+     MCP servers, and prompt-to-analysis tooling are genuinely ASA-relevant — NOT merely
+     "tangential". BUT ASA's Phase 1 is deterministic DSP/MIR and is the ground truth: native
+     audio / DSP / MIR libraries and chord / key / beat / loudness / structure models are the
+     PRIORITY. Do NOT inflate a repo just because it has an LLM / agent / MCP. A generic
+     music-LLM chat or MCP wrapper that adds no new DSP/MIR or analysis capability is a thin
+     wrapper — tangential at most. Music *generation* models count only when they feed analysis
+     or Harmonia reharmonization; a pure text-to-music generator is off-target.
    - ASA is an application: REST/API contract design, React analysis UIs, and job/queue patterns
      count.
    - Score Harmonia against its real stack (verify via CLAUDE.md).
@@ -71,3 +77,8 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
 
 Be direct. Don't pad the pitches. If a repo is a thin wrapper around something I'd already know
 about, say so and drop the score. Ignore any licence considerations.
+
+Keep the sweep DSP/MIR-led: at most about a third of survivors should be AI-first (music-LLM /
+agent / MCP / generation). The rest should be native analysis, DSP, MIR, or music-theory tooling.
+If you can't fill that third with genuinely ASA-relevant analysis-LLM work, ship fewer survivors
+rather than padding with generation models or MCP wrappers.
