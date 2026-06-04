@@ -52,3 +52,12 @@ memex-lab/memex
 dejuknow/md-redline
 alexanderatallah/redline
 rdegges/redline
+UseJunior/safe-docx
+superdoc-dev/superdoc
+trailofbits/graphtage
+afnanenayet/diffsitter
+super-productivity/super-productivity
+open-agreements/open-agreements
+Sysmagine/SemanticDiff
+docMentis/docmentis-udoc-viewer
+kako-jun/diffx
