@@ -122,3 +122,17 @@ dr-schlange/nallely-midi
 k2-fsa/sherpa-onnx
 rsxdalv/TTS-WebUI
 scragnog/HOT-Step-CPP
+jdez23/MiDiMe
+Omodaka9375/MIDIfren
+justinsalamon/audio_to_midi_melodia
+jonas-nothnagel/drum-beat-extractor
+meyda/meyda
+svsdval/video2midi
+danryland/groove-ai
+AxelCurso/youtube2midi
+supercollider/supercollider
+gvellut/dmp_midi
+stephenhandley/DrumMachinePatterns
+echolevel/Acid-Injector
+RyoK3N/Akai_MPC_25
+spite/WebAudioExtension
