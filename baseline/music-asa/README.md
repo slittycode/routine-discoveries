@@ -5,14 +5,16 @@ streams. **ASA** (`ableton-sonic-analyzer`) is a **server-side Python/FastAPI** 
 (React frontend) running **native** Essentia + librosa + torchcrepe + Demucs (PyTorch
 in-stack), with a **Gemini Phase-2** layer mapping the deterministic analysis JSON to
 Ableton Live 12 device/parameter advice — it is **not** in-browser / WASM / Essentia.js,
-so native C/C++/Rust/Python is first-class here. **Harmonia is a phantom**: no such
-project exists (`github.com/slittycode/harmonia` → 404; confirmed in ASA PR #98 /
-commit `f8d7add`), so every `H` repo is kept as a general chord/key/theory/UI reference —
-mineable, but not validated against any real consumer. See `../README.md` for the spec.
+so native C/C++/Rust/Python is first-class here. **Harmonia** is slittycode's
+**unpublished, dependency-free single-file vanilla-JS** chord/reharmonization tool — **not** a
+GitHub repo (`github.com/slittycode/harmonia` → 404) and **not** a "phantom" (it exists, just
+unpublished). With no repo and no deps, every `H` repo is a **conceptual reference only** (UX /
+algorithm / dataset for a chord tool), never a dependency or stack match. See `../README.md`.
 
 ## Legend
 - **Score = 1–5 relevance** to ASA/Harmonia plus a flag: `ASA` · `H` (Harmonia =
-  **phantom**) · `Both` · `tang` (tangential). This is the music schema — *not* the
+  conceptual ref — unpublished dep-free tool, no stack to match) · `Both` · `tang`
+  (tangential). This is the music schema — *not* the
   legal `fork/spark` scale.
 - **`maturity`** = `lib` (import/fork-and-run library) · `app` (runnable application) ·
   `model` (a pretrained model / training code) · `alpha` (early) · `reference`
@@ -155,7 +157,7 @@ mineable, but not validated against any real consumer. See `../README.md` for th
 - **`loudness-dynamics-dsp.md`** — loudness/R128, true-peak, LRA, dynamic-range; native DSP filters; and mel/spectrogram/visualization surfaces (ASA's Phase-1 loudness + dynamics stage).
 - **`stem-separation.md`** — source separation (ASA's Layer 2): Demucs + forks/ports/app-shells and other separation models/toolkits.
 - **`pitch-beat-tempo.md`** — pitch (torchcrepe on stems), beat/tempo estimation, and audio fingerprinting/identification on the margins.
-- **`chord-key.md`** — chord and key detection (audio→chord, audio→key) and the harmonic-core MIR feeding ASA's tonal stage and a phantom Harmonia consumer.
+- **`chord-key.md`** — chord and key detection (audio→chord, audio→key) and the harmonic-core MIR feeding ASA's tonal stage and, conceptually, a chord tool like Harmonia.
 - **`symbolic-theory.md`** — symbolic music, music-theory libraries, datasets, and tokenizers — the Harmonia-adjacent stream.
 - **`ableton-mcp-daw.md`** — Ableton / MCP / DAW plumbing and the agentic surface that lets an LLM read or drive a DAW (the "apply the Phase-2 recommendation in Live" companion).
 - **`llm-music-generation.md`** — LLM-for-music, audio-LLM understanding, and music generation — the model layer adjacent to ASA's Gemini Phase-2 interpreter and Phase-3 audition generation.
