@@ -111,7 +111,13 @@ Harmonia dependency or "matches Harmonia's stack."
      recs, so Ableton / Max-for-Live / Ableton-MCP tooling is core ASA relevance, not
      "tangential."
    - **LLM/agent layer:** audio-LLMs, LLM-/agent-driven analysis, natural-language
-     music interfaces, MCP servers, and prompt-to-analysis tooling are ASA-relevant.
+     music interfaces, MCP servers, and prompt-to-analysis tooling are ASA-relevant —
+     but ASA's Phase 1 is deterministic DSP/MIR and is the ground truth, so native DSP /
+     MIR / chord / key / beat / loudness / structure tooling is the **priority**. Do NOT
+     inflate a repo just for having an LLM / agent / MCP: a generic music-LLM chat or MCP
+     wrapper that adds no new DSP/MIR or analysis capability is a thin wrapper (tangential
+     at most). Music *generation* counts only when it feeds analysis or a Harmonia
+     conceptual reference; a pure text-to-music generator is off-target.
    - **ASA is an app:** REST/API contract design, React analysis UIs, and
      job/queue/server-deployment patterns count.
    - Chord/key **audio** repos that feed ASA's chord/key detection stage are `ASA`
@@ -139,3 +145,8 @@ Harmonia dependency or "matches Harmonia's stack."
 
 Be direct. Don't pad pitches. If a repo is a thin wrapper around something already
 known (or already in `_seen.txt`), say so and drop it. Ignore licence considerations.
+
+Keep the sweep DSP/MIR-led: at most about a third of survivors should be AI-first (music-LLM /
+agent / MCP / generation). The rest should be native analysis, DSP, MIR, or music-theory tooling.
+If you can't fill that third with genuinely ASA-relevant analysis-LLM work, ship fewer survivors
+rather than padding with generation models or MCP wrappers.

@@ -122,3 +122,16 @@ dr-schlange/nallely-midi
 k2-fsa/sherpa-onnx
 rsxdalv/TTS-WebUI
 scragnog/HOT-Step-CPP
+OpenMOSS/MOSS-Audio
+SUC-DriverOld/MSST-WebUI
+gluon/AbletonLive12_MIDIRemoteScripts
+Evilander/logic2ableton
+M-Igashi/headroom
+Metacreation-Lab/MIDI-GPT
+BinWang28/audio-ai-hub
+Yikai-Liao/symusic
+olilarkin/paulstretch-for-live
+federico-pepe/ableton-live-extensions
+XIAODUOLU/Midra
+Chz1Y/Steerable-music-transformer
+SNU-LIST/chi-separation
