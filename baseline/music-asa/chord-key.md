@@ -1,11 +1,11 @@
 # music-asa / chord-key
 
 Chord and key detection — audio→chord, audio→key, and the harmonic-core MIR that
-feeds both ASA's tonal stage and a (phantom) Harmonia consumer. Scores are **1–5
-relevance** to ASA / Harmonia plus a flag: `ASA` · `H` (Harmonia = **phantom**: no
-such project; `H` repos are kept as general chord/key references, mineable but not
-validated against any real consumer) · `Both` · `tang`. See `../README.md` for the
-spec; corrected scores follow `discoveries/reanalysis-2026-05-20.md`.
+feeds both ASA's tonal stage and Harmonia as a conceptual consumer. Scores are **1–5
+relevance** to ASA / Harmonia plus a flag: `ASA` · `H` (Harmonia = real but unpublished
+single-file vanilla-JS tool; no repo/deps; `H` repos are conceptual chord/key idea
+references) · `Both` · `tang`. See `../README.md` for the spec; corrected scores follow
+`discoveries/reanalysis-2026-05-20.md`.
 
 ## Cross-domain (full entry here — harmonic-core)
 
@@ -30,12 +30,12 @@ spec; corrected scores follow `discoveries/reanalysis-2026-05-20.md`.
 - **3/H** · [ifeelvoid/keyfinder](https://github.com/ifeelvoid/keyfinder) · `Swift` · `45★` · `active:2026-03` · `maturity:app`
   Native macOS app + VST/AU detecting key (Camelot), BPM, and waveforms via a custom **Krumhansl-Schmuckler** engine (16k-point FFT, bass weighting), sharing one Swift `KeyFinderEngine` package across app and plugin. Off-stack (Swift) but a tidy from-scratch K-S worked example. **Mine:** read the K-S implementation (FFT size, bass-weighting) and copy the app↔plugin shared-engine split if you ever ship both. _(surfaced 05-19 · tags: key, krumhansl, swift, vst)_
 - **3/H** · [markwilkins/midi-chord-reader](https://github.com/markwilkins/midi-chord-reader) · `C++` · `22★` · `maturity:app`
-  JUCE/C++ DAW plugin naming chords from a MIDI track during playback — normalises to one octave while preserving bass, generates slash inversions (`Am/C`), filters 2nd/4th/6th passing tones, uses the lowest three notes for quality. **Mine:** lift the chord-naming heuristics (octave-normalise + slash inversion + passing-tone filter) for any "given these MIDI notes, name the chord" path outside a Tonal.js dependency. _(surfaced 05-17 · tags: chord, midi, juce, heuristic)_
+  JUCE/C++ DAW plugin naming chords from a MIDI track during playback — normalises to one octave while preserving bass, generates slash inversions (`Am/C`), filters 2nd/4th/6th passing tones, uses the lowest three notes for quality. **Mine:** lift the chord-naming heuristics (octave-normalise + slash inversion + passing-tone filter) for any "given these MIDI notes, name the chord" use case. _(surfaced 05-17 · tags: chord, midi, juce, heuristic)_
 
 ## Marginal — kept with a note (low)
 
 - **low/H** · [lorediggia/harmony-lab](https://github.com/lorediggia/harmony-lab) · `Rust` · `maturity:app`
-  Minimal Rust scale/chord explorer. Dropped 05-21 as too small and wrong-stack for a Harmonia. **Mine:** only as a tiny reference for representing scales/chords in Rust if a native harmonic helper is wanted. _(surfaced 05-21 · tags: chord, scale, rust)_
+  Minimal Rust scale/chord explorer. Dropped 05-21 as too small. **Mine:** only as a tiny reference for representing scales/chords in Rust if a native harmonic helper is wanted. _(surfaced 05-21 · tags: chord, scale, rust)_
 - **low/tang** · [sepandhaghighi/capo](https://github.com/sepandhaghighi/capo) · `Python` · `maturity:lib`
   Python guitar-chord transposition. Dropped 05-21 (Tonal.js already transposes). **Mine:** capo/transpose mapping logic only, if a guitar-specific transpose ever comes up. _(surfaced 05-21 · tags: chord, guitar, transpose)_
 - **low/tang** · [timvancann/chordflow](https://github.com/timvancann/chordflow) · `Rust` · `maturity:app`

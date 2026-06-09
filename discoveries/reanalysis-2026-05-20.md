@@ -38,6 +38,14 @@ reharmonization on Tonal.js") as an unverified assumption and **hold** all Harmo
 `(H)` scores. The browser/native correction barely applies to Harmonia anyway (it
 genuinely *is* a React/Tonal.js browser app).
 
+> **Correction (2026-06-09):** Harmonia *is* real — it is an unpublished, single-file,
+> dependency-free vanilla-JS chord/reharmonization tool (no React, no Tonal.js, no
+> imports; a local HTML file the owner built). The statement "it genuinely *is* a
+> React/Tonal.js browser app" above is incorrect. The GitHub 404 stands (no repo), but
+> the project itself exists. Held `(H)` scores remain valid as chord/theory/UX idea
+> references; all prior "stack-fit" framing (React/Tonal.js compatibility, "bundle size",
+> "incorporate into Harmonia's codebase") should be disregarded.
+
 ## Two systematic errors (not one)
 
 1. **Browser/native bias** (the brief's premise). Native C/C++/Rust/Python tools

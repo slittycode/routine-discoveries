@@ -1,5 +1,13 @@
 # Forking / incorporation planning prompt — 2026-05-14
 
+> **Correction (2026-06-09):** The agent prompt below describes Harmonia as "a React
+> chord-progression / reharmonization tool built on Tonal.js" and states "Harmonia is
+> React + Tonal.js." Both are wrong. Harmonia is a real, unpublished, single-file,
+> dependency-free vanilla-JS tool — no React, no Tonal.js, no build. The Harmonia-related
+> forking angles in this prompt (stack-fit reasoning, "React + Tonal.js" compatibility
+> framing) are therefore inapplicable. Repos tagged for Harmonia remain valid conceptual
+> idea references.
+
 A ready-to-paste prompt for a coding agent. It directs the agent to turn
 five discoveries into concrete forking / incorporation plans, in the same
 shape as `incorporations/asa-2026-05-13.md`.

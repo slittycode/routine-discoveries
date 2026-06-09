@@ -22,11 +22,16 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
   JSON (spectral features, chroma/HPCP, key, chords, genre, EBU R128 loudness/true-peak/LRA,
   BPM/beats/rhythm, structure, stems, melody). It is an APP, not a library: NO Essentia.js, NO
   client-side/in-browser DSP, NO WASM. PyTorch is already in the stack.
-- **Harmonia** — a React chord-progression / reharmonization tool on Tonal.js. Symbolic-first (not
-  audio-first); license assumed MIT but unconfirmed. *(Per ASA's own
-  `incorporations/forking-plans-2026-05-14.md`, which flags Harmonia's license as "Assumed MIT
-  (confirm — out of repo)" — NOT verified against Harmonia's own CLAUDE.md, which is out of scope
-  from this ASA-scoped session.)*
+- **Harmonia** — a real but unpublished, single-file, dependency-free vanilla-JS chord /
+  reharmonization tool (a local HTML file the owner built; no React, no Tonal.js, no imports,
+  no build). Features: mood/genre → diatonic progression generation, roman-numeral analysis,
+  SVG piano, chord Substitutions panel (relative minor/major, tritone sub, sus voicings), Web
+  Audio playback, MIDI export. Symbolic-first: yes. **Not on GitHub** —
+  `github.com/slittycode/harmonia` → 404; no repo, no CLAUDE.md. Prior sweeps described
+  Harmonia as "React chord-progression / reharmonization on Tonal.js" — that was wrong.
+  ⚠ **Owner decision needed:** since Harmonia has no repo and no build, stack-compatibility
+  scoring is meaningless; candidates can only ever be *conceptual* references (UX/interaction
+  ideas, datasets). See workflow step 5 below.
 
 ## Workflow
 
@@ -60,7 +65,11 @@ music generation for the **ASA** and **Harmonia** projects. One of two streams i
      servers, and prompt-to-analysis tooling are genuinely ASA-relevant — NOT merely "tangential".
    - ASA is an application: REST/API contract design, React analysis UIs, and job/queue patterns
      count.
-   - Score Harmonia against its real stack (verify via CLAUDE.md).
+   - **Harmonia** is an unpublished, dependency-free single HTML file — no CLAUDE.md, no repo,
+     no dependencies to swap in. Do NOT score Harmonia-adjacent repos for stack-fit or
+     "incorporate into Harmonia." Tag them `(H)` as **conceptual references only**: UX ideas
+     (chord display, roman-numeral UI, substitution panels), dataset feeds, and algorithms that
+     could inform a future expanded version. Note "idea reference, not stack-fit" in each pitch.
 
 6. Append survivors to `discoveries/audio-mir-<YYYY-MM-DD>.md` with sections: ASA-relevant /
    Harmonia-relevant / Both / Tangential but interesting. Two-sentence pitch each, link, score.
