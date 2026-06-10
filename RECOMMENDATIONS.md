@@ -70,11 +70,17 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **4** · [Ryan5453/demucs-next](https://github.com/Ryan5453/demucs-next) — faster modern Demucs fork; direct L2 speed win. _(↑)_
 - **4** · [ssmall256/demucs-mlx](https://github.com/ssmall256/demucs-mlx) — pip-importable Apple-Silicon Demucs; L2 drop-in for Mac users. _(was wrongly dropped)_
 - **4** · [undef13/splifft](https://github.com/undef13/splifft) — modular separation/transcription + 110-model registry ("swap separation backend"). _(↑)_
+- **4** · [Yikai-Liao/symusic](https://github.com/Yikai-Liao/symusic) — C++20 MIDI/ABC toolkit with Python bindings (nanobind); faster symbolic MIDI manipulation for ASA's note-level / melody-round-trip stages. _(05-27)_
+- **4** · [Omodaka9375/MIDIfren](https://github.com/Omodaka9375/MIDIfren) — pure-Python audio→MIDI (stem separation, BPM, pitch-bend, quantize); on ASA's stack, reference for audio→symbolic conversion. _(06-04)_
 - **3** · [crlandsc/moises-light](https://github.com/crlandsc/moises-light) — band-split U-Net reference.
 - **3** · [sweetspotsoundsystem/stemgen-rt](https://github.com/sweetspotsoundsystem/stemgen-rt) — real-time 4-stem JUCE/VST plumbing.
 - **3** · [asteroid-team/asteroid](https://github.com/asteroid-team/asteroid) — mature PyTorch separation toolkit. _(was wrongly dropped)_
 - **3** · [paladini/voice-separator-demucs](https://github.com/paladini/voice-separator-demucs) — FastAPI + Demucs = ASA's L2-as-a-service shape. _(was wrongly dropped)_
 - **3** · [openvpi/GAME](https://github.com/openvpi/GAME) — singing-voice→MIDI diffusion (pitch adjacent; ASA uses torchcrepe).
+- **3** · [magenta/mt3](https://github.com/magenta/mt3) — Google Magenta multi-task multi-track transcription transformer; upgrade path for ASA's melody/note-extraction stage on polyphonic material. _(05-27)_
+- **3** · [SUC-DriverOld/MSST-WebUI](https://github.com/SUC-DriverOld/MSST-WebUI) — MSST + UVR WebUI; "swap separation backend" reference alongside splifft. _(05-27)_
+- **3** · [justinsalamon/audio_to_midi_melodia](https://github.com/justinsalamon/audio_to_midi_melodia) — classic Melodia melody→MIDI reference (Py2.7/2019, algorithm lineage only). _(06-04)_
+- **3** · [jonas-nothnagel/drum-beat-extractor](https://github.com/jonas-nothnagel/drum-beat-extractor) — compact onset→MIDI drum recipe; thin but on-topic. _(06-04)_
 
 ## ASA — LLM / MCP / Ableton (Phase 2–3)
 
@@ -90,6 +96,7 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **3** · [williamzujkowski/live-coding-music-mcp](https://github.com/williamzujkowski/live-coding-music-mcp) — Strudel.cc over MCP (+ analysis + optional Gemini).
 - **3** · [Conceptual-Machines/magda-core](https://github.com/Conceptual-Machines/magda-core) — AI-first JUCE DAW; NL→DSL session edits (agentic-surface reference).
 - **3** · [geshang777/GaMMA](https://github.com/geshang777/GaMMA) — research audio-LLM for joint global/temporal music understanding; second data point for the LLM layer (paper repo, not packaged). _(05-21)_
+- **3** · [gluon/AbletonLive12_MIDIRemoteScripts](https://github.com/gluon/AbletonLive12_MIDIRemoteScripts) — decompiled Live 12 MIDI Remote Scripts; canonical reference for the addressable Live 12 control-surface API. _(05-27)_
 - **3** · [innermost47/ai-dj](https://github.com/innermost47/ai-dj) — server-side Stable Audio Open loop generator; Phase-3 audition-sample reference. _(was wrongly dropped)_
 - **3** · [prabal-rje/latentscore](https://github.com/prabal-rje/latentscore) — retrieval-based ambient generation (Phase-3 retrieval-gen angle).
 
@@ -98,6 +105,7 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **4** · [NeptuneHub/AudioMuse-AI](https://github.com/NeptuneHub/AudioMuse-AI) — Flask + Redis/RQ workers + PostgreSQL + Docker/K8s analysis app; ASA hosted-mode blueprint. _(new)_
 - **4** · [NeptuneHub/AudioMuse-AI-NV-plugin](https://github.com/NeptuneHub/AudioMuse-AI-NV-plugin) — thin client of the above; its queue arch is the value. _(↑)_
 - **4** · [marcus/good-composer](https://github.com/marcus/good-composer) — FastAPI + WebSocket streaming + React + LLM = ASA's stack pattern. _(↑)_
+- **4** · [jdez23/MiDiMe](https://github.com/jdez23/MiDiMe) — Django + Demucs v4 + React; near scale-model of ASA's architecture (server-side analysis job → React visualisation contract). _(06-04)_
 - **3** · [Boof2015/astra](https://github.com/Boof2015/astra) — Electron player; decoupled analysis/output paths + visualizer-rack UX.
 
 ## Harmonia — chords, key, theory _(conceptual references — no repo to incorporate)_
@@ -124,11 +132,13 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **4** · [a1ex90/MusicalKeyCNN](https://github.com/a1ex90/MusicalKeyCNN) — CQT-CNN key estimation + Camelot output (tonal signal for both).
 - **4** · [andreamust/consonance-ACE](https://github.com/andreamust/consonance-ACE) — Conformer audio chord-estimation (root/bass/pitch heads), pretrained, WAV→170-class timestamped `.lab`; modern server-side model for ASA's chord stage. _(05-21)_
 - **3** · [ifeelvoid/keyfinder](https://github.com/ifeelvoid/keyfinder) — from-scratch K-S key/BPM (Swift; worked-example reference).
+- **3** · [LiZhuoming-lab/seemusic](https://github.com/LiZhuoming-lab/seemusic) — Streamlit spectral+symbolic side-by-side workspace; UX pattern for ASA's Phase-1-JSON + Phase-2 output presentation. _(05-27)_
 
 ## Tangential / plumbing (kept at 3)
 
 - **3** · [phones24/ep133-export-to-daw](https://github.com/phones24/ep133-export-to-daw) — WebMIDI → DAWproject/REAPER/MIDI export.
 - **3** · [gluon/Void-LinkAudio](https://github.com/gluon/Void-LinkAudio) — sample-accurate beat-synced audio over LAN (umbrella for the old `ofxAbletonLinkAudio`).
+- **3** · [meyda/meyda](https://github.com/meyda/meyda) — established JS audio feature extraction (spectral centroid, ZCR, MFCC); cross-check reference for ASA's spectral features (no browser credit; reference only). _(06-04)_
 
 ## Net-new this re-score (2026-05-20)
 
@@ -163,3 +173,9 @@ all resolved to the corrected scores above.
 musicplusplus (3), continuator (3), rechord (3) — were previously only in `baseline/`
 and the dated sweep; now added above so the shortlist again lists every repo ≥3. They
 were already scored under the corrected server-side framing.
+
+**2026-05-27 sweep folded in:** five ≥3 survivors from `discoveries/audio-mir-2026-05-27.md`
+— symusic (4), mt3 (3), MSST-WebUI (3), AbletonLive12_MIDIRemoteScripts (3), seemusic (3).
+
+**2026-06-04 sweep folded in:** five ≥3 survivors from `discoveries/audio-mir-2026-06-04.md`
+— MiDiMe (4), MIDIfren (4), audio_to_midi_melodia (3), drum-beat-extractor (3), meyda (3, tangential).
