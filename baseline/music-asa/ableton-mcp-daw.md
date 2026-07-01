@@ -22,6 +22,34 @@ Ableton tooling are first-class; browser/WASM credit removed).
   FastMCP server exposing 13 music21 tools — Roman numerals, cadence detection, voice leading, harmonization, counterpoint — with HTTP/CLI mirrors for when MCP misbehaves (author flags a candid "40-50% MCP production success rate"). A FastMCP server exposing analysis/theory tools to an LLM *is* ASA's MCP-tool pattern. **Mine:** copy the FastMCP-tool-wrapping pattern (and the HTTP/CLI fallback design) as the template for exposing ASA's analysis JSON to Gemini as callable tools. _(surfaced 05-18 · re-scored 3→4 on 05-20 · tags: mcp, music21, theory, fastmcp)_
 - **4/ASA** · [hugohow/mcp-music-analysis](https://github.com/hugohow/mcp-music-analysis) · `Python` · `maturity:app`
   Python MCP server wrapping librosa (beat/tempo/MFCC/chroma/spectral-centroid/onset) for LLM consumption — the closest analog to "expose ASA's analysis to Gemini as tools." Net-new in the 05-20 corrected sweep. **Mine:** the most direct reference for ASA's planned MCP surface — fork the librosa-feature→MCP-tool mapping and adapt it to ASA's richer Essentia/torchcrepe/Demucs JSON. _(surfaced 05-20 · tags: mcp, librosa, analysis, llm)_
+- **4/ASA** · [hidingwill/AbletonBridge](https://github.com/hidingwill/AbletonBridge) · `TypeScript` · `39★` · `active:2026` · `maturity:app`
+  353 tools connecting LLMs to Ableton Live 12 via MCP, OSC, M4L, TCP/UDP — session view, clip manipulation, device parameters, mixer, transport. ASA's Phase 2 Gemini layer produces Ableton device/parameter recommendations; AbletonBridge is the execution layer that turns those recommendations into actual Live state changes. **Mine:** most direct reference for how ASA's output maps to real LOM operations. _(surfaced 06-16 · tags: ableton, mcp, osc, m4l, execution-layer)_
+  **Note:** the 2026-07-01 sweep's bulk "hobbyist SDK flood" drop-list (in `discoveries/audio-mir-2026-07-01.md`) separately re-surfaced this repo and mischaracterised it as "hobby-scale, no DSP content" — that characterisation is superseded by this ground-truthed entry; kept at 4/ASA. See `RECOMMENDATIONS.md`'s 2026-07-01 reconciliation footer for detail.
+
+## Platform: Ableton Extensions SDK (new, 07-01)
+
+Not a repo — Ableton's own official public beta (2026-06-02) of a free JS SDK
+(`@ableton-extensions/sdk`) for building Extensions that run *inside* Live 12 Suite
+with read/write access to tracks/clips/device-params/automation, launched via
+right-click. **5/ASA** as a platform: the first Ableton-sanctioned path to turn ASA's
+Phase-2/3 "Ableton 12 device/parameter/value" recommendations into an applied change
+instead of instructions the user manually replicates — see
+`discoveries/audio-mir-2026-07-01.md` for detail and official sources. **Mine:**
+spike whether the beta write surface reaches device-parameter resolution before
+committing; if so, this may remove the "no action until ASA goes desktop" blocker in
+`incorporations/asa-2026-05-13.md` (Extensions run inside Live, no separate desktop
+shell needed).
+
+- **4/ASA** · [jasper-zheng/ableton-sdk-mcp](https://github.com/jasper-zheng/ableton-sdk-mcp) · `TypeScript` · `15★` · `active:2026-06` · `maturity:app`
+  MCP server letting an LLM issue Extensions-SDK commands against a running Live set. First public proof the "LLM reads a JSON analysis, decides what to change" pattern (ASA's Gemini layer) can be wired straight into Live rather than stopping at advice text. **Mine:** read the exposed tool-call surface before building ASA's own equivalent; repo contents unread this session (search-only GitHub access, no file reads outside this repo — flagged, not fabricated). _(surfaced 07-01)_
+- **4/ASA** · [pnomolos/live-wire](https://github.com/pnomolos/live-wire) · `JavaScript` · `5★` · `active:2026-06` · `maturity:app`
+  "MCP bridge for Ableton Live — control Live from Claude or any MCP client via a Max for Live proxy and the Ableton Extensions platform." An independent second implementation of the ableton-sdk-mcp idea, three days apart — two unrelated MCP-over-Extensions-SDK bridges in the SDK's first month is a converging pattern, not a one-off. **Mine:** compare its Max-for-Live-proxy approach against ableton-sdk-mcp's direct-SDK approach when scoping ASA's own bridge. _(surfaced 07-01)_
+- **3/ASA** · [ImiteDev/ReverseVerb](https://github.com/ImiteDev/ReverseVerb) · `TypeScript` · `13★` · `active:2026-07` · `maturity:app`
+  One-click reverse-reverb-swell Extension: offline DSP triggered by right-clicking an audio clip. Small, but a concrete end-to-end reference for "packaged offline DSP as a Live Extension" — build, package to `.ablx`, clip-level processing. **Mine:** study the build/package pipeline as the template if ASA ships any of its own DSP as an Extension. _(surfaced 07-01)_
+- **3/ASA** · [madisonrickert/ablevsep](https://github.com/madisonrickert/ablevsep) · `TypeScript` · `34★` · `active:2026-06` · `maturity:app`
+  Extension sending a clip to MVSEP's hosted stem-separation models and returning stems inside Live. Conceptually overlaps ASA's own Demucs stem stage (cloud-model-in, stems-out); a concrete precedent for delivering a stem result as an in-DAW action instead of a download link. **Mine:** the clip-in/stems-out Extension wiring is directly reusable if ASA ever exposes its own stem output this way. _(surfaced 07-01)_
+- **3/tang** · [borel119/Beat-Inspector](https://github.com/borel119/Beat-Inspector) · `TypeScript` · `12★` · `active:2026-06` · `maturity:app`
+  "A Beat Detective–style non-warping audio quantizer for Ableton Live." Timing correction, not analysis — adjacent rather than on-target for ASA's measurement layer, but another concrete example of audio-domain DSP shipped as an Extension. **Mine:** nothing beyond confirming the pattern above; not analysis. _(surfaced 07-01)_
 
 ## Useful references (3)
 
