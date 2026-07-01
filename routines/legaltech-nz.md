@@ -119,7 +119,11 @@ two streams in this repo (see `routines/README.md`). Paste into the recurring ta
 
 8. Append surfaced `owner/repo` lines to `_seen-legaltech-nz.txt`.
 
-9. Commit to branch `claude/legaltech-discoveries-<YYYY-MM-DD>` and open a PR.
+9. Commit to branch `claude/legaltech-discoveries-<YYYY-MM-DD>` and open a PR into
+   `main`. Fold each survivor into `LEGALTECH-RECOMMENDATIONS.md` and add every
+   non-trash repo to the matching `baseline/legal-tech/` sub-domain file
+   (document-comparison-redlining · document-understanding-rag · foundations ·
+   productivity · nz-legal-content · wildcard-tangential · excluded).
 
 Be direct; pitch each repo as a personal tool he'd actually fork and run; state whether it runs
 locally. Don't pad. Ignore licence entirely.
