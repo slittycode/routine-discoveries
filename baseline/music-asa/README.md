@@ -45,6 +45,11 @@ algorithm / dataset for a chord tool), never a dependency or stack match. See `.
 | [ManasWolrd/WarpCore](https://github.com/ManasWolrd/WarpCore) | ableton-mcp-daw | — | low/tang | app |
 | [dr-schlange/nallely-midi](https://github.com/dr-schlange/nallely-midi) | ableton-mcp-daw | — | low/tang | app |
 | [gibber-cc/gibberwocky](https://github.com/gibber-cc/gibberwocky) | ableton-mcp-daw | JavaScript | low/tang | app |
+| [jasper-zheng/ableton-sdk-mcp](https://github.com/jasper-zheng/ableton-sdk-mcp) | ableton-mcp-daw | TypeScript | 4/ASA | app |
+| [pnomolos/live-wire](https://github.com/pnomolos/live-wire) | ableton-mcp-daw | JavaScript | 4/ASA | app |
+| [ImiteDev/ReverseVerb](https://github.com/ImiteDev/ReverseVerb) | ableton-mcp-daw | TypeScript | 3/ASA | app |
+| [madisonrickert/ablevsep](https://github.com/madisonrickert/ablevsep) | ableton-mcp-daw | TypeScript | 3/ASA | app |
+| [borel119/Beat-Inspector](https://github.com/borel119/Beat-Inspector) | ableton-mcp-daw | TypeScript | 3/tang | app |
 | [creightonlinza/forever-jukebox](https://github.com/creightonlinza/forever-jukebox) | apps-architecture | TypeScript/Python | 5/ASA | app |
 | [Ircam-Partiels/Partiels](https://github.com/Ircam-Partiels/Partiels) | apps-architecture | C++ | 4/ASA | app |
 | [Polochon-street/bliss-rs](https://github.com/Polochon-street/bliss-rs) | apps-architecture | Rust | 4/ASA | lib |

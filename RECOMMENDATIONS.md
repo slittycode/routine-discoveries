@@ -84,6 +84,15 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 
 ## ASA — LLM / MCP / Ableton (Phase 2–3)
 
+> **Platform note (07-01):** Ableton opened a public beta of an official
+> **Extensions SDK** (`@ableton-extensions/sdk`, JS, 2026-06-02) — Extensions run
+> inside Live 12 Suite with read/write access to tracks/clips/device params/
+> automation, launched via right-click. Not a GitHub repo to score, but the most
+> consequential platform development for ASA's Phase-2/Phase-3 output surface since
+> this list started: a real, sanctioned path to apply (not just describe) ASA's
+> Ableton 12 recommendations. See `discoveries/audio-mir-2026-07-01.md` for detail
+> and sources; spike before committing.
+
 - **5** · [dreamrec/LivePilot](https://github.com/dreamrec/LivePilot) — Ableton MCP + analysis bridge + before/after measurement; the end-to-end analog. _(both · ↑)_
 - **5** · [OpenMOSS/MOSS-Music](https://github.com/OpenMOSS/MOSS-Music) — open 8B audio-LLM emitting ASA-shaped analysis (structure/chord/key/tempo/Q&A); reference or partial replacement for the Gemini layer. _(05-21)_
 - **4** · [adamjmurray/producer-pal](https://github.com/adamjmurray/producer-pal) — M4L + MCP + **Gemini** Ableton control; "apply the recommendation in Live" companion. _(↑)_
@@ -99,6 +108,10 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **3** · [gluon/AbletonLive12_MIDIRemoteScripts](https://github.com/gluon/AbletonLive12_MIDIRemoteScripts) — decompiled Live 12 MIDI Remote Scripts; canonical reference for the addressable Live 12 control-surface API. _(05-27)_
 - **3** · [innermost47/ai-dj](https://github.com/innermost47/ai-dj) — server-side Stable Audio Open loop generator; Phase-3 audition-sample reference. _(was wrongly dropped)_
 - **3** · [prabal-rje/latentscore](https://github.com/prabal-rje/latentscore) — retrieval-based ambient generation (Phase-3 retrieval-gen angle).
+- **4** · [jasper-zheng/ableton-sdk-mcp](https://github.com/jasper-zheng/ableton-sdk-mcp) — LLM issues Extensions-SDK commands against a running Live set; the Gemini-layer pattern wired one hop further into Live. _(07-01)_
+- **4** · [pnomolos/live-wire](https://github.com/pnomolos/live-wire) — independent second MCP-over-Extensions-SDK bridge; a converging pattern, not a one-off. _(07-01)_
+- **3** · [ImiteDev/ReverseVerb](https://github.com/ImiteDev/ReverseVerb) — one-click offline-DSP Extension (reverse-reverb swell); concrete "packaged DSP as a Live Extension" reference. _(07-01)_
+- **3** · [madisonrickert/ablevsep](https://github.com/madisonrickert/ablevsep) — stem-separation Extension (MVSEP models) delivering stems inside Live; precedent for shipping ASA's stem output as an in-DAW action. _(07-01)_
 
 ## ASA — app & deployment architecture
 

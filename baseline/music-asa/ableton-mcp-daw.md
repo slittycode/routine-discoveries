@@ -9,6 +9,31 @@ flag: `ASA` · `H` (Harmonia = conceptual ref; see `../README.md`) · `Both` · 
 Corrected scores follow `discoveries/reanalysis-2026-05-20.md` (native + LLM/MCP +
 Ableton tooling are first-class; browser/WASM credit removed).
 
+## Platform: Ableton Extensions SDK (new, 07-01)
+
+Not a repo — Ableton's own official public beta (2026-06-02) of a free JS SDK
+(`@ableton-extensions/sdk`) for building Extensions that run *inside* Live 12 Suite
+with read/write access to tracks/clips/device-params/automation, launched via
+right-click. **5/ASA** as a platform: the first Ableton-sanctioned path to turn ASA's
+Phase-2/3 "Ableton 12 device/parameter/value" recommendations into an applied change
+instead of instructions the user manually replicates — see
+`discoveries/audio-mir-2026-07-01.md` for detail and official sources. **Mine:**
+spike whether the beta write surface reaches device-parameter resolution before
+committing; if so, this may remove the "no action until ASA goes desktop" blocker in
+`incorporations/asa-2026-05-13.md` (Extensions run inside Live, no separate desktop
+shell needed).
+
+- **4/ASA** · [jasper-zheng/ableton-sdk-mcp](https://github.com/jasper-zheng/ableton-sdk-mcp) · `TypeScript` · `15★` · `active:2026-06` · `maturity:app`
+  MCP server letting an LLM issue Extensions-SDK commands against a running Live set. First public proof the "LLM reads a JSON analysis, decides what to change" pattern (ASA's Gemini layer) can be wired straight into Live rather than stopping at advice text. **Mine:** read the exposed tool-call surface before building ASA's own equivalent; repo contents unread this session (search-only GitHub access, no file reads outside this repo — flagged, not fabricated). _(surfaced 07-01)_
+- **4/ASA** · [pnomolos/live-wire](https://github.com/pnomolos/live-wire) · `JavaScript` · `5★` · `active:2026-06` · `maturity:app`
+  "MCP bridge for Ableton Live — control Live from Claude or any MCP client via a Max for Live proxy and the Ableton Extensions platform." An independent second implementation of the ableton-sdk-mcp idea, three days apart — two unrelated MCP-over-Extensions-SDK bridges in the SDK's first month is a converging pattern, not a one-off. **Mine:** compare its Max-for-Live-proxy approach against ableton-sdk-mcp's direct-SDK approach when scoping ASA's own bridge. _(surfaced 07-01)_
+- **3/ASA** · [ImiteDev/ReverseVerb](https://github.com/ImiteDev/ReverseVerb) · `TypeScript` · `13★` · `active:2026-07` · `maturity:app`
+  One-click reverse-reverb-swell Extension: offline DSP triggered by right-clicking an audio clip. Small, but a concrete end-to-end reference for "packaged offline DSP as a Live Extension" — build, package to `.ablx`, clip-level processing. **Mine:** study the build/package pipeline as the template if ASA ships any of its own DSP as an Extension. _(surfaced 07-01)_
+- **3/ASA** · [madisonrickert/ablevsep](https://github.com/madisonrickert/ablevsep) · `TypeScript` · `34★` · `active:2026-06` · `maturity:app`
+  Extension sending a clip to MVSEP's hosted stem-separation models and returning stems inside Live. Conceptually overlaps ASA's own Demucs stem stage (cloud-model-in, stems-out); a concrete precedent for delivering a stem result as an in-DAW action instead of a download link. **Mine:** the clip-in/stems-out Extension wiring is directly reusable if ASA ever exposes its own stem output this way. _(surfaced 07-01)_
+- **3/tang** · [borel119/Beat-Inspector](https://github.com/borel119/Beat-Inspector) · `TypeScript` · `12★` · `active:2026-06` · `maturity:app`
+  "A Beat Detective–style non-warping audio quantizer for Ableton Live." Timing correction, not analysis — adjacent rather than on-target for ASA's measurement layer, but another concrete example of audio-domain DSP shipped as an Extension. **Mine:** nothing beyond confirming the pattern above; not analysis. _(surfaced 07-01)_
+
 ## Cross-domain (stub — full entry in `chord-key.md`)
 
 - **5/Both** · [dreamrec/LivePilot](https://github.com/dreamrec/LivePilot) · `Python` · `21★` · `active:2026-03` · `maturity:app`
