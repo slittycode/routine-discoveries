@@ -37,6 +37,8 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **5** · [JuzzyDee/audio-analyzer-rs](https://github.com/JuzzyDee/audio-analyzer-rs) — pure-Rust MCP with ASA's whole L1 MIR stack (K-S key, pitch-class, tonnetz, R128). _(both)_
 - **5** · [OpenMOSS/MOSS-Music](https://github.com/OpenMOSS/MOSS-Music) — open 8B audio-LLM (lyrics ASR, structure, chord/key/tempo, captioning, Q&A); closest open self-hostable analogue of ASA's Essentia+Gemini layer. _(05-21)_
 - **5** · [ptnghia-j/ChordMiniApp](https://github.com/ptnghia-j/ChordMiniApp) — chord recognition + beat + lyrics + sheet render; closest neighbour to Harmonia. _(H)_
+- **5** · [spotify/basic-pitch](https://github.com/spotify/basic-pitch) — polyphonic audio→MIDI w/ pitch bends; fills ASA's "no MIDI output" transcription gap. _(06-16)_
+- **5** · [mir-aidj/all-in-one](https://github.com/mir-aidj/all-in-one) — single-pass beat/downbeat/section/chord/key model; replaces several separate ASA stages at once. _(06-16)_
 
 ## ASA — Phase 1: native DSP, loudness, MIR features
 
@@ -63,6 +65,8 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **3** · [casantosmu/audiodeck](https://github.com/casantosmu/audiodeck) — Go server-side spectrogram fake-lossless scanner; library-scan shape.
 - **3** · [tyiannak/pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) — established Python MIR (MFCC/chroma/segmentation/classification). _(new)_
 - **3** · [audeering/opensmile](https://github.com/audeering/opensmile) — mature C++ feature toolkit + Python wheels. _(new)_
+- **4** · [KinWaiCheuk/nnAudio](https://github.com/KinWaiCheuk/nnAudio) — GPU `nn.Module` mel/CQT/STFT layers; differentiable spectrogram computation, replaces librosa's CPU path. _(06-16)_
+- **3** · [aubio/aubio](https://github.com/aubio/aubio) — foundational C/Python onset/pitch/tempo library; validation baseline alongside Essentia. _(06-23)_
 
 ## ASA — Layer 2: stem separation + pitch (current pipeline)
 
@@ -81,8 +85,24 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **3** · [SUC-DriverOld/MSST-WebUI](https://github.com/SUC-DriverOld/MSST-WebUI) — MSST + UVR WebUI; "swap separation backend" reference alongside splifft. _(05-27)_
 - **3** · [justinsalamon/audio_to_midi_melodia](https://github.com/justinsalamon/audio_to_midi_melodia) — classic Melodia melody→MIDI reference (Py2.7/2019, algorithm lineage only). _(06-04)_
 - **3** · [jonas-nothnagel/drum-beat-extractor](https://github.com/jonas-nothnagel/drum-beat-extractor) — compact onset→MIDI drum recipe; thin but on-topic. _(06-04)_
+- **5** · [spotify/basic-pitch](https://github.com/spotify/basic-pitch) — polyphonic audio→MIDI w/ pitch bends; fills ASA's "no MIDI output" gap. _(06-16)_
+- **5** · [mir-aidj/all-in-one](https://github.com/mir-aidj/all-in-one) — single-pass joint beat/downbeat/section/chord/key model. _(06-16)_
+- **4** · [Music-and-Culture-Technology-Lab/omnizart](https://github.com/Music-and-Culture-Technology-Lab/omnizart) — multi-instrument (vocal/drums/guitar/bass/piano) transcription toolkit. _(06-16)_
+- **4** · [CPJKU/madmom](https://github.com/CPJKU/madmom) — broad DL MIR signal-processing lib from the CPJKU lab (same lab as ASA's beat_this/partitura). _(06-16)_
+- **4** · [mjhydri/BeatNet](https://github.com/mjhydri/BeatNet) — CRNN + particle-filter joint beat/downbeat/tempo/meter tracker; adds time-signature detection ASA lacks. _(06-16)_
+- **4** · [kwatcharasupat/query-bandit](https://github.com/kwatcharasupat/query-bandit) — query-conditioned stem separation beyond Demucs's fixed 4-stem schema. _(06-16)_
+- **3** · [openvpi/SOME](https://github.com/openvpi/SOME) — singing-oriented MIDI extractor; bridges Demucs vocal stem + torchcrepe F0 → note-level MIDI. _(06-23)_
 
 ## ASA — LLM / MCP / Ableton (Phase 2–3)
+
+> **Platform note (07-01):** Ableton opened a public beta of an official
+> **Extensions SDK** (`@ableton-extensions/sdk`, JS, 2026-06-02) — Extensions run
+> inside Live 12 Suite with read/write access to tracks/clips/device params/
+> automation, launched via right-click. Not a GitHub repo to score, but the most
+> consequential platform development for ASA's Phase-2/Phase-3 output surface since
+> this list started: a real, sanctioned path to apply (not just describe) ASA's
+> Ableton 12 recommendations. See `discoveries/audio-mir-2026-07-01.md` for detail
+> and sources; spike before committing.
 
 - **5** · [dreamrec/LivePilot](https://github.com/dreamrec/LivePilot) — Ableton MCP + analysis bridge + before/after measurement; the end-to-end analog. _(both · ↑)_
 - **5** · [OpenMOSS/MOSS-Music](https://github.com/OpenMOSS/MOSS-Music) — open 8B audio-LLM emitting ASA-shaped analysis (structure/chord/key/tempo/Q&A); reference or partial replacement for the Gemini layer. _(05-21)_
@@ -99,6 +119,11 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **3** · [gluon/AbletonLive12_MIDIRemoteScripts](https://github.com/gluon/AbletonLive12_MIDIRemoteScripts) — decompiled Live 12 MIDI Remote Scripts; canonical reference for the addressable Live 12 control-surface API. _(05-27)_
 - **3** · [innermost47/ai-dj](https://github.com/innermost47/ai-dj) — server-side Stable Audio Open loop generator; Phase-3 audition-sample reference. _(was wrongly dropped)_
 - **3** · [prabal-rje/latentscore](https://github.com/prabal-rje/latentscore) — retrieval-based ambient generation (Phase-3 retrieval-gen angle).
+- **4** · [hidingwill/AbletonBridge](https://github.com/hidingwill/AbletonBridge) — 353-tool LLM↔Ableton-Live-12 MCP/OSC/M4L bridge; the execution layer that turns Phase-2 recommendations into actual Live state changes. _(06-16)_
+- **4** · [jasper-zheng/ableton-sdk-mcp](https://github.com/jasper-zheng/ableton-sdk-mcp) — LLM issues Extensions-SDK commands against a running Live set; the Gemini-layer pattern wired one hop further into Live. _(07-01)_
+- **4** · [pnomolos/live-wire](https://github.com/pnomolos/live-wire) — independent second MCP-over-Extensions-SDK bridge; a converging pattern, not a one-off. _(07-01)_
+- **3** · [ImiteDev/ReverseVerb](https://github.com/ImiteDev/ReverseVerb) — one-click offline-DSP Extension (reverse-reverb swell); concrete "packaged DSP as a Live Extension" reference. _(07-01)_
+- **3** · [madisonrickert/ablevsep](https://github.com/madisonrickert/ablevsep) — stem-separation Extension (MVSEP models) delivering stems inside Live; precedent for shipping ASA's stem output as an in-DAW action. _(07-01)_
 
 ## ASA — app & deployment architecture
 
@@ -139,6 +164,12 @@ incorporate; idea / algorithm / dataset references only, never stack-fit).
 - **3** · [phones24/ep133-export-to-daw](https://github.com/phones24/ep133-export-to-daw) — WebMIDI → DAWproject/REAPER/MIDI export.
 - **3** · [gluon/Void-LinkAudio](https://github.com/gluon/Void-LinkAudio) — sample-accurate beat-synced audio over LAN (umbrella for the old `ofxAbletonLinkAudio`).
 - **3** · [meyda/meyda](https://github.com/meyda/meyda) — established JS audio feature extraction (spectral centroid, ZCR, MFCC); cross-check reference for ASA's spectral features (no browser credit; reference only). _(06-04)_
+- **3** · [FunAudioLLM/SenseVoice](https://github.com/FunAudioLLM/SenseVoice) — speech/audio-event model; audio-event-detection head relevant to the LLM interpretation layer. _(06-16)_
+- **3** · [lars76/swift-f0](https://github.com/lars76/swift-f0) — fast F0 CNN/ONNX; lighter torchcrepe alternative. _(06-16)_
+- **3** · [olilarkin/librosa.cpp](https://github.com/olilarkin/librosa.cpp) — C++17 librosa port; reference if ASA gains a native sidecar. _(06-16)_
+- **3** · [cjbayron/autochord](https://github.com/cjbayron/autochord) — ISMIR-2021 chord recognition; simpler complement to consonance-ACE. _(06-16)_
+- **3** · [cycfi/q](https://github.com/cycfi/q) — C++20 DSP library with pitch tracking; native/Extension-DSP reference. _(06-16)_
+- **3** · [borel119/Beat-Inspector](https://github.com/borel119/Beat-Inspector) — non-warping audio quantizer Extension; timing correction, not analysis, but another concrete DSP-as-Extension example. _(07-01)_
 
 ## Net-new this re-score (2026-05-20)
 
@@ -179,3 +210,21 @@ were already scored under the corrected server-side framing.
 
 **2026-06-04 sweep folded in:** five ≥3 survivors from `discoveries/audio-mir-2026-06-04.md`
 — MiDiMe (4), MIDIfren (4), audio_to_midi_melodia (3), drum-beat-extractor (3), meyda (3, tangential).
+
+**2026-06-16 / 06-23 / 07-01 sweeps reconciled (2026-07-01):** three sweeps landed as
+parallel open PRs (#32, #33, #34) against slightly different points on `main` and were
+folded in together rather than merged individually. Net-new survivors — basic-pitch (5),
+all-in-one (5), omnizart (4), madmom (4), nnAudio (4), AbletonBridge (4), BeatNet (4),
+query-bandit (4), SOME (3), aubio (3), ableton-sdk-mcp (4), live-wire (4), ReverseVerb (3),
+ablevsep (3), plus six tangential — folded in above. **Score conflicts resolved by keeping
+the first-found, more-informed verdict:** `all-in-one` kept at **5** (not PR #33's
+independent re-score of 4) and `BeatNet` kept at **4** (not PR #33's 3) — PR #33's own body
+already flagged it had forked from a stale point and recommended deferring to PR #32.
+**Substance conflict resolved:** `hidingwill/AbletonBridge` is kept at **4/ASA** per PR
+#32's ground-truthed writeup (353-tool MCP/OSC/M4L bridge — the execution layer for
+Phase-2 recommendations); PR #34's bulk "hobbyist SDK flood" drop-list independently
+re-swept the same repo and mischaracterised it as "hobby-scale, no DSP content" without
+cross-checking PR #32 — that characterisation is superseded (see
+`baseline/music-asa/ableton-mcp-daw.md`). PR #33's `MIDI-GPT`/`meyda`/
+`musicinformationretrieval.com` `_seen.txt` entries were already present on `main` from
+the 06-04 sweep and were not duplicated.
