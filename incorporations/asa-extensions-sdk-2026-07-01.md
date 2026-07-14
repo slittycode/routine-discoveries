@@ -49,13 +49,13 @@ whether ASA's own team has looked at this"). Two findings:
 
 ## Part A — Verdict: does the write surface reach device-parameter resolution?
 
-**Yes — confirmed, with one evidentiary caveat.** Ableton's own primary sources
-(`ableton.github.io/extensions-sdk`, `ableton.com/en/blog/introducing-extensions-sdk`,
-`soundonsound.com`'s coverage, `npmjs.com`, `help.ableton.com`) all returned **HTTP
-403** to this session's WebFetch tool and could not be directly quoted — likely
-anti-bot protection, not evidence of anything about the SDK itself. The verdict below
-rests on three independent, directly-fetched secondary/derived sources instead, which
-converge:
+**Yes — confirmed, with one evidentiary caveat (now explained, see follow-up below).**
+Ableton's own primary sources (`ableton.github.io/extensions-sdk`,
+`ableton.com/en/blog/introducing-extensions-sdk`, `soundonsound.com`'s coverage,
+`npmjs.com`, `help.ableton.com`) all returned **HTTP 403** to this session's WebFetch
+tool and could not be directly quoted — likely anti-bot protection, not evidence of
+anything about the SDK itself. The verdict below rests on three independent,
+directly-fetched secondary/derived sources instead, which converge:
 
 1. **`Ronvaknins/ableton-extensions-skill`** (a public GitHub repo teaching AI coding
    agents to build Extensions, built against "SDK 1.0.0-beta.0 (API version 1.0.0)"),
@@ -99,6 +99,36 @@ itself needing to go desktop, and ASA remains — correctly — a server-side an
 service with no reason to become one. What changes is that `asa-ableton`'s **Live
 mode** (the harder half of Track B, previously blocked on exactly this "no legitimate
 host" problem) now has a real, official host: an Extension, not a desktop shell.
+
+### Primary-source follow-up (2026-07-02)
+
+Re-attempted all five blocked URLs directly — still 403 across the board. Tried the
+Wayback Machine (unavailable in this environment entirely, not just for these URLs)
+and searched for a public GitHub source repo behind `ableton.github.io/extensions-sdk`.
+That search resolved the mystery rather than the citation gap: the site is served from
+`ableton/ableton.github.io` (a public repo), and its `extensions-sdk/index.md` **is**
+directly fetchable via `raw.githubusercontent.com` — and confirms, in Ableton's own
+words, that the API reference itself is not public. Quoted from that file: *"The
+Extensions SDK is available exclusively in the Live 12.4.5 public beta. It does not
+work with any earlier version of Live."* Getting the actual SDK and its documentation
+requires three steps stated on that page: join the Ableton Beta Program via
+**Centercode**, install Live Beta 12.4.5b3, and **obtain the Extensions SDK along with
+its documentation from Centercode** — i.e. the TypeDoc API reference this doc's Part A
+wanted to cite directly is gated behind Ableton's beta-program portal, not hosted
+anywhere publicly crawlable. The 403s on the blog/press/npm/FAQ pages are most likely
+unrelated anti-bot blocking (those aren't beta-gated content), but the one page that
+would have settled Part A definitively — the API reference — simply isn't public.
+
+This doesn't change the verdict: it explains, rather than resolves, the evidentiary
+gap. The three converging secondary sources in Part A (a third-party reference
+explicitly distilled from the SDK's real bundled type definitions, plus two working
+community bridges built against the beta SDK, one of which ships live device-parameter
+read/write) are very likely the practical ceiling of what's independently verifiable
+without joining Ableton's beta program directly. Treat Part A's verdict as
+well-corroborated but not primary-source-confirmed, and re-verify against the actual
+TypeDoc reference if/when beta access is obtained — don't treat this follow-up as
+having closed that gap, only as having explained why it can't be closed from outside
+the beta program.
 
 ## Part B — Track E1: Ableton Extensions SDK → close the advice-to-applied-change loop
 
@@ -155,8 +185,10 @@ host" problem) now has a real, official host: an Extension, not a desktop shell.
   framing); ASA users on Standard/Intro can't run an Extension-based apply path, so
   the `.als`-export mode `asa-ableton` already has remains the only path for them —
   keep both modes, don't retire export-mode. **Evidentiary caveat** — this verdict
-  rests on secondary sources because Ableton's own primary docs 403'd this session;
-  re-verify directly against the official API reference before writing real code.
+  rests on secondary sources; a 2026-07-02 follow-up confirmed the actual API
+  reference is gated behind Ableton's Centercode beta program, not publicly
+  accessible (see "Primary-source follow-up" above) — re-verify against it directly
+  once beta access is available, before writing real code.
 
 ## Reconciliation note
 
@@ -178,11 +210,13 @@ substantive Track B1/B2 content.
 
 ## Sequencing
 
-1. Re-verify Part A's verdict directly against `ableton.github.io/extensions-sdk`'s
-   official TypeDoc reference (this session's 403s should be revisited with a
-   different fetch path/tool before any build work starts) — cheapest, and the
-   secondary-source verdict above should not be treated as a substitute for the
-   primary source once accessible.
+1. ~~Re-verify Part A's verdict directly against `ableton.github.io/extensions-sdk`'s
+   official TypeDoc reference~~ — attempted 2026-07-02; the reference itself is
+   Centercode-beta-gated, not publicly reachable by any means tried (direct fetch,
+   Wayback Machine, source-repo search). **Actual next step:** join Ableton's Beta
+   Program and re-verify against the real TypeDoc reference once access is obtained,
+   before any build work starts — the secondary-source verdict above should not be
+   treated as a substitute for the primary source once accessible.
 2. Confirm the Extensions SDK public-beta licence/ToS — gates everything else, same
    as every other track in this repo.
 3. Build the minimal one-parameter Extension (Definition of done, item 2) as the
