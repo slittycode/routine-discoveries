@@ -1,0 +1,7 @@
+afadil/wealthfolio
+ghostfolio/ghostfolio
+karakeep-app/karakeep
+newsboat/newsboat
+guyfedwards/nom
+ratatui/ratatui
+MythicApp/Mythic

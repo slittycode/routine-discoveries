@@ -13,6 +13,11 @@ a different purpose; results land on `main` as the single source of truth.
   build-your-own-tool foundations. Local-first preferred; licence ignored.
   - sweeps: `discoveries/legaltech-nz-<date>.md` · dedupe: `discoveries/_seen-legaltech-nz.txt` ·
     routine: `routines/legaltech-nz.md`
+- **general** — broad "what's worth your time on GitHub" sweeps, not scoped to a single domain.
+  Biased hard toward proven usefulness (real adoption, recent activity, more than one live
+  contributor) over novelty.
+  - sweeps: `discoveries/general-<date>.md` · dedupe: `discoveries/_seen-general.txt` · routine:
+    `routines/general.md`
 
 ## Layout
 

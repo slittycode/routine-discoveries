@@ -8,6 +8,9 @@ its own dated files under `discoveries/`, and keeps its own `_seen` dedupe list 
 - **[`legaltech-nz.md`](legaltech-nz.md)** — personal, forkable tools for a NZ property lawyer who
   vibe-codes (document comparison / legal-impact, productivity, build-your-own-tool foundations;
   local-first preferred). → `discoveries/legaltech-nz-<date>.md` · `discoveries/_seen-legaltech-nz.txt`
+- **[`general.md`](general.md)** — broad, domain-agnostic GitHub discovery sweeps; routes around
+  the other two streams' territory. → `discoveries/general-<date>.md` ·
+  `discoveries/_seen-general.txt`
 
-Licence is ignored in both streams. To add a new stream, drop a routine file here and give it its
+Licence is ignored in all streams. To add a new stream, drop a routine file here and give it its
 own dated-file prefix and `_seen` list.
