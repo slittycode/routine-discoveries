@@ -8,6 +8,10 @@ its own dated files under `discoveries/`, and keeps its own `_seen` dedupe list 
 - **[`legaltech-nz.md`](legaltech-nz.md)** — personal, forkable tools for a NZ property lawyer who
   vibe-codes (document comparison / legal-impact, productivity, build-your-own-tool foundations;
   local-first preferred). → `discoveries/legaltech-nz-<date>.md` · `discoveries/_seen-legaltech-nz.txt`
+- **[`mac-gaming.md`](mac-gaming.md)** — tools to run, mod, measure, or tune games on an Apple
+  Silicon Mac (CrossOver/GPTK, translation layers, mod tooling, frame/power/latency/display
+  measurement, Rosetta, Parallels). → `discoveries/mac-gaming-<date>.md` ·
+  `discoveries/_seen-mac-gaming.txt` · `FINDS.md`
 
 Licence is ignored in both streams. To add a new stream, drop a routine file here and give it its
 own dated-file prefix and `_seen` list.
