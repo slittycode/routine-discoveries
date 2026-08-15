@@ -1,0 +1,12 @@
+frankea/Whisky
+guyfedwards/nom
+tonaljs/tonal
+karakeep-app/karakeep
+ghostfolio/ghostfolio
+charmbracelet/crush
+whisky-app/whisky
+sasobhabha/Brandywine
+imichaelnorris/Bourbon
+leonewt0n/Bourbon
+AryaLabsHQ/bunli
+rotki/rotki
