@@ -4,14 +4,14 @@ Full **analysis apps**, media-server integrations, track-to-track similarity, an
 the job-queue / worker / deployment shapes ASA needs in hosted mode (Python 3.11 +
 FastAPI backend, React 19 frontend, measurement → pitch/note → Gemini-interpretation
 queue). ASA is an **app**, so React UIs + API/contract + queue/deployment all count.
-Scores are **1–5 relevance** + flag: `ASA` · `H` (Harmonia = **phantom**) · `Both` ·
+Scores are **1–5 relevance** + flag: `ASA` · `H` (Harmonia = conceptual ref) · `Both` ·
 `tang`. See `../README.md`; corrected scores follow
 `discoveries/reanalysis-2026-05-20.md`.
 
 ## Cross-domain (full entry here)
 
 - **4/Both** · [rzru/nightingale](https://github.com/rzru/nightingale) · `Rust` · `1.1k★` · `active:2026-03` · `maturity:app`
-  Tauri (Rust + React) karaoke app combining Demucs/UVR vocal isolation, WhisperX/Parakeet-v3 lyric transcription with word timestamps, real-time pitch scoring, and key/tempo shifting. Hits the whole pipeline at once. **Mine:** the local-PyTorch-from-Tauri shape is a template for ASA's local mode; fork the separation + pitch-scoring + key/tempo-shift wiring (the pitch/key logic is also Harmonia-adjacent). _(surfaced 05-13 · ★ ASA plan: filed-for-later · tags: tauri, demucs, transcription, pitch, key-shift)_ — **stub also in `stem-separation.md`.**
+  Tauri (Rust + React) karaoke app combining Demucs/UVR vocal isolation, WhisperX/Parakeet-v3 lyric transcription with word timestamps, real-time pitch scoring, and key/tempo shifting. Hits the whole pipeline at once. **Mine:** the local-PyTorch-from-Tauri shape is a template for ASA's local mode; fork the separation + pitch-scoring + key/tempo-shift wiring (the key/tempo logic is also a conceptual reference for a chord tool like Harmonia). _(surfaced 05-13 · ★ ASA plan: filed-for-later · tags: tauri, demucs, transcription, pitch, key-shift)_ — **stub also in `stem-separation.md`.**
 
 ## Strong (4–5)
 

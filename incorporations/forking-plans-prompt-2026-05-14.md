@@ -1,5 +1,7 @@
 # Forking / incorporation planning prompt — 2026-05-14
 
+> **Correction (2026-05-23): Harmonia was mis-described here.** Harmonia is **real** but is slittycode's **unpublished, single-file, dependency-free vanilla-JS** chord-progression / reharmonization tool — **not** a React+Tonal.js project, and **not** a GitHub repo (`github.com/slittycode/harmonia` → 404). It is **not** a "phantom" (it exists; the ASA-docs "phantom" wording overshot). Any `(H)` / "Harmonia-relevant" / stack-fit notes below therefore stand only as **conceptual** (UX / idea / dataset) references, never dependency or stack-compatibility judgments. History preserved, not re-scored.
+
 A ready-to-paste prompt for a coding agent. It directs the agent to turn
 five discoveries into concrete forking / incorporation plans, in the same
 shape as `incorporations/asa-2026-05-13.md`.

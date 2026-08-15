@@ -4,7 +4,7 @@ LLM-for-music, audio-LLM understanding, and music generation — the model layer
 adjacent to ASA's **Gemini Phase-2 interpreter** (which maps the deterministic
 Phase-1 analysis JSON to Ableton device/parameter advice) and its **Phase-3** on-demand
 audition-sample generation. Scores are **1–5 relevance** + flag: `ASA` · `H`
-(Harmonia = **phantom**; see `../README.md`) · `Both` · `tang`. Corrected scores
+(Harmonia = conceptual ref; see `../README.md`) · `Both` · `tang`. Corrected scores
 follow `discoveries/reanalysis-2026-05-20.md` — LLM/music tooling is on-theme because
 ASA *is* an LLM app; pure text-to-music gen models stay low unless they touch the
 analysis/interpretation or Phase-3 audition path.
