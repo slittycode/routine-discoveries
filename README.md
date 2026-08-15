@@ -13,6 +13,11 @@ a different purpose; results land on `main` as the single source of truth.
   build-your-own-tool foundations. Local-first preferred; licence ignored.
   - sweeps: `discoveries/legaltech-nz-<date>.md` · dedupe: `discoveries/_seen-legaltech-nz.txt` ·
     routine: `routines/legaltech-nz.md`
+- **mac-gaming** — tools to run, mod, measure, or tune games on an Apple Silicon Mac (CrossOver/GPTK
+  and translation layers, bottle/mod managers, frame/power/latency/display measurement, Rosetta,
+  Parallels). Licence ignored.
+  - sweeps: `discoveries/mac-gaming-<date>.md` · dedupe: `discoveries/_seen-mac-gaming.txt` ·
+    shortlist: `FINDS.md` · routine: `routines/mac-gaming.md`
 
 ## Layout
 
