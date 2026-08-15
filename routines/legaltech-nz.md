@@ -9,8 +9,14 @@ two streams in this repo (see `routines/README.md`). Paste into the recurring ta
   PERSONAL use only.
 - Stack he'll fork/extend: [edit — e.g. TypeScript/Next.js, Python; fine with Tauri/Electron or a
   CLI]. Favour modern, hackable, well-documented codebases.
-- Documents are confidential, so LOCAL-FIRST / OFFLINE tools are preferred (local-LLM-capable a
-  plus) — but this is a preference, not a hard requirement.
+- Documents are confidential, so LOCAL-FIRST / OFFLINE tools are preferred — but this is a
+  preference, not a hard requirement.
+- **AI is optional, not the point.** Favour tools that deliver real value *deterministically* —
+  diff engines, document parsers, OOXML / tracked-change manipulation, productivity apps, data
+  stores — where any LLM / RAG layer would be a bolt-on he could add himself. Do NOT award
+  relevance just because a repo "has an LLM / RAG / agent." A repo whose ONLY substance is "pipe
+  documents to a model" is a thin wrapper (see Drops). Local-LLM capability is at most a minor
+  tiebreaker, never a reason to keep.
 - Licence is NOT a consideration. Never score, flag, or gate on it.
 - NZ relevance is a BONUS, not a requirement.
 - He wants BOTH directly-useful tools AND creative seeds to build something novel from.
@@ -19,12 +25,17 @@ two streams in this repo (see `routines/README.md`). Paste into the recurring ta
 1. **Document comparison & legal-impact** — version / clause / structural diff, redlining, contract
    comparison, AND single-document consistency (defined terms, cross-references, contradictions).
    Substantive legal meaning, not formatting/metadata.
-2. **Document understanding** — PDF/DOCX parsing, RAG / chat-with-documents, summarisation, clause/
-   term extraction; ideally offline / local-LLM.
+2. **Document understanding** — PDF / DOCX / OOXML parsing and extraction, layout / structure /
+   section detection, defined-term and cross-reference extraction. DETERMINISTIC parsing and
+   extraction first; chat-with-documents / RAG / summarisation are a sub-case, not the headline,
+   and only count when the parsing / extraction itself is the real substance.
 3. **Personal productivity** — to-do / task managers, notes / PKM, personal matter/time tracking,
    snippet & template libraries, small local dashboards.
 4. **Build-your-own-tool foundations** — text / semantic / AST / structural diff libraries,
-   document parsers, desktop shells (Tauri/Electron), CLI scaffolds, local-LLM / RAG plumbing.
+   OOXML / tracked-change engines, document parsers, desktop shells (Tauri/Electron), CLI
+   scaffolds, embedded / local data stores (SQLite, CRDT). Plain, dependency-light libraries he
+   can compose. (RAG / local-LLM plumbing is welcome but is the LEAST important sub-bucket here —
+   don't let it crowd out deterministic foundations.)
 5. **NZ legal content & data** — legislation.govt.nz / PCO, NZ case law (NZLII), NZ open datasets.
 6. **Tangential but interesting.**
 7. **Wildcard / cross-domain spark** — clever apps from OTHER domains whose pattern transfers
@@ -37,11 +48,21 @@ two streams in this repo (see `routines/README.md`). Paste into the recurring ta
    empty). This is SEPARATE from the audio stream's `discoveries/_seen.txt` — never mix them.
 
 2. Find candidates — keyword search AND lateral discovery:
-   - Keyword queries (examples): "document comparison" OR "contract comparison" OR "semantic diff"
-     OR redline; "clause extraction" OR "contract analysis" (LLM); "chat with documents" OR RAG
-     (local/offline/ollama); "PDF extraction" OR docx OR OCR; todo OR "task manager" OR "note
-     taking" OR PKM (local-first); "local-first" (Tauri/Electron); "local LLM" OR ollama
-     (notes/docs); "diff" (semantic/AST/structural) library; "New Zealand" (legislation/"case law").
+   - Keyword queries — LEAD with deterministic tooling; treat AI terms as a small minority of
+     your queries, run LAST:
+     - comparison / redline: "document comparison" OR "contract comparison" OR "semantic diff" OR
+       redline OR "tracked changes" OR OOXML
+     - diff / structure libraries: "structural diff" OR "AST diff" OR "text diff" library; docx OR
+       OOXML ("tracked changes" / redline engines)
+     - parsing & extraction (no-AI): "PDF extraction" OR docx OR OCR OR "layout analysis";
+       "clause extraction" OR "defined terms" OR "cross-reference"
+     - productivity (local-first, no-AI): todo OR "task manager" OR "note taking" OR PKM OR
+       "time tracking" OR "snippet manager" OR "template manager"
+     - foundations: "local-first" (Tauri/Electron); embedded datastore (SQLite / CRDT / sync)
+     - NZ: "New Zealand" (legislation / "case law")
+     - AI — CAP at one or two queries, run them LAST and sparingly: "contract analysis" (LLM) OR
+       "chat with documents" / RAG (local / ollama). These already flood every sweep; you are
+       trying to find what ELSE is out there, not more of them.
    - Lateral methods (use these too, not just keywords): browse GitHub TOPIC tags (e.g.
      `text-diff`, `redlining`, `local-first`, `knowledge-management`, `document-ai`); MINE
      awesome-lists for individual repos, INCLUDING non-legal ones (awesome-local-first / diff /
@@ -74,9 +95,18 @@ two streams in this repo (see `routines/README.md`). Paste into the recurring ta
      Exclude keyword-spam and pirated-software repos. **Do NOT drop a repo for being well-known or
      popular** — popularity is irrelevant to personal forking, and a famous repo is often the best
      base or teacher.
+   - **LLM / RAG wrappers count as thin wrappers:** a repo whose substance is "send documents to a
+     model" — chatbot UIs, generic ollama / RAG / agent starters, "chat with your PDF" clones —
+     is a thin wrapper. Drop it unless it adds a DETERMINISTIC capability he couldn't trivially
+     rebuild in an afternoon (a real parser, diff, datastore, or extraction step), OR it clears
+     the spark bar with a specifically-named tool. Being popular does not rescue it here.
 
 6. Caps: soft target 15 survivors, hard ceiling 20; within that ≤3 spark-only and ≤3 wildcard. No
    even-bucket-spread quota — a lopsided sweep is fine.
+   - **AI-first cap:** at most ~1/3 of survivors may be "AI-first" (won't do anything useful
+     without an LLM / RAG). The MAJORITY must be useful with ZERO AI. A sweep that is mostly
+     deterministic tooling is the goal, not a shortfall — if you can't fill the cap with good
+     non-AI finds, ship fewer survivors rather than padding with RAG starters.
 
 7. Append survivors to `discoveries/legaltech-nz-<YYYY-MM-DD>.md` under the seven section
    headings. Entry format:
@@ -89,7 +119,11 @@ two streams in this repo (see `routines/README.md`). Paste into the recurring ta
 
 8. Append surfaced `owner/repo` lines to `_seen-legaltech-nz.txt`.
 
-9. Commit to branch `claude/legaltech-discoveries-<YYYY-MM-DD>` and open a PR.
+9. Commit to branch `claude/legaltech-discoveries-<YYYY-MM-DD>` and open a PR into
+   `main`. Fold each survivor into `LEGALTECH-RECOMMENDATIONS.md` and add every
+   non-trash repo to the matching `baseline/legal-tech/` sub-domain file
+   (document-comparison-redlining · document-understanding-rag · foundations ·
+   productivity · nz-legal-content · wildcard-tangential · excluded).
 
 Be direct; pitch each repo as a personal tool he'd actually fork and run; state whether it runs
 locally. Don't pad. Ignore licence entirely.

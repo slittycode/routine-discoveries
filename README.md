@@ -5,7 +5,7 @@ a different purpose; results land on `main` as the single source of truth.
 
 ## Streams
 
-- **audio-mir** — audio / MIR / music-theory tooling for the **ASA** and **Harmonia** projects.
+- **audio-mir** — audio / MIR / music-theory / LLM-music tooling for the **ASA** project, with **Harmonia** (slittycode's unpublished, dependency-free single-file vanilla-JS chord/reharmonization tool — not a repo) as a conceptual-reference-only axis.
   - sweeps: `discoveries/audio-mir-<date>.md` · dedupe: `discoveries/_seen.txt` · shortlist:
     `RECOMMENDATIONS.md` · routine: `routines/audio-mir.md`
 - **legaltech-nz** — personal tools a NZ property lawyer (who "vibe-codes") could **fork and build
@@ -19,14 +19,16 @@ a different purpose; results land on `main` as the single source of truth.
   stands on its own until several accrue.
   - sweeps: `discoveries/general-<date>.md` · dedupe: `discoveries/_seen-general.txt` · routine:
     `routines/general.md`
+    shortlist: `LEGALTECH-RECOMMENDATIONS.md` · routine: `routines/legaltech-nz.md`
 
 ## Layout
 
 - **`routines/`** — the routine prompt for each stream (the registry of what runs).
 - **`discoveries/`** — raw per-sweep vetting records: one dated file per scan with scores and why
   candidates were dropped. Each stream keeps its own `_seen` dedupe list.
-- **`RECOMMENDATIONS.md`** — consolidated shortlist for the audio-mir stream (a legaltech-nz one
-  will follow once several sweeps accrue).
+- **`RECOMMENDATIONS.md`** — consolidated shortlist for the audio-mir stream.
+  `LEGALTECH-RECOMMENDATIONS.md` — the equivalent consolidated shortlist for the legaltech-nz
+  stream.
 - **`incorporations/`** — plans for lifting selected discoveries into downstream projects.
 - **`baseline/`** — the comprehensive **tech baseline**: every non-trash repo ever surfaced,
   categorized (`music-asa/`, `legal-tech/`) with idea-mining ("what to fork/build") commentary —
