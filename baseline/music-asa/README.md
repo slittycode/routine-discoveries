@@ -5,14 +5,16 @@ streams. **ASA** (`ableton-sonic-analyzer`) is a **server-side Python/FastAPI** 
 (React frontend) running **native** Essentia + librosa + torchcrepe + Demucs (PyTorch
 in-stack), with a **Gemini Phase-2** layer mapping the deterministic analysis JSON to
 Ableton Live 12 device/parameter advice — it is **not** in-browser / WASM / Essentia.js,
-so native C/C++/Rust/Python is first-class here. **Harmonia is a phantom**: no such
-project exists (`github.com/slittycode/harmonia` → 404; confirmed in ASA PR #98 /
-commit `f8d7add`), so every `H` repo is kept as a general chord/key/theory/UI reference —
-mineable, but not validated against any real consumer. See `../README.md` for the spec.
+so native C/C++/Rust/Python is first-class here. **Harmonia** is slittycode's
+**unpublished, dependency-free single-file vanilla-JS** chord/reharmonization tool — **not** a
+GitHub repo (`github.com/slittycode/harmonia` → 404) and **not** a "phantom" (it exists, just
+unpublished). With no repo and no deps, every `H` repo is a **conceptual reference only** (UX /
+algorithm / dataset for a chord tool), never a dependency or stack match. See `../README.md`.
 
 ## Legend
 - **Score = 1–5 relevance** to ASA/Harmonia plus a flag: `ASA` · `H` (Harmonia =
-  **phantom**) · `Both` · `tang` (tangential). This is the music schema — *not* the
+  conceptual ref — unpublished dep-free tool, no stack to match) · `Both` · `tang`
+  (tangential). This is the music schema — *not* the
   legal `fork/spark` scale.
 - **`maturity`** = `lib` (import/fork-and-run library) · `app` (runnable application) ·
   `model` (a pretrained model / training code) · `alpha` (early) · `reference`
@@ -43,6 +45,12 @@ mineable, but not validated against any real consumer. See `../README.md` for th
 | [ManasWolrd/WarpCore](https://github.com/ManasWolrd/WarpCore) | ableton-mcp-daw | — | low/tang | app |
 | [dr-schlange/nallely-midi](https://github.com/dr-schlange/nallely-midi) | ableton-mcp-daw | — | low/tang | app |
 | [gibber-cc/gibberwocky](https://github.com/gibber-cc/gibberwocky) | ableton-mcp-daw | JavaScript | low/tang | app |
+| [hidingwill/AbletonBridge](https://github.com/hidingwill/AbletonBridge) | ableton-mcp-daw | TypeScript | 4/ASA | app |
+| [jasper-zheng/ableton-sdk-mcp](https://github.com/jasper-zheng/ableton-sdk-mcp) | ableton-mcp-daw | TypeScript | 4/ASA | app |
+| [pnomolos/live-wire](https://github.com/pnomolos/live-wire) | ableton-mcp-daw | JavaScript | 4/ASA | app |
+| [ImiteDev/ReverseVerb](https://github.com/ImiteDev/ReverseVerb) | ableton-mcp-daw | TypeScript | 3/ASA | app |
+| [madisonrickert/ablevsep](https://github.com/madisonrickert/ablevsep) | ableton-mcp-daw | TypeScript | 3/ASA | app |
+| [borel119/Beat-Inspector](https://github.com/borel119/Beat-Inspector) | ableton-mcp-daw | TypeScript | 3/tang | app |
 | [creightonlinza/forever-jukebox](https://github.com/creightonlinza/forever-jukebox) | apps-architecture | TypeScript/Python | 5/ASA | app |
 | [Ircam-Partiels/Partiels](https://github.com/Ircam-Partiels/Partiels) | apps-architecture | C++ | 4/ASA | app |
 | [Polochon-street/bliss-rs](https://github.com/Polochon-street/bliss-rs) | apps-architecture | Rust | 4/ASA | lib |
@@ -59,6 +67,7 @@ mineable, but not validated against any real consumer. See `../README.md` for th
 | [dogayuksel/webKeyFinder](https://github.com/dogayuksel/webKeyFinder) | chord-key | TypeScript | 4/H | app |
 | [andreamust/consonance-ACE](https://github.com/andreamust/consonance-ACE) | chord-key | — | 4/Both | model |
 | [ifeelvoid/keyfinder](https://github.com/ifeelvoid/keyfinder) | chord-key | Swift | 3/H | app |
+| [cjbayron/autochord](https://github.com/cjbayron/autochord) | chord-key | Python | 3/tang | model |
 | [markwilkins/midi-chord-reader](https://github.com/markwilkins/midi-chord-reader) | chord-key | C++ | 3/H | app |
 | [lorediggia/harmony-lab](https://github.com/lorediggia/harmony-lab) | chord-key | Rust | low/H | app |
 | [sepandhaghighi/capo](https://github.com/sepandhaghighi/capo) | chord-key | Python | low/tang | lib |
@@ -74,12 +83,17 @@ mineable, but not validated against any real consumer. See `../README.md` for th
 | [tyiannak/pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) | essentia-mir | Python | 3/ASA | lib |
 | [audeering/opensmile](https://github.com/audeering/opensmile) | essentia-mir | C++/Python | 3/ASA | lib |
 | [urinieto/msaf](https://github.com/urinieto/msaf) | essentia-mir | Python | 3/ASA | lib |
+| [CPJKU/madmom](https://github.com/CPJKU/madmom) | essentia-mir | Python | 4/ASA | lib |
+| [KinWaiCheuk/nnAudio](https://github.com/KinWaiCheuk/nnAudio) | essentia-mir | Python | 4/ASA | lib |
+| [aubio/aubio](https://github.com/aubio/aubio) | essentia-mir | C/Python | 3/ASA | lib |
+| [olilarkin/librosa.cpp](https://github.com/olilarkin/librosa.cpp) | essentia-mir | C++ | 3/tang | lib |
 | [adamstark/Gist](https://github.com/adamstark/Gist) | essentia-mir | C++ | low/ASA | lib |
 | [OpenMOSS/MOSS-Music](https://github.com/OpenMOSS/MOSS-Music) | llm-music-generation | — | 5/ASA | model |
 | [sanderwood/clamp3](https://github.com/sanderwood/clamp3) | llm-music-generation | Python | 4/ASA | model |
 | [marcus/good-composer](https://github.com/marcus/good-composer) | llm-music-generation | JavaScript | 4/ASA | app |
 | [geshang777/GaMMA](https://github.com/geshang777/GaMMA) | llm-music-generation | — | 3/ASA | reference |
 | [innermost47/ai-dj](https://github.com/innermost47/ai-dj) | llm-music-generation | Python | 3/ASA | app |
+| [FunAudioLLM/SenseVoice](https://github.com/FunAudioLLM/SenseVoice) | llm-music-generation | Python | 3/tang | model |
 | [prabal-rje/latentscore](https://github.com/prabal-rje/latentscore) | llm-music-generation | Python | 3/tang | app |
 | [ace-step/ACE-Step-1.5](https://github.com/ace-step/ACE-Step-1.5) | llm-music-generation | — | low/tang | model |
 | [fspecii/ace-step-ui](https://github.com/fspecii/ace-step-ui) | llm-music-generation | — | low/tang | app |
@@ -101,9 +115,16 @@ mineable, but not validated against any real consumer. See `../README.md` for th
 | [mhartzel/freelcs](https://github.com/mhartzel/freelcs) | loudness-dynamics-dsp | Python | 3/ASA | app |
 | [Boof2015/astra](https://github.com/Boof2015/astra) | loudness-dynamics-dsp | TypeScript/C++ | 3/ASA | app |
 | [casantosmu/audiodeck](https://github.com/casantosmu/audiodeck) | loudness-dynamics-dsp | TypeScript/Go | 3/ASA | app |
+| [cycfi/q](https://github.com/cycfi/q) | loudness-dynamics-dsp | C++ | 3/tang | lib |
 | [WeebLabs/DSPi](https://github.com/WeebLabs/DSPi) | loudness-dynamics-dsp | — | low/ASA | reference |
 | [maxrmorrison/torchcrepe](https://github.com/maxrmorrison/torchcrepe) | pitch-beat-tempo | Python | 5/ASA | lib |
 | [CPJKU/beat_this](https://github.com/CPJKU/beat_this) | pitch-beat-tempo | Python | 4/ASA | model |
+| [spotify/basic-pitch](https://github.com/spotify/basic-pitch) | pitch-beat-tempo | Python | 5/ASA | model |
+| [mir-aidj/all-in-one](https://github.com/mir-aidj/all-in-one) | pitch-beat-tempo | Python | 5/ASA | model |
+| [Music-and-Culture-Technology-Lab/omnizart](https://github.com/Music-and-Culture-Technology-Lab/omnizart) | pitch-beat-tempo | Python | 4/ASA | model |
+| [mjhydri/BeatNet](https://github.com/mjhydri/BeatNet) | pitch-beat-tempo | Python | 4/ASA | model |
+| [openvpi/SOME](https://github.com/openvpi/SOME) | pitch-beat-tempo | Python | 3/ASA | model |
+| [lars76/swift-f0](https://github.com/lars76/swift-f0) | pitch-beat-tempo | Python | 3/tang | model |
 | [openvpi/GAME](https://github.com/openvpi/GAME) | pitch-beat-tempo | Python | 3/tang | model |
 | [JorenSix/Olaf](https://github.com/JorenSix/Olaf) | pitch-beat-tempo | C | 2/tang | lib |
 | [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) | pitch-beat-tempo | — | low/tang | lib |
@@ -118,6 +139,7 @@ mineable, but not validated against any real consumer. See `../README.md` for th
 | [sweetspotsoundsystem/stemgen-rt](https://github.com/sweetspotsoundsystem/stemgen-rt) | stem-separation | C++ | 3/ASA | app |
 | [asteroid-team/asteroid](https://github.com/asteroid-team/asteroid) | stem-separation | Python | 3/ASA | lib |
 | [paladini/voice-separator-demucs](https://github.com/paladini/voice-separator-demucs) | stem-separation | Python | 3/ASA | app |
+| [kwatcharasupat/query-bandit](https://github.com/kwatcharasupat/query-bandit) | stem-separation | Python | 4/ASA | model |
 | [flarkflarkflark/STEMwerk-reaper](https://github.com/flarkflarkflark/STEMwerk-reaper) | stem-separation | Lua | low/ASA | app |
 | [crlandsc/torch-l1-snr](https://github.com/crlandsc/torch-l1-snr) | stem-separation | Python | low/ASA | lib |
 | [sigsep/sigsep-mus-eval](https://github.com/sigsep/sigsep-mus-eval) | stem-separation | Python | low/ASA | lib |
@@ -155,7 +177,7 @@ mineable, but not validated against any real consumer. See `../README.md` for th
 - **`loudness-dynamics-dsp.md`** — loudness/R128, true-peak, LRA, dynamic-range; native DSP filters; and mel/spectrogram/visualization surfaces (ASA's Phase-1 loudness + dynamics stage).
 - **`stem-separation.md`** — source separation (ASA's Layer 2): Demucs + forks/ports/app-shells and other separation models/toolkits.
 - **`pitch-beat-tempo.md`** — pitch (torchcrepe on stems), beat/tempo estimation, and audio fingerprinting/identification on the margins.
-- **`chord-key.md`** — chord and key detection (audio→chord, audio→key) and the harmonic-core MIR feeding ASA's tonal stage and a phantom Harmonia consumer.
+- **`chord-key.md`** — chord and key detection (audio→chord, audio→key) and the harmonic-core MIR feeding ASA's tonal stage and, conceptually, a chord tool like Harmonia.
 - **`symbolic-theory.md`** — symbolic music, music-theory libraries, datasets, and tokenizers — the Harmonia-adjacent stream.
 - **`ableton-mcp-daw.md`** — Ableton / MCP / DAW plumbing and the agentic surface that lets an LLM read or drive a DAW (the "apply the Phase-2 recommendation in Live" companion).
 - **`llm-music-generation.md`** — LLM-for-music, audio-LLM understanding, and music generation — the model layer adjacent to ASA's Gemini Phase-2 interpreter and Phase-3 audition generation.

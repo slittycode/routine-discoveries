@@ -38,9 +38,12 @@ are kept, with commentary saying why they're marginal and what's still mineable.
   layer that maps the deterministic analysis JSON to Ableton Live 12 device/parameter
   recommendations. It is **not** in-browser / WASM / Essentia.js — native C/C++/Rust/Python is
   first-class. (Authoritative: `routines/audio-mir.md`. The old "Essentia.js" wording elsewhere is wrong.)
-- **Harmonia** = a **phantom**: no such project exists (`github.com/slittycode/harmonia` → 404;
-  confirmed in ASA PR #98 / commit `f8d7add`). Repos formerly scored "Harmonia-relevant" are kept as
-  **general chord / theory / UI references** — mineable, but not validated against any real consumer.
+- **Harmonia** = slittycode's **unpublished, single-file, dependency-free vanilla-JS**
+  chord-progression / reharmonization tool (hand-rolled theory + byte-level MIDI writer; no
+  React/Tonal.js, no build). **Not a GitHub repo** (`github.com/slittycode/harmonia` → 404) and
+  **not a "phantom"** — it exists, just unpublished (the earlier ASA-docs "phantom" wording
+  overshot). With no repo and no deps, `H` repos are **conceptual references only** (UX / algorithm
+  / dataset for a chord tool) — never a dependency or stack match.
 
 ## Provenance
 Per-repo write-ups originate in the dated sweeps under `discoveries/` and the consolidated
