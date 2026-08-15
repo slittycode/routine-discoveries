@@ -8,5 +8,4 @@ whisky-app/whisky
 sasobhabha/Brandywine
 imichaelnorris/Bourbon
 leonewt0n/Bourbon
-AryaLabsHQ/bunli
 rotki/rotki
