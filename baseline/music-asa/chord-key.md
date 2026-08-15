@@ -1,11 +1,12 @@
 # music-asa / chord-key
 
 Chord and key detection — audio→chord, audio→key, and the harmonic-core MIR that
-feeds both ASA's tonal stage and a (phantom) Harmonia consumer. Scores are **1–5
-relevance** to ASA / Harmonia plus a flag: `ASA` · `H` (Harmonia = **phantom**: no
-such project; `H` repos are kept as general chord/key references, mineable but not
-validated against any real consumer) · `Both` · `tang`. See `../README.md` for the
-spec; corrected scores follow `discoveries/reanalysis-2026-05-20.md`.
+feeds ASA's tonal stage and, conceptually, a chord tool like Harmonia. Scores are **1–5
+relevance** to ASA / Harmonia plus a flag: `ASA` · `H` (Harmonia = slittycode's
+unpublished, dependency-free single-file vanilla-JS chord/reharmonization tool — no repo;
+`H` repos are conceptual chord/key references only, never a dependency or stack match) ·
+`Both` · `tang`. See `../README.md` for the spec; corrected scores follow
+`discoveries/reanalysis-2026-05-20.md`.
 
 ## Cross-domain (full entry here — harmonic-core)
 
@@ -23,21 +24,21 @@ spec; corrected scores follow `discoveries/reanalysis-2026-05-20.md`.
 - **4/H** · [dogayuksel/webKeyFinder](https://github.com/dogayuksel/webKeyFinder) · `TypeScript` · `35★` · `active:2026-03` · `maturity:app`
   libKeyFinder (C++) compiled to WASM via Emscripten, fed by an AudioWorkletProcessor + Web Workers, wrapped in Preact. The cleanest current template for in-browser audio→key plumbing. **Mine:** for a browser consumer, fork the worklet→worker→WASM wiring wholesale; for ASA the real nugget is the underlying native **libKeyFinder** (run it server-side, skip the WASM). _(surfaced 05-18 · tags: key, wasm, libkeyfinder, worklet)_
 - **4/Both** · [andreamust/consonance-ACE](https://github.com/andreamust/consonance-ACE) · `maturity:model`
-  Audio chord-estimation Conformer that splits prediction into separate root / bass / pitch-activation heads with consonance-based label smoothing; ships a pretrained checkpoint and inference turning WAV into 170-class timestamped chord `.lab` output. **Mine:** run server-side as a modern, theory-informed replacement for ASA's chord stage; its timestamped chord stream is exactly the input a Harmonia-style consumer would ingest. _(surfaced 05-21 · tags: chord, conformer, ace, lab)_
+  Audio chord-estimation Conformer that splits prediction into separate root / bass / pitch-activation heads with consonance-based label smoothing; ships a pretrained checkpoint and inference turning WAV into 170-class timestamped chord `.lab` output. **Mine:** run server-side as a modern, theory-informed replacement for ASA's chord stage; its timestamped chord stream is the kind of input a chord/reharmonization tool consumes. _(surfaced 05-21 · tags: chord, conformer, ace, lab)_
 
 ## Useful references (3)
 
 - **3/H** · [ifeelvoid/keyfinder](https://github.com/ifeelvoid/keyfinder) · `Swift` · `45★` · `active:2026-03` · `maturity:app`
   Native macOS app + VST/AU detecting key (Camelot), BPM, and waveforms via a custom **Krumhansl-Schmuckler** engine (16k-point FFT, bass weighting), sharing one Swift `KeyFinderEngine` package across app and plugin. Off-stack (Swift) but a tidy from-scratch K-S worked example. **Mine:** read the K-S implementation (FFT size, bass-weighting) and copy the app↔plugin shared-engine split if you ever ship both. _(surfaced 05-19 · tags: key, krumhansl, swift, vst)_
 - **3/H** · [markwilkins/midi-chord-reader](https://github.com/markwilkins/midi-chord-reader) · `C++` · `22★` · `maturity:app`
-  JUCE/C++ DAW plugin naming chords from a MIDI track during playback — normalises to one octave while preserving bass, generates slash inversions (`Am/C`), filters 2nd/4th/6th passing tones, uses the lowest three notes for quality. **Mine:** lift the chord-naming heuristics (octave-normalise + slash inversion + passing-tone filter) for any "given these MIDI notes, name the chord" path outside a Tonal.js dependency. _(surfaced 05-17 · tags: chord, midi, juce, heuristic)_
+  JUCE/C++ DAW plugin naming chords from a MIDI track during playback — normalises to one octave while preserving bass, generates slash inversions (`Am/C`), filters 2nd/4th/6th passing tones, uses the lowest three notes for quality. **Mine:** lift the chord-naming heuristics (octave-normalise + slash inversion + passing-tone filter) for any "given these MIDI notes, name the chord" path. _(surfaced 05-17 · tags: chord, midi, juce, heuristic)_
 
 ## Marginal — kept with a note (low)
 
 - **low/H** · [lorediggia/harmony-lab](https://github.com/lorediggia/harmony-lab) · `Rust` · `maturity:app`
-  Minimal Rust scale/chord explorer. Dropped 05-21 as too small and wrong-stack for a Harmonia. **Mine:** only as a tiny reference for representing scales/chords in Rust if a native harmonic helper is wanted. _(surfaced 05-21 · tags: chord, scale, rust)_
+  Minimal Rust scale/chord explorer. Dropped 05-21 as too small. **Mine:** only a tiny conceptual reference for representing scales/chords (Rust) if a native harmonic helper is ever wanted. _(surfaced 05-21 · tags: chord, scale, rust)_
 - **low/tang** · [sepandhaghighi/capo](https://github.com/sepandhaghighi/capo) · `Python` · `maturity:lib`
-  Python guitar-chord transposition. Dropped 05-21 (Tonal.js already transposes). **Mine:** capo/transpose mapping logic only, if a guitar-specific transpose ever comes up. _(surfaced 05-21 · tags: chord, guitar, transpose)_
+  Python guitar-chord transposition. Dropped 05-21 (chord transposition is trivial to implement directly). **Mine:** capo/transpose mapping logic only, if a guitar-specific transpose ever comes up. _(surfaced 05-21 · tags: chord, guitar, transpose)_
 - **low/tang** · [timvancann/chordflow](https://github.com/timvancann/chordflow) · `Rust` · `maturity:app`
   Rust chord-practice TUI — not analysis or theory tooling. Dropped 05-21. **Mine:** practice-loop / progression-cycling UX idea only. _(surfaced 05-21 · tags: chord, practice, tui)_
 - **low/H** · [JJ110112/LiveChord](https://github.com/JJ110112/LiveChord) · `maturity:alpha`

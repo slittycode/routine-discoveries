@@ -1,5 +1,7 @@
 # Re-analysis — 2026-05-20
 
+> **Correction (2026-05-23): Harmonia was mis-described here.** Harmonia is **real** but is slittycode's **unpublished, single-file, dependency-free vanilla-JS** chord-progression / reharmonization tool — **not** a React+Tonal.js project, and **not** a GitHub repo (`github.com/slittycode/harmonia` → 404). It is **not** a "phantom" (it exists; the ASA-docs "phantom" wording overshot). Any `(H)` / "Harmonia-relevant" / stack-fit notes below therefore stand only as **conceptual** (UX / idea / dataset) references, never dependency or stack-compatibility judgments. History preserved, not re-scored.
+
 Every prior sweep (05-13, 05-14, 05-17, 05-18, 05-19) scored repos against a
 **wrong** description of ASA — *"Essentia.js DSP pipeline … in-browser"* — which
 biased scores toward browser/WASM/client-side tools and penalised native
@@ -37,6 +39,12 @@ not reach ground truth** — I treat the brief's description ("React chord-progr
 reharmonization on Tonal.js") as an unverified assumption and **hold** all Harmonia
 `(H)` scores. The browser/native correction barely applies to Harmonia anyway (it
 genuinely *is* a React/Tonal.js browser app).
+
+> **Inline correction (2026-05-23):** both sentences above are wrong — Harmonia is **not**
+> "no repo / couldn't reach ground truth," and is **not** "genuinely a React/Tonal.js browser
+> app." It's a real but **unpublished**, single-file, **dependency-free vanilla-JS** tool (no
+> React/Tonal.js; `github.com/slittycode/harmonia` → 404). The held `(H)` scores are
+> conceptual-reference-only. (See the correction banner at the top of this file.)
 
 ## Two systematic errors (not one)
 
@@ -143,6 +151,9 @@ relevant by definition); low-signal awesome-lists `BillyDM/awesome-audio-dsp` &
 
 - **Harmonia is unverified** (no repo found; absent from ASA). Its `(H)` scores are
   held and flagged. If a Harmonia repo exists elsewhere, re-run.
+  - **Correction (2026-05-23):** resolved — Harmonia is real but **unpublished** (a single-file,
+    dependency-free vanilla-JS tool), so a GitHub re-run won't surface it; `(H)` is
+    conceptual-reference-only. (See the top banner.)
 - ASA facts are from its public `CLAUDE.md`/`README.md`, treated as authoritative
   over the brief's summary (per instructions). The `[FILL IN]` for Gemini is
   resolved above.

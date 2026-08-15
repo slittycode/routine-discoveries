@@ -4,7 +4,7 @@ ASA's **pitch** path (Layer 2: `torchcrepe` on Demucs stems) plus beat/tempo
 estimation for the analysis JSON and audio-fingerprinting/identification on the
 margins. Pitch and beat are **current ASA scope**, not hypothetical. Native
 C/C++/Rust/Python and PyTorch models are first-class — no browser/WASM credit.
-Scores are **1–5 relevance** + flag: `ASA` · `H` (Harmonia = **phantom**) ·
+Scores are **1–5 relevance** + flag: `ASA` · `H` (Harmonia = conceptual ref) ·
 `Both` · `tang`. See `../README.md`; corrected scores follow
 `discoveries/reanalysis-2026-05-20.md`.
 
