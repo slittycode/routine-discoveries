@@ -1,3 +1,9 @@
+wealthfolio/wealthfolio
+ghostfolio/ghostfolio
+karakeep-app/karakeep
+newsboat/newsboat
+guyfedwards/nom
+ratatui/ratatui
 frankea/Whisky
 guyfedwards/nom
 tonaljs/tonal
