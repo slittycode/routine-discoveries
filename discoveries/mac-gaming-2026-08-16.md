@@ -41,6 +41,13 @@ did a light recheck of the rest rather than re-running every search from scratch
     on direct fetch (`EGRESS_BLOCKED`) — the above is reconstructed from search-result snippets, not
     a full read of the page. Worth a maintainer/user re-check next sweep if direct access becomes
     possible, rather than treating this as fully verified.
+  - **Post-publish correction (from PR #44 review, verified via follow-up search):** the "Tuxborn for
+    macOS users" page marks the process **experimental**, and Tuxborn's bundled Community Shaders
+    1.2.1 (current release is 1.3) breaks grass/sky rendering under CrossOver unless disabled —
+    confirmed via search snippets referencing that page and a related blog post. A working install
+    can reportedly be copied over from a Steam Deck and then only needs CrossOver to run. FINDS.md's
+    "someone's already confirmed it survives the Mac path" phrasing was corrected to reflect this —
+    it runs, but with a known graphics bug you have to work around, not cleanly.
 - `Omni-guides/Tuxborn` — the modlist itself. Wabbajack-format Skyrim SE modlist built for Steam
   Deck / lower-spec-PC performance targets (Legacy of the Dragonborn, BFCO combat overhaul, NPC/
   quest content). 99★, 262 commits, commits as recent as 2026-07-15 — active. No macOS mention in
@@ -66,14 +73,15 @@ explicitly warns this niche is full of thin wrappers).
   pattern the routine warns about.** The releases repo checked has 16★ and reads as a single-commit
   releases dump with no visible link back to real source; activity/maintenance couldn't be
   established. Not pursued further.
-- `apple/game-porting-toolkit` — Apple's own repo, not previously in `_seen`. 143★, structured as a
-  single-commit "static drop" per release rather than incremental history (README explicitly says
-  PRs aren't accepted — it's a controlled distribution channel, not a collaborative OSS project).
-  README currently references "Game Porting Toolkit 4" and macOS/Xcode 27 prerequisites, confirming
-  it's kept current with the OS beta cycle rather than stale. Footnote-tier find: the user doesn't
-  need to touch this directly (CrossOver already bundles equivalent tooling, and it's the thing
-  DXMT/Sikarugir/Whisky build config around), but worth having the actual upstream on record instead
-  of only its downstream wrappers.
+- `apple/game-porting-toolkit` — Apple's own repo, not previously in `_seen`. **Misidentified on
+  first pass, corrected after PR #44 review flagged it:** this repo is not the GPTK translation-layer
+  toolkit. Its own Overview says it contains AI agent skills (Metal 4/MetalFX/shader-compilation
+  domain modules for coding-assistant porting workflows), Metal-cpp, and code samples. GPTK 4 itself
+  (the actual Wine-based evaluation environment / Metal Shader Converter) is listed as a prerequisite
+  downloaded **separately** from `developer.apple.com/games/game-porting-toolkit/` — not a GitHub
+  repo at all. Corrected finding: there is no GitHub upstream for GPTK to point to; the real toolkit
+  is Apple-Developer-portal-only. Not a find, not a footnote worth installing — left in
+  `_seen-mac-gaming.txt` only so a future sweep doesn't re-surface and re-misidentify it.
 
 ## Rechecked, no change from 2026-08-15
 - `3Shain/dxmt` — an issue thread (`#151`, "DXMT 1.0 Release Plan," opened 2026-04-21) confirms

@@ -198,27 +198,36 @@ because it's a real answer in the gap 2026-08-15 flagged as unsolved.
   annathepiper guide above documents someone running it on a Mac specifically. A Steam-Deck-safe
   modlist is a reasonable proxy for Wine/CrossOver-safe, since both avoid the same class of
   Windows-only INI/driver hacks — reasoning, not a guarantee.
+- **Correction (flagged in PR review, verified):** "survives the Mac path" overstated it — the
+  annathepiper guide marks the Mac process **experimental**, and Tuxborn's bundled Community Shaders
+  1.2.1 (vs. the current 1.3) breaks grass/sky rendering under CrossOver unless you disable it. A
+  working install can reportedly be copied over from a Steam Deck and then only needs CrossOver to
+  run — but "runs" still means "runs with a known graphics bug you have to work around," not a clean
+  pass.
 - **Do:** worth considering as a curated starting load order for the "heavily modded Skyrim SE" plan
-  instead of building one from scratch, given someone's already confirmed it survives the Mac path.
-  Take-an-idea / evaluate, not a blind adopt.
+  instead of building one from scratch — but go in expecting to disable Community Shaders (or accept
+  broken grass/sky) as a known first fix, not a smooth out-of-the-box run. Take-an-idea / evaluate,
+  not a blind adopt.
 - **Overlap with your latency tool:** none.
 
-### 3. Apple Game Porting Toolkit — `apple/game-porting-toolkit` [translation-layer] [background-infra] [active]
-Apple's own upstream repo for GPTK — not previously tracked in this stream despite being the
-foundation DXMT/Sikarugir/Whisky-family tools build config around.
-- **Used & maintained:** 143★, but structured as a single-commit "static drop" per release rather
-  than incremental history — Apple explicitly doesn't accept PRs here, it's a controlled
-  distribution channel, not a collaborative OSS project. No tagged GitHub Releases either. Currency
-  signal instead: the README currently references "Game Porting Toolkit 4" and macOS/Xcode 27
-  prerequisites, so it's tracking the current OS beta cycle, not frozen on an old version.
-- **Apple Silicon:** yes, primary target (that's GPTK's whole purpose).
-- **Do:** nothing to install directly — CrossOver, which you already use, bundles equivalent tooling
-  commercially. Footnote-tier: worth knowing the actual upstream exists on record rather than only
-  ever encountering it through wrappers.
-- **Ruled out alongside this:** `installaware/AGPT`, a once-popular free GUI installer for raw GPTK
-  (542★), is **stale** — last commit 2025-01-06, 19+ months old against a fast-moving stack
-  (D3DMetal/DXMT). `Porting-Kit-Wrapper-Suite` / `vitor251093/porting-kit-releases` ("Porting Kit")
-  is exactly the thin-Wineskin-wrapper pattern this routine is skeptical of by default — 16★,
-  reads as a releases dump with no clear link to maintained source. Neither recommended over
-  CrossOver.
+### 3. Apple's `game-porting-toolkit` repo — correction, not what it was first filed as [not-the-toolkit] [background-infra]
+**Correction (flagged in PR review, verified against the repo's own Overview):** the 2026-08-16
+draft of this entry mischaracterized `apple/game-porting-toolkit` as the GPTK translation-layer
+upstream. It isn't. The repo's own README says it contains AI **agent skills** (Metal 4/MetalFX/
+shader-compilation domain modules for coding-assistant porting workflows), **Metal-cpp**, and code
+samples — not the Wine-based toolkit itself. GPTK 4 (the actual evaluation environment /
+Metal Shader Converter you'd need for translation work) is listed as a prerequisite you download
+**separately** from `developer.apple.com/games/game-porting-toolkit/`, and that download isn't a
+GitHub repo at all.
+- **Corrected finding:** there is no GitHub upstream for GPTK itself to point to — the tool DXMT/
+  Sikarugir/Whisky-family projects build config around isn't on GitHub; it's a direct Apple Developer
+  download. Worth knowing as a "doesn't exist as a repo" fact in its own right, not a tool to use.
+- **Do:** nothing — not a find, not a footnote worth installing. Left in `_seen-mac-gaming.txt` only
+  so a future sweep doesn't re-surface and re-misidentify the same repo.
+- **Ruled out alongside the original (mis)investigation, findings still stand:** `installaware/AGPT`,
+  a once-popular free GUI installer wrapping the real GPTK download (542★), is **stale** — last
+  commit 2025-01-06, 19+ months old against a fast-moving stack (D3DMetal/DXMT).
+  `Porting-Kit-Wrapper-Suite` / `vitor251093/porting-kit-releases` ("Porting Kit") is exactly the
+  thin-Wineskin-wrapper pattern this routine is skeptical of by default — 16★, reads as a releases
+  dump with no clear link to maintained source. Neither recommended over CrossOver.
 - **Overlap with your latency tool:** none.
