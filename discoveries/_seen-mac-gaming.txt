@@ -71,3 +71,8 @@ JulyIghor/prltype
 Starefossen/prlctl-usb
 Alia-Traces/MetalBench
 philipturner/metal-benchmarks
+Omni-guides/Tuxborn
+anaximan/tuxborn_111
+installaware/AGPT
+vitor251093/porting-kit-releases
+apple/game-porting-toolkit

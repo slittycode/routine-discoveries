@@ -159,3 +159,66 @@ QHD panel together off the M3 Pro.
   independent GitHub project) and per `utmapp/d3dmetal-native`'s README it ships **x86_64-only**,
   meaning even on Apple Silicon it runs under Rosetta 2, not natively — a genuine architectural
   wrinkle in the "best" D3D backend, not a tooling gap.
+
+---
+
+## 2026-08-16
+
+One day on from an unusually thorough first sweep, most of the territory is saturated — this round
+targeted the one gap 2026-08-15 left open (MO2/Skyrim-on-Mac specifics) plus a light recheck of the
+rest. Full vetting notes, including two installer GUIs ruled out as thin/stale, in
+`discoveries/mac-gaming-2026-08-16.md`.
+
+### 1. Anna Plays Skyrim's macOS modding guide — `skyrim.annathepiper.org/wiki/...` [not-a-repo] [skyrim] [canonical-guide]
+Personal wiki, not a GitHub repo — flagged as such — but it's the closest thing to a canonical
+answer to the exact question your "portable MO2" plan depends on.
+- **What it says, load-bearing for your plan:** on Apple Silicon, **MO2 runs in CrossOver but not in
+  a Parallels Windows-ARM VM; Vortex is the reverse** (works in the VM, not in CrossOver). That's not
+  "CrossOver is better," it's "CrossOver is the only combination that works at all" — validates your
+  portable-MO2-via-CrossOver plan over the alternative of using the Parallels VM you already keep
+  around. Also notes Parallels throttles VM RAM to 8GB unless you're on the yearly (not one-time)
+  licence tier, relevant only if you reconsider the VM route for a big load order.
+  - **Wabbajack caveat:** the Wabbajack *installer app* itself doesn't run cleanly in CrossOver
+    (Nexus login breaks on a Webview dependency) — so if you use a Wabbajack-built modlist, expect to
+    generate/update it elsewhere and run the resulting portable-MO2 output inside CrossOver, not run
+    Wabbajack itself in the bottle.
+- **Confidence caveat:** `skyrim.annathepiper.org` was blocked by this session's egress proxy on
+  direct fetch, so this is reconstructed from search snippets, not a full read — treat as one
+  well-informed source pending a direct re-check, not fully confirmed.
+- **Do:** read it before you start the Skyrim SE modding project — it directly shapes which tool
+  (CrossOver vs. the Parallels VM) you point MO2 at.
+- **Overlap with your latency tool:** none.
+
+### 2. Tuxborn — `Omni-guides/Tuxborn` [modlist] [wabbajack] [skyrim] [active]
+A Wabbajack-format Skyrim SE modlist tuned for Steam Deck / lower-spec-PC performance (Legacy of the
+Dragonborn, BFCO combat overhaul, NPC/quest content) — a config repo, not executable tooling, counted
+because it's a real answer in the gap 2026-08-15 flagged as unsolved.
+- **Used & maintained:** 99★, 262 commits, commits as recent as 2026-07-15.
+- **Apple Silicon:** not claimed by the repo itself (it's Steam-Deck/Linux-framed), but the
+  annathepiper guide above documents someone running it on a Mac specifically. A Steam-Deck-safe
+  modlist is a reasonable proxy for Wine/CrossOver-safe, since both avoid the same class of
+  Windows-only INI/driver hacks — reasoning, not a guarantee.
+- **Do:** worth considering as a curated starting load order for the "heavily modded Skyrim SE" plan
+  instead of building one from scratch, given someone's already confirmed it survives the Mac path.
+  Take-an-idea / evaluate, not a blind adopt.
+- **Overlap with your latency tool:** none.
+
+### 3. Apple Game Porting Toolkit — `apple/game-porting-toolkit` [translation-layer] [background-infra] [active]
+Apple's own upstream repo for GPTK — not previously tracked in this stream despite being the
+foundation DXMT/Sikarugir/Whisky-family tools build config around.
+- **Used & maintained:** 143★, but structured as a single-commit "static drop" per release rather
+  than incremental history — Apple explicitly doesn't accept PRs here, it's a controlled
+  distribution channel, not a collaborative OSS project. No tagged GitHub Releases either. Currency
+  signal instead: the README currently references "Game Porting Toolkit 4" and macOS/Xcode 27
+  prerequisites, so it's tracking the current OS beta cycle, not frozen on an old version.
+- **Apple Silicon:** yes, primary target (that's GPTK's whole purpose).
+- **Do:** nothing to install directly — CrossOver, which you already use, bundles equivalent tooling
+  commercially. Footnote-tier: worth knowing the actual upstream exists on record rather than only
+  ever encountering it through wrappers.
+- **Ruled out alongside this:** `installaware/AGPT`, a once-popular free GUI installer for raw GPTK
+  (542★), is **stale** — last commit 2025-01-06, 19+ months old against a fast-moving stack
+  (D3DMetal/DXMT). `Porting-Kit-Wrapper-Suite` / `vitor251093/porting-kit-releases` ("Porting Kit")
+  is exactly the thin-Wineskin-wrapper pattern this routine is skeptical of by default — 16★,
+  reads as a releases dump with no clear link to maintained source. Neither recommended over
+  CrossOver.
+- **Overlap with your latency tool:** none.
