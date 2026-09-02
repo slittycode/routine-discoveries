@@ -73,7 +73,12 @@ view by hand, and never treat a view as the record.
 ## History
 
 Before 2026-08 this repo split finds across two per-project streams
-(`discoveries/`, `baseline/`) and a score-gated shortlist
-(`RECOMMENDATIONS.md`). Every repo those files recorded — including ones scored
-below the old threshold or marked dropped — was migrated into `FINDS.md`, and
-the old structure was removed. `git log` has the detail.
+(`discoveries/`, `baseline/`) and score-gated shortlists
+(`RECOMMENDATIONS.md`, `LEGALTECH-RECOMMENDATIONS.md`). Every repo those files
+recorded — including ones scored below the old threshold, marked dropped, or
+logged to a dedupe list with no write-up at all — was migrated into `FINDS.md`,
+and the old structure was removed. `git log` has the detail.
+
+The old streams survive only as the `audio` and `legal` tags, and only because
+that is what has been logged so far. They are not a schema. Nothing about them
+says a future find has to be one or the other.
