@@ -697,6 +697,12 @@ surfaced:  2026-06-23
 what:      Fine-tuned automatic-music-transcription model for piano cover generation.
 tags:      audio, transcription, piano, niche
 
+## mir-dataset-loaders/mirdata
+link:      https://github.com/mir-dataset-loaders/mirdata
+surfaced:  2026-06-23
+what:      Python loaders for standard MIR research datasets (key/chord/beat ground-truth annotations).
+tags:      audio, dataset, loaders, benchmark, ground-truth, oracle
+
 ## marcobn/musicntwrk
 link:      https://github.com/marcobn/musicntwrk
 surfaced:  2026-06-23
@@ -858,12 +864,6 @@ link:      https://github.com/Music-and-Culture-Technology-Lab/omnizart
 surfaced:  2026-06-16
 what:      Python library for omniscient music transcription — piano, guitar, bass, drums, chords, beats, vocal melody — each a separate neural model, all callable via a shared CLI or Python API.
 tags:      audio, transcription, midi, multi-instrument, chord, beat, tensorflow
-
-## mir-dataset-loaders/mirdata
-link:      https://github.com/mir-dataset-loaders/mirdata
-surfaced:  2026-06-23
-what:      Python loaders for standard MIR research datasets (key/chord/beat ground-truth annotations).
-tags:      audio, dataset, loaders, benchmark, ground-truth, oracle
 
 ## mjhydri/BeatNet
 link:      https://github.com/mjhydri/BeatNet

@@ -26,6 +26,734 @@ against — write the words that fit the find.
 
 ---
 
+## anaximan/tuxborn_111
+link:      https://github.com/anaximan/tuxborn_111
+surfaced:  2026-08-16
+what:      A fork or mirror of the Tuxborn Skyrim SE modlist.
+alive:     no independent activity signal found beyond the parent
+why:       Not a separate find from Omni-guides/Tuxborn.
+tags:      mac-gaming, skyrim, modlist, fork, redundant
+
+## xsyetopz/OpenJoystickDriver
+link:      https://github.com/xsyetopz/OpenJoystickDriver
+surfaced:  2026-08-15
+what:      Joystick driver / mapping utility.
+alive:     commit/contributor/release detail unrecorded
+why:       Mapping/visualization only, no latency measurement. Dropped.
+tags:      mac-gaming, controller, driver, mapping, not-latency
+
+## WyvernIXTL/gamepadla-plus
+link:      https://github.com/WyvernIXTL/gamepadla-plus
+surfaced:  2026-08-15
+what:      Gamepad latency/polling measurement tool.
+alive:     commit/contributor/release detail unrecorded
+why:       Measures analog-stick jitter interval, not press-to-frame latency; explicitly caveated by its own authors as a guide rather than an exact measurement.
+tags:      mac-gaming, controller, polling-rate, latency-proxy, not-a-substitute
+
+## WineAndAqua/rosettax87
+link:      https://github.com/WineAndAqua/rosettax87
+surfaced:  2026-08-15
+what:      Rosetta 2 x87 patching work.
+alive:     dead link, 404
+why:       A dead end, flagged so it isn't chased again.
+tags:      mac-gaming, rosetta, 404, dead-end
+
+## Whisky-App/Whisky
+link:      https://github.com/Whisky-App/Whisky
+surfaced:  2026-08-15
+what:      The original native macOS Wine wrapper for running Windows games on Apple Silicon.
+alive:     archived, dead since April 2025
+why:       The maintainer stopped rather than free-ride on CrossOver's funded Wine work, and told users to buy CrossOver. Don't recommend the original — superseded by the active community fork frankea/Whisky.
+tags:      mac-gaming, wine, archived, dead, superseded
+
+## whisky-app/whisky
+link:      https://github.com/whisky-app/whisky
+surfaced:  2026-08-15
+what:      The original Whisky macOS Wine wrapper, under its lowercase org path.
+alive:     archived April 2025, no longer maintained
+why:       Archived and superseded by frankea/Whisky. Recorded separately from `Whisky-App/Whisky` because both spellings were surfaced and logged during the sweeps; they are the same project.
+tags:      mac-gaming, wine, archived, dead, superseded, duplicate-spelling
+
+## waydabber/BetterDisplay
+link:      https://github.com/waydabber/BetterDisplay
+surfaced:  2026-08-15
+what:      The de facto tool for macOS display control: refresh-rate menu, HiDPI scaling, VRR-range handling, multi-display brightness and UI-scale sync.
+alive:     33.2k★, 630 forks, active release cadence (v5.0.x through mid-2025 as verified), explicitly listing support through "macOS 27 Golden Gate / macOS 26 Tahoe"
+why:       Flag before anything else: this is **not actually an open-source repo**. The GitHub repo hosts README/docs/DMG release links and a Pro-license upsell ($21.99), but no visible application source — it's a distribution and issue-tracker shell around a closed, partly-paid app. Included because it's the honest answer to the display-control gap, not because it clears the routine's usual "read the source" bar. Directly relevant to running the 4K panel and the 144Hz QHD panel together off the M3 Pro. Apple Silicon caveat from its own maintainer discussion: the display co-processor (not the OS) negotiates modes from EDID, so the maintainer recommends pinning the 144Hz panel to a supported flat refresh rate rather than fighting for a custom VRR range. Use it — there's no genuinely open, equally capable alternative yet.
+tags:      mac-gaming, display, vrr, refresh-rate, hidpi, not-open-source, closed-source
+
+## vladkens/macmon
+link:      https://github.com/vladkens/macmon
+surfaced:  2026-08-15
+what:      Sudoless Rust TUI (plus JSON/Prometheus export) reading the same private power/thermal API `powermetrics` uses, without needing root.
+alive:     1.8k★; releases v0.8.0–v0.8.2 landed 2026-07-24 through 2026-08-04; README states explicit M1–M5 support
+why:       Apple Silicon support confirmed recently, not assumed — the M5 mention in the changelog means someone validated it against hardware that shipped this cycle, not years-old M1 testing. Use directly: this is the honest, current answer to "power/thermal logging for Apple Silicon" and replaces the instinct to reach for asitop, which is dead. No overlap with the raw-HID latency tool, but complementary — pair macmon's power/thermal log with the latency numbers to see whether thermal throttling during a long Skyrim session correlates with latency drift.
+tags:      mac-gaming, power, thermal, tui, rust, apple-silicon, monitoring, active
+
+## vitor251093/porting-kit-releases
+link:      https://github.com/vitor251093/porting-kit-releases
+surfaced:  2026-08-15
+what:      Releases repo for "Porting Kit", a Wineskin-based GUI wrapper suite with a large pre-made game/app catalog.
+alive:     16★; reads as a single-commit releases dump with no visible link back to real source; activity/maintenance couldn't be established
+why:       Ruled out as exactly the thin-wrapper pattern the routine warns about. Not pursued further, not recommended over CrossOver.
+tags:      mac-gaming, gptk, wineskin, wrapper, thin, ruled-out
+
+## utmapp/d3dmetal-native
+link:      https://github.com/utmapp/d3dmetal-native
+surfaced:  2026-08-15
+what:      Niche reimplementation work around Apple's D3DMetal component.
+alive:     12★
+why:       Confirms D3DMetal ships x86_64-only, meaning even on Apple Silicon it runs under Rosetta 2 rather than natively — a genuine architectural wrinkle in the "best" D3D backend. A reference point, not a recommendation.
+tags:      mac-gaming, d3dmetal, rosetta, reference, architecture-note
+
+## Trsvsr/MetalHUDEnabler
+link:      https://github.com/Trsvsr/MetalHUDEnabler
+surfaced:  2026-08-15
+what:      CrossOver-bottle-aware toggle for Apple's Metal performance HUD, editing `cxbottle.conf` directly.
+alive:     62★
+why:       Mildly useful as a convenience toggle, but it does not log or parse the numbers.
+tags:      mac-gaming, metal-hud, crossover, toggle, convenience
+
+## todbot/mac-hid-dump
+link:      https://github.com/todbot/mac-hid-dump
+surfaced:  2026-08-15
+what:      Command-line HID report dumper for macOS.
+alive:     no liveness data recorded at capture
+why:       Surfaced in the HID/input-latency search and logged to the dedupe list; a dump/inspection utility rather than a latency benchmark, in the same class as the other HID tools that were dropped.
+tags:      mac-gaming, hid, dump, diagnostic, not-latency
+
+## tlkh/asitop
+link:      https://github.com/tlkh/asitop
+surfaced:  2026-08-15
+what:      Apple Silicon power/thermal monitor, the widely-cited one.
+alive:     4.6k★ but dead — last commit 2023-01-24, explicitly Monterey-only in its own README, 52 open issues, no activity since
+why:       High star count here is a trap, not a signal — more stars than macmon and mactop combined, and dead. Explicitly called out as such rather than recommended.
+tags:      mac-gaming, power, thermal, dead, star-trap, monterey-only
+
+## timkurvers/metalhud
+link:      https://github.com/timkurvers/metalhud
+surfaced:  2026-08-15
+what:      Toggle utility for Apple's Metal performance HUD.
+alive:     8★
+why:       Toggle-only, no logging or parsing. Metal HUD logging/parsing over time doesn't exist as a maintained tool.
+tags:      mac-gaming, metal-hud, toggle, measurement-gap
+
+## theodorechapman/win32mac
+link:      https://github.com/theodorechapman/win32mac
+surfaced:  2026-08-15
+what:      Proof-of-concept Win32 compatibility work for macOS.
+alive:     1★, 3 commits
+why:       A proof-of-concept covering Fallout New Vegas only. Not maintained, not general-purpose. Dropped.
+tags:      mac-gaming, win32, proof-of-concept, unmaintained
+
+## teamfinalmouse/xlat
+link:      https://github.com/teamfinalmouse/xlat
+surfaced:  2026-08-15
+what:      Hardware-firmware input-latency measurement rig.
+alive:     commit/contributor/release detail unrecorded
+why:       Hardware-firmware based, not macOS-HID-native, no Metal HUD pairing. A different technique entirely. Dropped.
+tags:      mac-gaming, latency, hardware, firmware, different-technique
+
+## t0msk/InputLagTester
+link:      https://github.com/t0msk/InputLagTester
+surfaced:  2026-08-15
+what:      Input-lag testing tool.
+alive:     commit/contributor/release detail unrecorded
+why:       Hardware-firmware or camera/photodiode based, not macOS-HID-native, no Metal HUD pairing. A different technique entirely. Dropped.
+tags:      mac-gaming, latency, hardware, different-technique
+
+## SuperKenVery/asitop
+link:      https://github.com/SuperKenVery/asitop
+surfaced:  2026-08-15
+what:      Revival fork of asitop.
+alive:     no independent evidence of currency found
+why:       A revival fork with no independent evidence of currency. Not shortlisted.
+tags:      mac-gaming, power, thermal, fork, unverified
+
+## stenyak/inputLagTimer
+link:      https://github.com/stenyak/inputLagTimer
+surfaced:  2026-08-15
+what:      Camera/photodiode-based input-latency measurement tool.
+alive:     commit/contributor/release detail unrecorded
+why:       Camera/photodiode-based, not macOS-HID-native, no Metal HUD pairing. A different technique entirely. Dropped.
+tags:      mac-gaming, latency, camera, photodiode, different-technique
+
+## Starefossen/prlctl-usb
+link:      https://github.com/Starefossen/prlctl-usb
+surfaced:  2026-08-15
+what:      USB helper for the Parallels `prlctl` tool.
+alive:     0–4★ range, no real adoption
+why:       Tiny and unproven, not gaming-framed. Dropped.
+tags:      mac-gaming, parallels, prlctl, usb, tiny, unproven
+
+## socram8888/SKSE64LoaderDLL
+link:      https://github.com/socram8888/SKSE64LoaderDLL
+surfaced:  2026-08-15
+what:      Generic Windows SKSE loader alternative.
+alive:     commit/contributor/release detail unrecorded
+why:       Not Mac-specific. Nothing dedicated exists for SKSE under Wine, and nothing is needed — SKSE, Address Library and CommonLibSSE are generic Windows infrastructure that just needs to run inside a correctly configured bottle, same as on real Windows.
+tags:      mac-gaming, skyrim, skse, windows, not-mac-specific
+
+## Sikarugir-App/Sikarugir
+link:      https://github.com/Sikarugir-App/Sikarugir
+surfaced:  2026-08-15
+what:      GUI Wine-bottle manager (Wineskin → Kegworks → Sikarugir lineage) for wrapping individual Windows apps and games, with WineD3D/VKD3D/D3DMetal/DXMT/DXVK all selectable per-wrapper.
+alive:     3.5k★, 150 commits, commits as recent as 2026-08-04. No tagged Releases (rolling `main` via Homebrew tap only) — a changelog-discipline gap, not a maintenance red flag
+why:       Maintained in part by Gcenx, who also maintains WineHQ's official macOS Wine builds and the Homebrew/MacPorts Wine taps — real standing in the upstream Wine-on-Mac community, not a random wrapper author. Apple Silicon confirmed, macOS 14+ required, but the README notes parts of the stack still need Rosetta 2, so "Apple Silicon support" means "runs," not "runs fully native." Not a reason to leave CrossOver, which is the commercial upstream this whole ecosystem free-rides on. Worth a look specifically to A/B a DXMT-backed bottle for Skyrim SE against CrossOver's D3DMetal path, or for a free bottle for a one-off non-game Windows app. Take-an-idea, not adopt. Security note: the repo warns `sikarugir.com` is a squatted, unaffiliated domain — GitHub and the official Homebrew tap are the only legitimate sources.
+tags:      mac-gaming, bottle-manager, wine, apple-silicon, dxmt, gcenx, active
+
+## sasobhabha/Brandywine
+link:      https://github.com/sasobhabha/Brandywine
+surfaced:  2026-08-15
+what:      A fork of Whisky, the macOS Wine wrapper.
+alive:     thinner activity than frankea's fork; commit/contributor/release detail unrecorded
+why:       Thinner activity than frankea/Whisky and redundant with it.
+tags:      general, mac-gaming, wine, whisky-fork, redundant
+
+## rotki/rotki
+link:      https://github.com/rotki/rotki
+surfaced:  2026-08-15
+what:      Self-hosted portfolio and accounting tool.
+alive:     no liveness data recorded at capture
+why:       Strong self-hosted portfolio tool but crypto/tax-focused; ghostfolio is the closer fit for general share holdings.
+tags:      general, portfolio, crypto, tax, self-hosted
+
+## rhunecke/HIDTester
+link:      https://github.com/rhunecke/HIDTester
+surfaced:  2026-08-15
+what:      HID controller test utility.
+alive:     19★; confirms Apple Silicon
+why:       A visual diagnostic (axis/deadzone), not a latency benchmark. Dropped.
+tags:      mac-gaming, hid, diagnostic, apple-silicon, not-latency
+
+## rbourgeat/mac-m1-game-list
+link:      https://github.com/rbourgeat/mac-m1-game-list
+surfaced:  2026-08-15
+what:      A list of games and how they run on Apple Silicon Macs.
+alive:     archived 2026-01-12, stale
+why:       The one project that directly matched the "Parallels as gaming fallback" framing, but archived and stale. Not shortlisted; noted as a dead pointer.
+tags:      mac-gaming, game-list, parallels, archived, dead-pointer
+
+## qsniyg/winevfs
+link:      https://github.com/qsniyg/winevfs
+surfaced:  2026-08-15
+what:      Virtual filesystem layer for Wine.
+alive:     Linux-only; not maintained
+why:       Linux-only and not general-purpose. Dropped.
+tags:      mac-gaming, wine, vfs, linux-only, unmaintained
+
+## pqrs-org/osx-hid-inspector
+link:      https://github.com/pqrs-org/osx-hid-inspector
+surfaced:  2026-08-15
+what:      macOS HID descriptor and property inspector.
+alive:     36★, genuinely active — commits within days of the sweep
+why:       Descriptor/property inspection only, no timing capture. Not a latency tool, so not what's needed here.
+tags:      mac-gaming, hid, inspector, no-timing, active
+
+## pqrs-org/Karabiner-Elements
+link:      https://github.com/pqrs-org/Karabiner-Elements
+surfaced:  2026-08-15
+what:      The dominant macOS keyboard/input remapper.
+alive:     22.6k★, actively maintained with macOS 26 Tahoe support
+why:       Relevant as "the" remapper if remapping is ever needed, but not a measurement tool — out of scope for this sweep's need.
+tags:      mac-gaming, hid, remapper, input, out-of-scope, active
+
+## pkoistin/prlkey
+link:      https://github.com/pkoistin/prlkey
+surfaced:  2026-08-15
+what:      Small `prlctl` wrapper utility for Parallels.
+alive:     0–4★ range, no real adoption
+why:       Tiny and unproven, not gaming-framed. Dropped.
+tags:      mac-gaming, parallels, prlctl, tiny, unproven
+
+## philipturner/metal-benchmarks
+link:      https://github.com/philipturner/metal-benchmarks
+surfaced:  2026-08-15
+what:      Apple GPU microarchitecture benchmarks.
+alive:     commit/contributor/release detail unrecorded
+why:       GPU microarchitecture benchmarking, not per-frame game timing capture. Not relevant to the frame-pacing gap. Dropped.
+tags:      mac-gaming, metal, gpu, microarchitecture, benchmark
+
+## Parallels/vagrant-parallels
+link:      https://github.com/Parallels/vagrant-parallels
+surfaced:  2026-08-15
+what:      Vagrant provider for Parallels Desktop.
+alive:     real, maintained
+why:       CI/dev-provisioning tooling with zero gaming relevance. Dropped.
+tags:      mac-gaming, parallels, vagrant, provisioning, no-gaming-relevance
+
+## Parallels/prlctl-scripts
+link:      https://github.com/Parallels/prlctl-scripts
+surfaced:  2026-08-15
+what:      Scripts for the Parallels `prlctl` command-line tool.
+alive:     real, maintained
+why:       CI/dev-provisioning tooling with zero gaming relevance. Dropped.
+tags:      mac-gaming, parallels, provisioning, ci, no-gaming-relevance
+
+## Parallels/parallels-vscode-extension
+link:      https://github.com/Parallels/parallels-vscode-extension
+surfaced:  2026-08-15
+what:      VS Code extension for Parallels Desktop.
+alive:     real, maintained
+why:       CI/dev-provisioning tooling with zero gaming relevance. Dropped.
+tags:      mac-gaming, parallels, vscode, tooling, no-gaming-relevance
+
+## Parallels/packer-examples
+link:      https://github.com/Parallels/packer-examples
+surfaced:  2026-08-15
+what:      Packer build examples for Parallels Desktop.
+alive:     real, maintained
+why:       CI/dev-provisioning tooling with zero gaming relevance. Dropped.
+tags:      mac-gaming, parallels, packer, provisioning, no-gaming-relevance
+
+## op06072/NeoAsitop
+link:      https://github.com/op06072/NeoAsitop
+surfaced:  2026-08-15
+what:      Sudoless Apple Silicon power/thermal monitor in the asitop lineage.
+alive:     100★; only tested through M1 Ultra per its own docs
+why:       Sudoless, but weaker than macmon/mactop on hardware coverage.
+tags:      mac-gaming, power, thermal, sudoless, limited-hardware
+
+## Omni-guides/Tuxborn
+link:      https://github.com/Omni-guides/Tuxborn
+surfaced:  2026-08-15
+what:      A Wabbajack-format Skyrim SE modlist tuned for Steam Deck / lower-spec-PC performance targets (Legacy of the Dragonborn, BFCO combat overhaul, NPC/quest content) — a config repo, not executable tooling.
+alive:     99★, 262 commits, commits as recent as 2026-07-15 — active
+why:       Counted because it's a real answer in the gap the 08-15 sweep flagged as unsolved. No macOS mention in the repo's own README (it's Steam-Deck/Linux-framed), but the annathepiper guide documents someone running it on a Mac specifically, and a Steam-Deck-safe modlist is a reasonable proxy for Wine/CrossOver-safe since both avoid the same class of Windows-only INI/driver hacks — reasoning, not a guarantee. Correction flagged in PR review and verified: "survives the Mac path" overstated it — the guide marks the Mac process **experimental**, and Tuxborn's bundled Community Shaders 1.2.1 (vs the current 1.3) breaks grass/sky rendering under CrossOver unless disabled. A working install can reportedly be copied over from a Steam Deck and then only needs CrossOver to run — but "runs" still means "runs with a known graphics bug you have to work around," not a clean pass. Worth considering as a curated starting load order instead of building one from scratch, expecting to disable Community Shaders as a known first fix.
+tags:      mac-gaming, skyrim, modlist, wabbajack, crossover, experimental, config-repo
+
+## N2M0/Metal-HUD-Parse
+link:      https://github.com/N2M0/Metal-HUD-Parse
+surfaced:  2026-08-15
+what:      Project named for parsing Metal HUD output.
+alive:     0★
+why:       Reads as a personal script, not a tool. The closest thing to Metal HUD parsing that exists, which is the point: there isn't one.
+tags:      mac-gaming, metal-hud, parsing, personal-script, measurement-gap
+
+## MythicApp/wine
+link:      https://github.com/MythicApp/wine
+surfaced:  2026-08-15
+what:      Wine build maintained for the Mythic macOS game launcher; successor to MythicApp/Engine.
+alive:     3★, unadopted
+why:       Supersedes the archived Engine repo but has seen no adoption.
+tags:      mac-gaming, wine, unadopted, launcher
+
+## MythicApp/Engine
+link:      https://github.com/MythicApp/Engine
+surfaced:  2026-08-15
+what:      The engine component behind the Mythic macOS game launcher.
+alive:     archived; superseded by MythicApp/wine
+why:       Archived and superseded.
+tags:      mac-gaming, archived, superseded, launcher
+
+## mrb0y/Gamepadla
+link:      https://github.com/mrb0y/Gamepadla
+surfaced:  2026-08-15
+what:      Gamepad latency/polling measurement tool.
+alive:     commit/contributor/release detail unrecorded
+why:       Measures analog-stick jitter interval, not press-to-frame latency; explicitly caveated by its own authors as a guide rather than an exact measurement.
+tags:      mac-gaming, controller, polling-rate, latency-proxy, not-a-substitute
+
+## MonitorControl/MonitorControl
+link:      https://github.com/MonitorControl/MonitorControl
+surfaced:  2026-08-15
+what:      macOS DDC brightness and volume control.
+alive:     commit/contributor/release detail unrecorded
+why:       DDC brightness/volume only, no refresh-rate or VRR capability at all. Not relevant to the actual need. Dropped.
+tags:      mac-gaming, display, ddc, brightness, not-relevant
+
+## ModOrganizer2/modorganizer
+link:      https://github.com/ModOrganizer2/modorganizer
+surfaced:  2026-08-15
+what:      Mod Organizer 2, the Windows mod manager for Bethesda games.
+alive:     Windows-only; USVFS-under-Wine tracked in open issue #372, open since 2018-05-19 and still open with no new activity as of 2026-08-16
+why:       This is the actual blocker for the planned Skyrim SE MO2 setup. MO2's own USVFS doesn't work correctly under Wine, and no Mac-native alternative has real adoption. Everyone just runs MO2.exe inside the CrossOver bottle and lives with USVFS being occasionally flaky — worth knowing going in on the heavily-modded Skyrim SE plan, not a tooling gap you can currently buy your way out of.
+tags:      mac-gaming, skyrim, mod-manager, usvfs, wine, blocker, windows-only
+
+## mikyll/SDL2-Controller-Tester
+link:      https://github.com/mikyll/SDL2-Controller-Tester
+surfaced:  2026-08-15
+what:      SDL2-based controller test utility.
+alive:     no liveness data recorded at capture
+why:       Mapping/visualization only, no latency measurement. Dropped.
+tags:      mac-gaming, controller, sdl2, mapping, not-latency
+
+## metaspartan/mactop
+link:      https://github.com/metaspartan/mactop
+surfaced:  2026-08-15
+what:      Go-based alternative to macmon: terminal TUI plus a `--menubar` mode with live sparklines/gauges, reading native IOReport/IOKit/SMC APIs directly (also sudoless), and adding fan RPM readout and control.
+alive:     1.6k★, 599 commits; v2.1.3–v2.1.5 releases landed 2026-05-03 through 2026-06-14, with changelog entries referencing ANE-bandwidth handling for the macOS 27 beta — actively tracking the current OS beta cycle. Confirms M1 through M5/M5 Pro/Max
+why:       Use instead of macmon if you want an always-visible menu-bar HUD during play rather than a terminal you have to keep in view, or if you want fan control alongside monitoring. Functionally overlapping with macmon — pick one, they're not both needed.
+tags:      mac-gaming, power, thermal, menubar, go, apple-silicon, fan-control, active
+
+## maziac/lagmeter
+link:      https://github.com/maziac/lagmeter
+surfaced:  2026-08-15
+what:      Hardware-based input-lag measurement tool.
+alive:     commit/contributor/release detail unrecorded
+why:       Hardware-firmware based, not macOS-HID-native, no Metal HUD pairing. A different technique entirely. Dropped.
+tags:      mac-gaming, latency, hardware, different-technique
+
+## limo-app/limo
+link:      https://github.com/limo-app/limo
+surfaced:  2026-08-15
+what:      Native Bethesda-focused mod manager.
+alive:     767★, real activity
+why:       A good native mod manager — but Linux-only, no macOS support. Dropped for this rig, cited as "what a good native alternative looks like."
+tags:      mac-gaming, mod-manager, linux-only, bethesda, reference
+
+## Lifeisawful/rosettax87_jit
+link:      https://github.com/Lifeisawful/rosettax87_jit
+surfaced:  2026-08-15
+what:      x87/AVX instruction patching for old DirectX 9 titles crashing under Rosetta 2.
+alive:     active — commits through 2026-08-07
+why:       A real, narrow, currently-active niche, but specifically for World-of-Warcraft-era DX9 titles. Elden Ring and Skyrim SE are both DX11/12-era, so it isn't currently relevant — worth remembering if you ever run something DX9-vintage through GPTK.
+tags:      mac-gaming, rosetta, x87, dx9, niche, active
+
+## Lifeisawful/rosettax87
+link:      https://github.com/Lifeisawful/rosettax87
+surfaced:  2026-08-15
+what:      Rosetta 2 x87 patching work, the predecessor to rosettax87_jit.
+alive:     archived
+why:       A dead end, flagged so it isn't chased again.
+tags:      mac-gaming, rosetta, x87, archived, dead-end
+
+## leonewt0n/Bourbon
+link:      https://github.com/leonewt0n/Bourbon
+surfaced:  2026-08-15
+what:      A fork of Whisky, the macOS Wine wrapper.
+alive:     thinner activity than frankea's fork; commit/contributor/release detail unrecorded
+why:       Thinner activity than frankea/Whisky and redundant with it.
+tags:      general, mac-gaming, wine, whisky-fork, redundant
+
+## kianwoon/asitop
+link:      https://github.com/kianwoon/asitop
+surfaced:  2026-08-15
+what:      Revival fork of asitop.
+alive:     no independent evidence of currency found
+why:       A revival fork with no independent evidence of currency. Not shortlisted.
+tags:      mac-gaming, power, thermal, fork, unverified
+
+## KhronosGroup/MoltenVK
+link:      https://github.com/KhronosGroup/MoltenVK
+surfaced:  2026-08-15
+what:      Vulkan implementation layered over Apple's Metal.
+alive:     5.8k★, healthy (v1.4.2-rc1, 2026-07-19)
+why:       Infrastructure other tools build on, not a standalone user tool. Name-checked rather than given a slot of its own.
+tags:      mac-gaming, vulkan, metal, infrastructure, khronos
+
+## Kegworks-App/Kegworks
+link:      https://github.com/Kegworks-App/Kegworks
+surfaced:  2026-08-15
+what:      Wine-bottle manager, the previous name in the Wineskin → Kegworks → Sikarugir lineage.
+alive:     renamed to Sikarugir-App/Sikarugir in Oct 2025; GitHub redirects
+why:       Renamed rather than abandoned — the live project is Sikarugir, which is shortlisted.
+tags:      mac-gaming, bottle-manager, wine, renamed, redirect
+
+## JulyIghor/prltype
+link:      https://github.com/JulyIghor/prltype
+surfaced:  2026-08-15
+what:      Small `prlctl` wrapper utility for Parallels.
+alive:     0–4★ range, no real adoption
+why:       Tiny and unproven, not gaming-framed. Dropped.
+tags:      mac-gaming, parallels, prlctl, tiny, unproven
+
+## its-a-feature/Mythic
+link:      https://github.com/its-a-feature/Mythic
+surfaced:  2026-08-15
+what:      A red-team command-and-control framework, unrelated to the macOS game launcher of the same name.
+alive:     commit/contributor/release detail unrecorded
+why:       Surfaced only as a name collision: `MythicApp/Mythic` (the macOS GPTK game launcher) shares its name with this unrelated red-team C2 tool, which was noted as a reason the launcher's name is confusing to search for. Logged so the collision is on record, not as a find in this domain.
+tags:      mac-gaming, name-collision, security, c2, not-a-find
+
+## installaware/AGPT
+link:      https://github.com/installaware/AGPT
+surfaced:  2026-08-15
+what:      Free, point-and-click installer GUI for Apple's Game Porting Toolkit, from InstallAware, with notarized builds.
+alive:     542★; last commit 2025-01-06 — 19+ months old as of the sweep
+why:       Ruled out as stale: the underlying stack it wraps (D3DMetal, DXMT) has moved fast enough in that window that an installer frozen at that point is a real risk, not a nitpick. Not recommended over CrossOver.
+tags:      mac-gaming, gptk, installer, gui, stale, ruled-out
+
+## imichaelnorris/Bourbon
+link:      https://github.com/imichaelnorris/Bourbon
+surfaced:  2026-08-15
+what:      A fork of Whisky, the macOS Wine wrapper.
+alive:     thinner activity than frankea's fork; commit/contributor/release detail unrecorded
+why:       Thinner activity than frankea/Whisky and redundant with it.
+tags:      general, mac-gaming, wine, whisky-fork, redundant
+
+## huberdf/FreeDisplay
+link:      https://github.com/huberdf/FreeDisplay
+surfaced:  2026-08-15
+what:      Open-source macOS display-control utility.
+alive:     85★, genuinely open
+why:       Genuinely open source, but has no refresh-rate/VRR row in its own feature table — not a substitute for BetterDisplay on the axis that matters here.
+tags:      mac-gaming, display, open-source, no-vrr, limited
+
+## guilhermearaujo/xboxonecontrollerenabler
+link:      https://github.com/guilhermearaujo/xboxonecontrollerenabler
+surfaced:  2026-08-15
+what:      Xbox One controller enabler for macOS.
+alive:     no liveness data recorded at capture
+why:       Surfaced in the controller search and logged to the dedupe list; superseded by macOS's native support for Bluetooth Xbox controllers made after August 2016, which needs no driver.
+tags:      mac-gaming, controller, xbox, driver, superseded
+
+## gromeck/LatencyMeasure
+link:      https://github.com/gromeck/LatencyMeasure
+surfaced:  2026-08-15
+what:      Hardware-based latency measurement tool.
+alive:     commit/contributor/release detail unrecorded
+why:       Hardware-firmware based, not macOS-HID-native, no Metal HUD pairing. A different technique entirely. Dropped.
+tags:      mac-gaming, latency, hardware, different-technique
+
+## General-Arcade/sdl2-gamepad-tool
+link:      https://github.com/General-Arcade/sdl2-gamepad-tool
+surfaced:  2026-08-15
+what:      SDL2-based gamepad mapping tool.
+alive:     no liveness data recorded at capture
+why:       Mapping/visualization only, no latency measurement. Dropped.
+tags:      mac-gaming, controller, sdl2, mapping, not-latency
+
+## Gcenx/winerosetta
+link:      https://github.com/Gcenx/winerosetta
+surfaced:  2026-08-15
+what:      Rosetta-related Wine tooling for old DirectX 9 titles.
+alive:     established, maintained by Gcenx — a credible name in Wine-on-Mac
+why:       The same DX9/WoW niche as rosettax87. Noted, not shortlisted — not relevant to the current games.
+tags:      mac-gaming, rosetta, wine, dx9, gcenx, niche
+
+## Gcenx/macports-wine
+link:      https://github.com/Gcenx/macports-wine
+surfaced:  2026-08-15
+what:      MacPorts Wine packaging for macOS, maintained by Gcenx.
+alive:     no liveness data recorded at capture
+why:       Part of the Gcenx Wine-on-Mac infrastructure named as evidence of upstream standing.
+tags:      mac-gaming, wine, macports, packaging, gcenx, infrastructure
+
+## Gcenx/macOS_Wine_builds
+link:      https://github.com/Gcenx/macOS_Wine_builds
+surfaced:  2026-08-15
+what:      WineHQ's official macOS Wine builds, maintained by Gcenx.
+alive:     commit/contributor/release detail unrecorded
+why:       Named as evidence of Gcenx's real standing in the upstream Wine-on-Mac community — the same maintainer behind Sikarugir and the Homebrew/MacPorts Wine taps. Infrastructure rather than a user-facing tool.
+tags:      mac-gaming, wine, builds, gcenx, infrastructure, upstream
+
+## Gcenx/homebrew-wine
+link:      https://github.com/Gcenx/homebrew-wine
+surfaced:  2026-08-15
+what:      Homebrew tap for Wine on macOS, maintained by Gcenx.
+alive:     no liveness data recorded at capture
+why:       Part of the Gcenx Wine-on-Mac infrastructure named as evidence of upstream standing; the legitimate distribution channel for Sikarugir alongside GitHub.
+tags:      mac-gaming, wine, homebrew, tap, gcenx, infrastructure
+
+## Gcenx/DXVK-macOS
+link:      https://github.com/Gcenx/DXVK-macOS
+surfaced:  2026-08-15
+what:      macOS port of DXVK.
+alive:     293★, last release 2023-07-23
+why:       Superseded by DXMT and D3DMetal/GPTK. Dropped as abandoned.
+tags:      mac-gaming, translation-layer, dxvk, macos, abandoned
+
+## frankea/Whisky
+link:      https://github.com/frankea/Whisky
+surfaced:  2026-08-15
+what:      Actively maintained community continuation of Whisky, a native macOS Wine wrapper for running Windows games and apps on Apple Silicon.
+alive:     401★, 28 forks, 11 open issues under active triage, pushed 2026-08-13; issues/commits as recent as 2026-08-12–14
+why:       Exists specifically because the original `whisky-app/whisky` was archived (April 2025) and the maintainer picked up the backlog. Ships DXMT (a Metal-native DX12 backend) and Game Porting Toolkit integration — genuinely newer engineering than what CrossOver ships. Sits right next to CrossOver in the same problem space: a free, Apple-Silicon-native alternative worth A/B-ing against whatever CrossOver is currently doing for specific titles, especially anything CrossOver runs poorly. First move: install it alongside CrossOver, pick one game that currently runs suboptimally, and compare DXMT vs CrossOver's D3DMetal backend on FPS/stability. The real continuation of Whisky — don't use the archived original.
+tags:      general, mac-gaming, wine, crossover, apple-silicon, dxmt, bottle-manager
+
+## FluidInference/fluidtop
+link:      https://github.com/FluidInference/fluidtop
+surfaced:  2026-08-15
+what:      Apple Silicon power/thermal monitor, a real asitop-replacement effort.
+alive:     66★, 112 commits; M1–M4 claimed but no M5 mention yet; much smaller community than macmon/mactop
+why:       A genuine replacement effort but a much smaller community than macmon/mactop. Not shortlisted, worth a re-check next sweep.
+tags:      mac-gaming, power, thermal, asitop-replacement, recheck
+
+## FFRI/ProjectChampollion
+link:      https://github.com/FFRI/ProjectChampollion
+surfaced:  2026-08-15
+what:      Reverse-engineering research on Rosetta 2 internals.
+alive:     archived
+why:       No gaming tooling — not a tool, background reading only.
+tags:      mac-gaming, rosetta, reverse-engineering, research, archived
+
+## exelban/stats
+link:      https://github.com/exelban/stats
+surfaced:  2026-08-15
+what:      The most popular general macOS menu-bar system monitor.
+alive:     41.2k★, actively released
+why:       Historically showed utilization % rather than true powermetrics-grade wattage — a 2025 feature request had to ask for power metrics. Verify the current build before treating it as a macmon/mactop substitute; it's a fine general system monitor, not built around power data the way those two are. Noted as a caveat rather than a straight recommendation.
+tags:      mac-gaming, system-monitor, menubar, power, caveat, popular
+
+## espetro/wowplay
+link:      https://github.com/espetro/wowplay
+surfaced:  2026-08-15
+what:      World of Warcraft on macOS launcher/tooling.
+alive:     brand new (2026-06), 0★; own README admits crashes/WIP
+why:       Watch-list only.
+tags:      mac-gaming, wow, dx9, wip, watch-list
+
+## doitsujin/dxvk
+link:      https://github.com/doitsujin/dxvk
+surfaced:  2026-08-15
+what:      Vulkan-based D3D9/10/11 translation layer.
+alive:     17.8k★, healthy
+why:       Linux/Proton-scoped, no macOS mention. Not directly usable; enters this space only via MoltenVK or Gcenx's old port.
+tags:      mac-gaming, translation-layer, vulkan, linux, proton, upstream
+
+## dkosmari/SDL2-Game-Controller-Test
+link:      https://github.com/dkosmari/SDL2-Game-Controller-Test
+surfaced:  2026-08-15
+what:      SDL2-based controller test utility.
+alive:     no liveness data recorded at capture
+why:       Mapping/visualization only, no latency measurement. Dropped.
+tags:      mac-gaming, controller, sdl2, mapping, not-latency
+
+## diewland/py-rosetta2-vs-arm
+link:      https://github.com/diewland/py-rosetta2-vs-arm
+surfaced:  2026-08-15
+what:      Rosetta 2 vs native ARM benchmarking scripts in Python.
+alive:     1★, dormant since ~2020
+why:       Dropped.
+tags:      mac-gaming, rosetta, benchmark, dormant
+
+## charmbracelet/crush
+link:      https://github.com/charmbracelet/crush
+surfaced:  2026-08-15
+what:      Charm's own terminal AI coding agent (Go, Bubbletea-based) — a direct sibling to the opencode fork already in progress, built by the team behind the TUI libraries (Bubbletea/Lipgloss/Glamour) that also power nom.
+alive:     27,382★, 2,158 forks, 630 open issues under active work, pushed 2026-08-14; built by a well-resourced, long-running OSS shop
+why:       Not a fork target (different stack — Go/Bubbletea vs the opencode fork's TS/Bun), but the closest actively-developed sibling project to study for UX and agent-loop decisions. Its underlying TUI libraries are also exactly what would polish the terminal news reader. First move: run crush on one real task for a day, note anywhere its TUI/agent-loop choices diverge from the opencode fork's, and flag anything worth backporting.
+tags:      general, coding-agent, terminal, tui, go, bubbletea, sibling-project
+
+## cakama3a/Polling
+link:      https://github.com/cakama3a/Polling
+surfaced:  2026-08-15
+what:      Controller polling-rate measurement tool.
+alive:     commit/contributor/release detail unrecorded
+why:       Measures the interval between successive analog-stick position changes while you move the stick in a circle — a synthetic proxy for controller responsiveness, not true button-press-to-frame latency, and the authors themselves caveat it as "a guide, not an exact measurement." Confirmed nothing here rivals the existing raw-HID + Metal HUD tool.
+tags:      mac-gaming, controller, polling-rate, latency-proxy, not-a-substitute
+
+## atahan99/simple-parallels
+link:      https://github.com/atahan99/simple-parallels
+surfaced:  2026-08-15
+what:      Small `prlctl` wrapper utility for Parallels.
+alive:     0–4★ range, no real adoption
+why:       Tiny and unproven, not gaming-framed. Dropped.
+tags:      mac-gaming, parallels, prlctl, tiny, unproven
+
+## AryaLabsHQ/bunli
+link:      https://github.com/AryaLabsHQ/bunli
+surfaced:  2026-08-15
+what:      Bun-native CLI framework.
+alive:     95★ / 5 forks — too early to call proven adoption
+why:       On-theme (explicit Bun user) but too early to call proven adoption yet. Worth a re-check in a future sweep; was not added to the dedupe list as a firm pass since the verdict may change.
+tags:      general, bun, cli, framework, early, recheck
+
+## aquitaine/OpenDisplay
+link:      https://github.com/aquitaine/OpenDisplay
+surfaced:  2026-08-15
+what:      GPL-3.0 clean-room macOS display-control alternative explicitly targeting Apple Silicon.
+alive:     8★, pre-1.0, VRR support unconfirmed
+why:       A promising genuinely-open alternative to BetterDisplay, but pre-1.0 with VRR unconfirmed. Worth a bookmark to revisit and a re-check next sweep, not a recommendation yet.
+tags:      mac-gaming, display, open-source, apple-silicon, pre-1.0, recheck
+
+## apple/game-porting-toolkit
+link:      https://github.com/apple/game-porting-toolkit
+surfaced:  2026-08-15
+what:      Apple repo containing AI agent skills (Metal 4 / MetalFX / shader-compilation domain modules for coding-assistant porting workflows), Metal-cpp, and code samples.
+alive:     commit/contributor/release detail unrecorded
+why:       Misidentified on first pass and corrected after PR #44 review: this repo is **not** the GPTK translation-layer toolkit. GPTK 4 itself (the actual Wine-based evaluation environment / Metal Shader Converter) is listed as a prerequisite downloaded separately from developer.apple.com — not a GitHub repo at all. Corrected finding: there is no GitHub upstream for GPTK to point to; the tool the DXMT/Sikarugir/Whisky-family projects build config around is an Apple-Developer-portal-only download. Worth knowing as a "doesn't exist as a repo" fact in its own right. Kept in the dedupe list only so a future sweep doesn't re-surface and re-misidentify it.
+tags:      mac-gaming, apple, gptk, metal, correction, not-the-toolkit, background
+
+## Alia-Traces/MetalBench
+link:      https://github.com/Alia-Traces/MetalBench
+surfaced:  2026-08-15
+what:      Metal GPU benchmarking tool.
+alive:     commit/contributor/release detail unrecorded
+why:       GPU microarchitecture benchmarking, not per-frame game timing capture. Not relevant to the frame-pacing gap. Dropped.
+tags:      mac-gaming, metal, gpu, benchmark, not-frame-timing
+
+## akemin-dayo/IOKitHIDKeyboardTester
+link:      https://github.com/akemin-dayo/IOKitHIDKeyboardTester
+surfaced:  2026-08-15
+what:      IOKit HID keyboard test utility for macOS.
+alive:     no liveness data recorded at capture
+why:       Surfaced in the HID/input-latency search and logged to the dedupe list; a diagnostic rather than a latency benchmark, in the same class as the other HID testers that were dropped.
+tags:      mac-gaming, hid, keyboard, diagnostic, not-latency
+
+## 3Shain/dxmt
+link:      https://github.com/3Shain/dxmt
+surfaced:  2026-08-15
+what:      Metal-native Direct3D 11/10 (and growing D3D12) translation layer for Wine on macOS.
+alive:     1.1k★; 10 commits landed on 2026-08-13 alone (D3D12 indirect draw/dispatch work) — current, active engineering, not a snapshot. Tagged GitHub Releases stopped at v0.80 (2025-04-23, mid MIT→LGPL relicense toward v1.0), so it ships bundled inside bottle managers rather than via its own release page — a packaging gap, not an activity gap. Issue #151 ("DXMT 1.0 Release Plan", opened 2026-04-21) confirms active roadmap planning
+why:       The actual "Metal descendant" in the DXVK lineage — not a fork of DXVK's code but the same niche solved natively for Metal instead of via MoltenVK. Apple Silicon (macOS 14+) is the *primary* supported target and Intel Mac support is explicitly still WIP, the reverse of most of this ecosystem. CodeWeavers' own CrossOver 26 changelog lists "DXMT 0.72" alongside D3DMetal 3.0 — third-party validation from the commercial beneficiary of the work. Nothing to install directly: it arrives as a selectable per-bottle backend in Sikarugir or the frankea Whisky fork. Worth knowing it exists so you can pick it as an alternate D3D11 backend to try against D3DMetal. No overlap with the raw-HID latency tool — pure graphics translation, no measurement surface.
+tags:      mac-gaming, translation-layer, d3d11, metal, wine, apple-silicon, active
+
+## 360Controller/360Controller
+link:      https://github.com/360Controller/360Controller
+surfaced:  2026-08-15
+what:      Xbox 360/One controller driver for macOS.
+alive:     6.7k★ but explicitly no Apple Silicon / Big Sur+ support per its own README (Dec 2020)
+why:       Confirmed dead for this hardware. Also confirms the actual current answer: Bluetooth Xbox controllers made after August 2016 are natively supported by macOS, no driver needed.
+tags:      mac-gaming, controller, driver, dead, no-apple-silicon
+
+## wealthfolio/wealthfolio
+link:      https://github.com/wealthfolio/wealthfolio
+surfaced:  2026-08-13
+what:      A private, local-first investment tracker — Rust/Tauri backend with a React/TypeScript frontend, SQLite via Diesel, that pulls in your holdings and shows real performance (twr/mwr, allocation, fees) without shipping your portfolio to anyone's cloud.
+alive:     8.6k★, 3,485 commits, 319 open issues / 54 open PRs; commits landed same-day as the sweep (Aug 9–13 2026) covering SnapTrade brokerage sync, currency-gain fixes and a Japanese locale — multiple contributors, not a solo drip-feed; AGPL-3.0
+why:       You said you hold shares you don't understand as well as you should — this is a tool that makes you actually look at them, and it's built in exactly your hobby stack (Rust + TypeScript, Tauri). It's a legitimate "read the source to learn Tauri properly" project as much as a thing to run. First move: `git clone` and run it locally against a read-only export of your holdings before connecting anything live.
+tags:      general, investing, portfolio, local-first, rust, tauri, typescript
+
+## ratatui/ratatui
+link:      https://github.com/ratatui/ratatui
+surfaced:  2026-08-13
+what:      The standard Rust crate for building terminal UIs — layout, widgets, styling, input handling — the thing most serious Rust TUI apps (yazi, gitui, bottom, and others) are built on top of.
+alive:     22.2k★, 2,307 commits, 148 open issues / 77 open PRs; organized as a workspace of maintained sub-crates (ratatui-core, ratatui-crossterm, ratatui-widgets)
+why:       If any part of you wants to build the terminal news reader (or anything else you're gaming/CrossOver/terminal-adjacent about) in Rust rather than TS, this is the foundation everyone else already standardized on — you'd be building on well-trodden ground instead of reinventing input handling and layout. It's itself a survival story worth knowing: forked from the abandoned `tui-rs` and kept alive by a team rather than one person. First move: work through the official tutorial app once, then decide whether porting your news reader's rendering layer to it beats staying in TS/Bun.
+tags:      general, rust, tui, terminal, widgets, foundation
+
+## newsboat/newsboat
+link:      https://github.com/newsboat/newsboat
+surfaced:  2026-08-13
+what:      The venerable terminal RSS/Atom reader (successor to Newsbeuter) — vim-style keybindings, macros, podcast queueing, scriptable filters, nothing but a terminal and a feed list.
+alive:     3.9k★, 8,951 commits, 389 open issues, 16 open PRs, CI green on GitHub Actions + Cirrus CI; over a decade of continuous maintenance
+why:       You have a half-finished terminal news reader of your own. Newsboat is worth having installed regardless (it's just a good reader), but it's also the reference implementation for the hard parts you'll hit — feed parsing edge cases, macro/filter syntax, offline caching. "Old and quietly maintained beats new and exciting." First move: install it, live with it for a week to find what you actually miss from it — that's your spec.
+tags:      general, rss, terminal, tui, news-reader, cpp, reference
+
+## MythicApp/Mythic
+link:      https://github.com/MythicApp/Mythic
+surfaced:  2026-08-13
+what:      macOS GPTK-based game launcher, CrossOver-adjacent.
+alive:     1.4k★ but last code commit ~2026-02-12 — six months stale as of the sweep; one source reported the sole maintainer had paused development
+why:       A real project, but not solid enough today: thin/WIP Winetricks-arbitrary-app support, and the name collides with an unrelated red-team C2 tool (`its-a-feature/Mythic`). Watch-list only, not shortlisted. Deliberately not added to the general dedupe list at the time — the whole point of a recheck is that a future sweep needs to be able to find it again.
+tags:      general, mac-gaming, launcher, gptk, stale, recheck
+
+## karakeep-app/karakeep
+link:      https://github.com/karakeep-app/karakeep
+surfaced:  2026-08-13
+what:      A self-hosted "bookmark everything" app — links, notes, screenshots — with AI-based auto-tagging, full-text + semantic search, and full-page archiving so saved pages don't rot when the source does.
+alive:     28.3k–28,356★, 1,434 forks, 597–678 open issues and 80 open PRs, weekly-cadence releases through July 2026, pushed 2026-08-13; formerly "Hoarder," renamed and still shipping; AGPL-3.0, Docker, Ollama-capable
+why:       You read a lot and keep more notes than you use — that's usually a retrieval problem, not a note-taking one. Karakeep's pitch is specifically "save now, find it again later without re-organizing," which is a lower-friction fit than another PKM tool, and local models mean tagging doesn't require sending your reading list to OpenAI. First move: stand it up in Docker with local search only (skip the AI tagging at first), point your browser extension at it for a week, and see whether full-text search alone already beats your save-and-forget habit.
+tags:      general, bookmarks, notes, self-hosted, search, ollama, archiving
+
+## guyfedwards/nom
+link:      https://github.com/guyfedwards/nom
+surfaced:  2026-08-13
+what:      A terminal RSS/Atom reader (Go, Bubbletea TUI) with local sync and Miniflux/FreshRSS backend support, and markdown-rendered reading via Glow.
+alive:     738–739★, 52 forks, 23 contributors, v3.0/v3.3.0 released this year (2026-03-19), pushed 2026-07-08, 33 open issues under active work; 11 distinct authors across its last 10 commits
+why:       This is the exact project already half-built (a terminal news reader) — a working, maintained implementation of the same idea, so it's a direct comparison point rather than a tangent. A much smaller codebase than newsboat that's easier to read end-to-end in an afternoon and steal ideas from for a Bun/TS build. First move: run it for a week against real feeds and note which design choices (backend abstraction, keybindings, read-later state) are worth stealing outright vs deliberately doing differently.
+tags:      general, rss, terminal, tui, go, bubbletea, news-reader
+
+## ghostfolio/ghostfolio
+link:      https://github.com/ghostfolio/ghostfolio
+surfaced:  2026-08-13
+what:      Open-source, self-hosted wealth-management dashboard (Angular + NestJS + Prisma) that aggregates holdings across brokers and exchanges into one view.
+alive:     9.1k–9,127★, 1,271 forks, pushed 2026-08-14 (day of the sweep); active discussions, hundreds of open issues under triage, official Docker images, running continuously since 2021 — long past any spike
+why:       The equivalent of wealthfolio in server form, if you'd rather have a self-hosted web dashboard than a local desktop app. Matches "hold some shares not understood as well as they should be" almost exactly — it exists to turn scattered holdings into allocation/performance/fee breakdowns without handing the data to another SaaS. First move: try the hosted demo/sandbox mode, then import one account's real holdings via CSV and see if the views clarify anything the broker's own app doesn't.
+tags:      general, investing, portfolio, self-hosted, angular, nestjs, dashboard
+
 ## YutoTerashima/hms-harmful-brain-activity-classification
 link:      https://github.com/YutoTerashima/hms-harmful-brain-activity-classification
 surfaced:  2026-07-01
@@ -946,6 +1674,14 @@ alive:     commit/contributor/release detail unrecorded
 why:       Too niche.
 tags:      audio, transcription, piano, niche
 
+## mir-dataset-loaders/mirdata
+link:      https://github.com/mir-dataset-loaders/mirdata
+surfaced:  2026-06-23
+what:      Python loaders for standard MIR research datasets (key/chord/beat ground-truth annotations).
+alive:     commit/contributor/release detail unrecorded
+why:       Standardized MIR dataset loader — useful for training/benchmarking but not ASA's analysis pipeline. Revisited on 07-01: not a runtime dependency, but the closest ready-made oracle set if ASA ever wants to benchmark its chord/key/beat stages against labelled data rather than only cross-checking against other tools (as the openmeters/soundscope loudness track already does).
+tags:      audio, dataset, loaders, benchmark, ground-truth, oracle
+
 ## marcobn/musicntwrk
 link:      https://github.com/marcobn/musicntwrk
 surfaced:  2026-06-23
@@ -1161,14 +1897,6 @@ what:      Python library for omniscient music transcription — piano, guitar, 
 alive:     1912–1915★; Python/TF2; actively maintained through 2026; installable as a Python package; commit/contributor/release detail unrecorded
 why:       Where basic-pitch gives polyphonic MIDI and all-in-one gives structure, omnizart adds instrument-specific transcription (drum hits, guitar tabs, bass lines) that ASA's current Demucs-based stem separation doesn't attempt. Its chord + beat modules parallel ASA's pipeline and can cross-validate. Plugin for completing the transcription→recommendation pipeline, and a realistic near-term action.
 tags:      audio, transcription, midi, multi-instrument, chord, beat, tensorflow
-
-## mir-dataset-loaders/mirdata
-link:      https://github.com/mir-dataset-loaders/mirdata
-surfaced:  2026-06-23
-what:      Python loaders for standard MIR research datasets (key/chord/beat ground-truth annotations).
-alive:     commit/contributor/release detail unrecorded
-why:       Standardized MIR dataset loader — useful for training/benchmarking but not ASA's analysis pipeline. Revisited on 07-01: not a runtime dependency, but the closest ready-made oracle set if ASA ever wants to benchmark its chord/key/beat stages against labelled data rather than only cross-checking against other tools (as the openmeters/soundscope loudness track already does).
-tags:      audio, dataset, loaders, benchmark, ground-truth, oracle
 
 ## mjhydri/BeatNet
 link:      https://github.com/mjhydri/BeatNet

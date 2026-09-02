@@ -44,9 +44,10 @@ show it — `views/general.md` catches everything the other filters miss, and if
 it is empty that means nothing has landed there yet, not that nothing could.
 
 **Tags are freeform.** Lowercase words, comma-separated, whatever the entry's
-own text supports. There is no controlled list, and there must not become one —
-a fixed tag vocabulary is a taxonomy, and a taxonomy is the filter this
-structure exists to remove.
+own text supports. A tag naming the sweep that found something (`mac-gaming`,
+`general`) is just another word — it confers nothing and gates nothing. There
+is no controlled list, and there must not become one: a fixed tag vocabulary is
+a taxonomy, and a taxonomy is the filter this structure exists to remove.
 
 ## Entry format
 
@@ -74,11 +75,14 @@ view by hand, and never treat a view as the record.
 
 Before 2026-08 this repo split finds across two per-project streams
 (`discoveries/`, `baseline/`) and score-gated shortlists
-(`RECOMMENDATIONS.md`, `LEGALTECH-RECOMMENDATIONS.md`). Every repo those files
+(`RECOMMENDATIONS.md`, `LEGALTECH-RECOMMENDATIONS.md`, and a per-stream
+`FINDS.md` the mac-gaming stream had started). Every repo those files
 recorded — including ones scored below the old threshold, marked dropped, or
 logged to a dedupe list with no write-up at all — was migrated into `FINDS.md`,
 and the old structure was removed. `git log` has the detail.
 
-The old streams survive only as the `audio` and `legal` tags, and only because
-that is what has been logged so far. They are not a schema. Nothing about them
-says a future find has to be one or the other.
+The old streams survive only as tags — `audio`, `legal`, `general`,
+`mac-gaming` — and only because that is what has been logged so far. They are
+not a schema, and a new stream does not need a new file, folder or shortlist of
+its own: it appends to `FINDS.md` like everything else and picks up whatever
+tags fit.
